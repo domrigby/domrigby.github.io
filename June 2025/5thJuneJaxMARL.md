@@ -1,4 +1,4 @@
-#JaxMARL
+# JaxMARL
 
 Date: 5th June 2025
 
