@@ -1,5 +1,5 @@
 ## Reinforcement Learning Pre-Training
-10th June 2025
+11th June 2025
 
 ## Key Points
 - Allow the model to reason when predicting the next token during pre-trainin.
