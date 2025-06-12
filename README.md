@@ -9,8 +9,11 @@ This section outlines in a sentence or two some of the most interesting methods 
 ### Open-Endedness
 
 ### Reinforcement Learning
-1. LLM reasoning self-play, rooted to reality by a coding engine (Absolute Zero Reasoner).
-The dynamic was for the LLM to both design coding problems as well as solve them.
+1. **LLM reasoning self-play**, rooted to reality by a coding engine (Absolute Zero Reasoner).
+    - The dynamic was for the LLM to both design coding problems as well as solve them.
 Interesting to see how this coupd be applied in other domains, with different environments rooting them to reality (e.g. robotics) 
 
+### Training in General
+1. **Heterogenous pre-training for robotics**: Pi0.5 trained on video datasets in order to learn transferable skills for robotics.
+2. RL-Pre-Training: allow model to reason during pre-training for every token. This can also be used for fine-tuning.
  
