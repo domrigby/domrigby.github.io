@@ -9,3 +9,8 @@ This section outlines in a sentence or two some of the most interesting methods 
 ### Open-Endedness
 
 ### Reinforcement Learning
+1. LLM reasoning self-play, rooted to reality by a coding engine (Absolute Zero Reasoner).
+The dynamic was for the LLM to both design coding problems as well as solve them.
+Interesting to see how this coupd be applied in other domains, with different environments rooting them to reality (e.g. robotics) 
+
+ 
