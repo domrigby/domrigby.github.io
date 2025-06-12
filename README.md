@@ -16,9 +16,13 @@ Interesting to see how this coupd be applied in other domains, with different en
 Guess Who like game with in domain images.
 3. RL performance can be improved (especially in LLMs) by only training on **high entropy** tokens.
 These are 'forks in the road' and affect performance the most. Other tokens are pre-decided by thess high entropy tokens.
-Training on these alone delivers performance improvements.  
+Training on these alone delivers performance improvements.
+4. ProRL and AlphaStar both filter out prompts which the agent always got wrong or right.
+You want to exist in the **zone of proximal development**.
+
 
 ### Training in General
 1. **Heterogenous pre-training for robotics**: Pi0.5 trained on video datasets in order to learn transferable skills for robotics.
 2. RL-Pre-Training: allow model to reason during pre-training for every token. This can also be used for fine-tuning.
- 
+3. **Higher clip parameter in PPO/GRPO**: ProRL showed this benefits exploration as it encourages increasing probablity of previously unlikely tokens.
+4. ProRL showed that GRPO could be improved by adding KL divergence term against a constantly updated reference policy.
