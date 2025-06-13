@@ -19,6 +19,8 @@ These are 'forks in the road' and affect performance the most. Other tokens are 
 Training on these alone delivers performance improvements.
 4. ProRL and AlphaStar both filter out prompts which the agent always got wrong or right.
 You want to exist in the **zone of proximal development**.
+5. MARL policies as conditional sequences. JointPPO proposed a two step approach to MARL: 1) Ordering network orders agent on how important their decision is.
+2) Sequential network (transformer in this case but could be LSTM) produces actions conditioned on previous agents action.
 
 
 ### Training in General
