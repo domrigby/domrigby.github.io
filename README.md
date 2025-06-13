@@ -22,7 +22,7 @@ You want to exist in the **zone of proximal development**.
 5. **MARL policies as conditional sequences**. JointPPO proposed a two step approach to MARL: 
     1) **Ordering network** orders agent on how important their decision is.
     2) **Recurrent action-conditioned** network (transformer in this case but could be LSTM) produces actions conditioned on previous agents action.
-
+6. **Synthetically expand experience replay**: SynthER trains a diffusion model to expand the experience buffer. It then trains on mixed real-fake batches
 
 ### Training in General
 1. **Heterogenous pre-training for robotics**: Pi0.5 trained on video datasets in order to learn transferable skills for robotics.
