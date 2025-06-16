@@ -22,8 +22,8 @@ environments. This preference was then used a reward function in a two player cr
 6. **MARL policies as conditional sequences**. [JointPPO](May 2025/28thMayJointPPO.md) proposed a two-step approach to MARL: 
     1) **Ordering network** orders agent on how important their decision is.
     2) **Recurrent action-conditioned** network (transformer in this case but could be LSTM) produces actions conditioned on previous agents action.
-7. **Synthetically expand experience replay**: SynthER trains a diffusion model to expand the experience buffer. It then trains on mixed real-fake batches
-8. **Reasoning via games**: Play to Generalise showed reasoning capabilities can deciding the best move in a game. This 
+7. **Synthetically expand experience replay**: [SynthER](May 2025/29thMaySynthER.md) trains a diffusion model to expand the experience buffer. It then trains on mixed real-fake batches
+8. **Reasoning via games**: [Play to Generalise](June 2025/16thJuneReasoningThroughGames.md) showed reasoning capabilities can deciding the best move in a game. This 
 can induce specific reasoning capabilities dependent on the game.
 
 
