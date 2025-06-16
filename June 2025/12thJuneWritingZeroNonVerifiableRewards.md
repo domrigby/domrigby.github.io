@@ -7,7 +7,7 @@ Date: 12th June 2025
 - Subjective tasks such as creative writing are inherently unverifiable and opinion based. This makes giving them rewards
 in RL extremely difficult.
 - Scoring normally relies on preferences between two pieces. This paper trained a Generative Reward Model (GenRM) to give
-a total score of 10 between two pieces of writing.
+a total score of 10 between two pieces of writing. They trained this via LLM style training
 
 ### Key Methods:
 - Bootstrapped Relative Policy Optimisation: as mentioned above, you need some writing to compare the results to.

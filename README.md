@@ -18,7 +18,8 @@ Guess Who like game with in domain images.
 These are 'forks in the road' and affect performance the most. Other tokens are pre-decided by thess high entropy tokens.
 Training on these alone delivers performance improvements.
 4. ProRL and AlphaStar both filter out prompts which the agent always got wrong or right.
-You want to exist in the **zone of proximal development**.
+You want to exist in the **zone of proximal development**. This is DAPO.
+5. Reward models: Writing-Zero proposed an interesting method for training reward models
 
 
 ### Training in General
