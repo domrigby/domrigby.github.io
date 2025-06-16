@@ -18,8 +18,12 @@ Guess Who like game with in domain images.
 These are 'forks in the road' and affect performance the most. Other tokens are pre-decided by thess high entropy tokens.
 Training on these alone delivers performance improvements.
 4. ProRL and AlphaStar both filter out prompts which the agent always got wrong or right.
-You want to exist in the **zone of proximal development**. This is DAPO.
+You want to exist in the **zone of proximal development**.
 5. Reward models: Writing-Zero proposed an interesting method for training reward models
+6. **MARL policies as conditional sequences**. JointPPO proposed a two step approach to MARL: 
+    1) **Ordering network** orders agent on how important their decision is.
+    2) **Recurrent action-conditioned** network (transformer in this case but could be LSTM) produces actions conditioned on previous agents action.
+7. **Synthetically expand experience replay**: SynthER trains a diffusion model to expand the experience buffer. It then trains on mixed real-fake batches
 
 
 ### Training in General
