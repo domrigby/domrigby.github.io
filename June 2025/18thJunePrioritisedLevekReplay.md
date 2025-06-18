@@ -2,7 +2,7 @@
 
 18th June 2025
 
-
+[Paper link](https://arxiv.org/pdf/2010.03934)
 
 ## Key Points
 - Generates 'levels' for games to be as 'learnable' as possible.
