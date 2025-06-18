@@ -48,3 +48,7 @@ tends to improve when its used for RL even if the rewards are completely random.
 temporal consistency.
 3. [Mimic One](June%202025/17thJuneMimicOneDexterousHand.md) also used a U-Net based diffusion model as the policy.
 [Pi0.5](May%202025/24thMayPi0.5VLA.md) also uses a diffusion model to create fields to control the robots.
+
+### Open-Endedness and Auto Curriculums
+1. Poet ranks levels by the agents win rate.
+2. Prioritised Level Replay ranks previous levels on their temporal differencd error to rate how useful they are.
