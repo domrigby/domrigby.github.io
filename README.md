@@ -1,7 +1,10 @@
 # PaperDiary
-I have been keeping up to date with deep learning but trying to read at least one paper a day.
+I have been keeping up to date with deep learning but trying to read at least one paper a day. 
 
 I recently decided to keep track of this using this repository!
+
+Note: I often update this on my phone or iPad when I am out and about. Formatting is then tuned on my laptop
+in the followinf days.
 
 ## Interesting Methods and Lesson Learned
 This section outlines in a sentence or two some of the most interesting methods and common themes.
@@ -25,7 +28,7 @@ environments. This preference was then used a reward function in a two player cr
 7. **Synthetically expand experience replay**: [SynthER](May%202025/29thMaySynthER.md) trains a diffusion model to expand the experience buffer. It then trains on mixed real-fake batches
 8. **Reasoning via games**: [Play to Generalise](June%202025/16thJuneReasoningThroughGames.md) showed reasoning capabilities can deciding the best move in a game. This 
 can induce specific reasoning capabilities dependent on the game.
-
+9. SEAL used RL to produce self-edits and hyperparameters to tune itself. These self-edits were synthetic data aimed at baking in knowledge or adapting to a new task as quickly as possible.
 
 
 ### Training in General
