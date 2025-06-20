@@ -3,6 +3,9 @@ I have been keeping up to date with deep learning but trying to read at least on
 
 I recently decided to keep track of this using this repository!
 
+Note: I often update this on my phone or iPad when I am out and about. Formatting is then tuned on my laptop
+in the followinf days.
+
 ## Interesting Methods and Lesson Learned
 This section outlines in a sentence or two some of the most interesting methods and common themes.
 
@@ -27,6 +30,8 @@ environments. This preference was then used a reward function in a two player cr
 can induce specific reasoning capabilities dependent on the game.
 9. [Agents of Change](June%202025/20thJuneLLMsForStrategicPlanning.md) introduced a method for **self-evolution** by adapting your own prompts. They gave themselves better info in the prompt to make better decisions.
 10. [Agents of Change](June%202025/20thJuneLLMsForStrategicPlanning.md)  also used **teams of agents with different roles** (analyser, coder, researcher etc.) to give the playing agent the optimal information to play the game.
+11. SEAL used RL to produce self-edits and hyperparameters to tune itself. These self-edits were synthetic data aimed at baking in knowledge or adapting to a new task as quickly as possible.
+
 
 
 
@@ -50,3 +55,7 @@ tends to improve when its used for RL even if the rewards are completely random.
 temporal consistency.
 3. [Mimic One](June%202025/17thJuneMimicOneDexterousHand.md) also used a U-Net based diffusion model as the policy.
 [Pi0.5](May%202025/24thMayPi0.5VLA.md) also uses a diffusion model to create fields to control the robots.
+
+### Open-Endedness and Auto Curriculums
+1. Poet ranks levels by the agents win rate.
+2. Prioritised Level Replay ranks previous levels on their temporal differencd error to rate how useful they are.
