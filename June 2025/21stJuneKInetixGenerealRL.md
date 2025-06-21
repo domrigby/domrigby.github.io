@@ -2,6 +2,8 @@
 
 Date: 21st June 2025 (read in a sunny Hyde Park!)
 
+[ArXiv link](https://arxiv.org/pdf/2410.23208)
+
 # Key Points
 - Aims to create a generalisable agent from creating vast amounts of online data on a generic task
 - Generic task in this case was to a space of shapes, some connected by joints and motors and other with thrusters. They must get the green and blue shapes to touch without touching the red shape.
