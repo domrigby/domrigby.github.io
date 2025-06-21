@@ -31,8 +31,7 @@ can induce specific reasoning capabilities dependent on the game.
 9. [Agents of Change](June%202025/20thJuneLLMsForStrategicPlanning.md) introduced a method for **self-evolution** by adapting your own prompts. They gave themselves better info in the prompt to make better decisions.
 10. [Agents of Change](June%202025/20thJuneLLMsForStrategicPlanning.md)  also used **teams of agents with different roles** (analyser, coder, researcher etc.) to give the playing agent the optimal information to play the game.
 11. SEAL used RL to produce self-edits and hyperparameters to tune itself. These self-edits were synthetic data aimed at baking in knowledge or adapting to a new task as quickly as possible.
-
-
+12. [Kinetix](June%202025/21stJuneKInetixGenerealRL.md) and [JaxMARL](June%202025/5thJuneJaxMARL.md) both use GPU accelerated environments to create large amounts of training data as well as avoiding costly CPU-GPU transfers.
 
 
 ### Training in General
@@ -57,5 +56,7 @@ temporal consistency.
 [Pi0.5](May%202025/24thMayPi0.5VLA.md) also uses a diffusion model to create fields to control the robots.
 
 ### Open-Endedness and Auto Curriculums
-1. Poet ranks levels by the agents win rate.
-2. Prioritised Level Replay ranks previous levels on their temporal differencd error to rate how useful they are.
+1. [POET](June%202025/9thJunePOETOpenEndedLearning.md) introduces new levels, checks they meet a minimum learnability criterion and then only adds the most novel.
+2. [Prioritised Level Replay](June%202025/18thJunePrioritisedLevekReplay.md) ranks previous levels on their temporal difference error to rate how useful they are.
+3. [Kinetix](June%202025/21stJuneKInetixGenerealRL.md) generated random levels using a method called 'SFL' in which it 
+performs rollouts on randomly generated environments before picking the most learnable ones.
