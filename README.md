@@ -8,29 +8,30 @@ in the following days.
 This section outlines in a sentence or two some of the most interesting methods and common themes that I have seen in these papers.
 
 ### Reinforcement Learning
-1. **LLM reasoning self-play**, rooted to reality by a coding engine ([Absolute Zero Reasoner](May%202025/23rdMayAbsoluteZeroReasoner.md)).
-    - The dynamic was for the LLM to both design coding problems as well as solve them. Interesting to see how this 
-      could be applied in other domains, with different environments rooting them to reality (e.g. robotics)
-2. Unsupervised self-improvement via self-dialog games [VLM Self-Dialog Games](May%202025/26thMaySelfDialogueGames.md). VLMs can self-improve by playing a
-Guess Who like game with in domain images. 
-3. RL performance can be improved (especially in LLMs) by only training on **high entropy** tokens.
+1. RL performance can be improved (especially in LLMs) by only training on **high entropy** tokens.
 These are 'forks in the road' and affect performance the most. Other tokens are pre-decided by thess high entropy tokens.
 Training on these alone delivers performance improvements. ([80:20 Rule](June%202025/11thJuneTokenEntropyRLVR.md))
-4. [ProRL](June%202025/4thJuneProlongedRL.md) and [Absolute Zero Reasoner](May%202025/23rdMayAbsoluteZeroReasoner.md) both filter out prompts which the agent always got wrong or right.
+2. [ProRL](June%202025/4thJuneProlongedRL.md) and [Absolute Zero Reasoner](May%202025/23rdMayAbsoluteZeroReasoner.md) both filter out prompts which the agent always got wrong or right.
 You want to exist in the **zone of proximal development**.
-5. Non-Verifiable Reward Models: Writing-Zero proposed an interesting method for training preference models in non-verifiable reward 
+3. Non-Verifiable Reward Models: Writing-Zero proposed an interesting method for training preference models in non-verifiable reward 
 environments. This preference was then used a reward function in a two player creative writing game.
-6. **MARL policies as conditional sequences**. [JointPPO](May%202025/28thMayJointPPO.md) proposed a two-step approach to MARL: 
+4. **MARL policies as conditional sequences**. [JointPPO](May%202025/28thMayJointPPO.md) proposed a two-step approach to MARL: 
     1) **Ordering network** orders agent on how important their decision is.
     2) **Recurrent action-conditioned** network (transformer in this case but could be LSTM) produces actions conditioned on previous agents action.
-7. **Synthetically expand experience replay**: [SynthER](May%202025/29thMaySynthER.md) trains a diffusion model to expand the experience buffer. It then trains on mixed real-fake batches
-8. **Reasoning via games**: [Play to Generalise](June%202025/16thJuneReasoningThroughGames.md) showed reasoning capabilities can deciding the best move in a game. This 
+5. **Synthetically expand experience replay**: [SynthER](May%202025/29thMaySynthER.md) trains a diffusion model to expand the experience buffer. It then trains on mixed real-fake batches
+6. **Reasoning via games**: [Play to Generalise](June%202025/16thJuneReasoningThroughGames.md) showed reasoning capabilities can deciding the best move in a game. This 
 can induce specific reasoning capabilities dependent on the game.
-9. [Agents of Change](June%202025/20thJuneLLMsForStrategicPlanning.md) introduced a method for **self-evolution** by adapting your own prompts. They gave themselves better info in the prompt to make better decisions.
-10. [Agents of Change](June%202025/20thJuneLLMsForStrategicPlanning.md)  also used **teams of agents with different roles** (analyser, coder, researcher etc.) to give the playing agent the optimal information to play the game.
-11. [SEAL](June%202025/19thJuneSelfAdaptingLanguageModels.md) used RL to produce self-edits and hyperparameters to tune itself. These self-edits were synthetic data aimed at baking in knowledge or adapting to a new task as quickly as possible.
-12. [Kinetix](June%202025/21stJuneKInetixGenerealRL.md) and [JaxMARL](June%202025/5thJuneJaxMARL.md) both use GPU accelerated environments to create large amounts of training data as well as avoiding costly CPU-GPU transfers.
+7. [Kinetix](June%202025/21stJuneKInetixGenerealRL.md) and [JaxMARL](June%202025/5thJuneJaxMARL.md) both use GPU accelerated environments to create large amounts of training data as well as avoiding costly CPU-GPU transfers.
 
+### Self Improvement
+1. **LLM can do self-play to learn reasoning**, rooted to reality by a coding engine ([Absolute Zero Reasoner](May%202025/23rdMayAbsoluteZeroReasoner.md)).
+    - LLM generated an input, a piece of a code and an output. One was hidden from the reasoner and it had to work out 
+   what was missing. This could potentially be applied in other domains, with different environments rooting them to reality (e.g. robotics)
+2. Unsupervised self-improvement via self-dialog games [VLM Self-Dialog Games](May%202025/26thMaySelfDialogueGames.md). VLMs can self-improve by playing a
+Guess Who like game with in domain images. 
+3. [Agents of Change](June%202025/20thJuneLLMsForStrategicPlanning.md) introduced a method for **self-evolution** by adapting your own prompts. They gave themselves better info in the prompt to make better decisions.
+4. [Agents of Change](June%202025/20thJuneLLMsForStrategicPlanning.md)  also used **teams of agents with different roles** (analyser, coder, researcher etc.) to give the playing agent the optimal information to play the game.
+5. [SEAL](June%202025/19thJuneSelfAdaptingLanguageModels.md) used RL to produce self-edits and hyperparameters to tune itself. These self-edits were synthetic data aimed at baking in knowledge or adapting to a new task as quickly as possible.
 
 ### Training in General
 1. **Heterogenous pre-training for robotics**: [Pi0.5](May%202025/24thMayPi0.5VLA.md) trained on video datasets in order to learn transferable skills for robotics.
