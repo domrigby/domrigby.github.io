@@ -1,13 +1,11 @@
 # PaperDiary
-I have been keeping up to date with deep learning but trying to read at least one paper a day.
-
-I recently decided to keep track of this using this repository!
+I have been keeping up to date with deep learning but trying to read at least one paper a day. I recently decided to keep track of this using this repository!
 
 Note: I often update this on my phone or iPad when I am out and about. Formatting is then tuned on my laptop
-in the followinf days.
+in the following days.
 
 ## Interesting Methods and Lesson Learned
-This section outlines in a sentence or two some of the most interesting methods and common themes.
+This section outlines in a sentence or two some of the most interesting methods and common themes that I have seen in these papers.
 
 ### Reinforcement Learning
 1. **LLM reasoning self-play**, rooted to reality by a coding engine ([Absolute Zero Reasoner](May%202025/23rdMayAbsoluteZeroReasoner.md)).
@@ -30,7 +28,7 @@ environments. This preference was then used a reward function in a two player cr
 can induce specific reasoning capabilities dependent on the game.
 9. [Agents of Change](June%202025/20thJuneLLMsForStrategicPlanning.md) introduced a method for **self-evolution** by adapting your own prompts. They gave themselves better info in the prompt to make better decisions.
 10. [Agents of Change](June%202025/20thJuneLLMsForStrategicPlanning.md)  also used **teams of agents with different roles** (analyser, coder, researcher etc.) to give the playing agent the optimal information to play the game.
-11. SEAL used RL to produce self-edits and hyperparameters to tune itself. These self-edits were synthetic data aimed at baking in knowledge or adapting to a new task as quickly as possible.
+11. [SEAL](June%202025/19thJuneSelfAdaptingLanguageModels.md) used RL to produce self-edits and hyperparameters to tune itself. These self-edits were synthetic data aimed at baking in knowledge or adapting to a new task as quickly as possible.
 12. [Kinetix](June%202025/21stJuneKInetixGenerealRL.md) and [JaxMARL](June%202025/5thJuneJaxMARL.md) both use GPU accelerated environments to create large amounts of training data as well as avoiding costly CPU-GPU transfers.
 
 
@@ -42,7 +40,7 @@ can induce specific reasoning capabilities dependent on the game.
 [Play to Generalise](June%202025/16thJuneReasoningThroughGames.md) however preferred to not use a KL divergence term increase exploration.
 5. **Reasoning agent produce best and worst move**: [Play to Generalise](June%202025/16thJuneReasoningThroughGames.md) showed that performance could improve from 
 simultaneously getting the model to output the best and worst move (increased game understanding)
-6. **Always put the environment on the GPU if possible** [(JaxMARL)](June%202025/5thJuneJaxMARL.md)
+6. **Always put the environment on the GPU if possible** [(JaxMARL,](June%202025/5thJuneJaxMARL.md)[ Kinetix)](June%202025/21stJuneKInetixGenerealRL.md)
 7. **Be careful when using Qwen and Clipping for RL**: [RL with Spurious Rewards](June%202025/3rdJuneSpuriousRewardsRL.md) showed that Qwen
 tends to improve when its used for RL even if the rewards are completely random. This is because it:
    1. Encourages it to write more code.
