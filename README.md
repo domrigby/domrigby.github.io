@@ -46,6 +46,8 @@ simultaneously getting the model to output the best and worst move (increased ga
 tends to improve when its used for RL even if the rewards are completely random. This is because it:
    1. Encourages it to write more code.
    2. GRPO clipping concentrates probability on high likelihood behaviours.
+8. You could theoretically make a very intelligent and general agent by training it on all verifiable tasks. This would ofcourse be without human supervision. [link post]
+9. Few potential routes to superintelligence: [list when home]
 
 ### Robotics
 1. Pre-training can be effective in robotics like it is in LLMs [Pi0.5](May%202025/24thMayPi0.5VLA.md)
