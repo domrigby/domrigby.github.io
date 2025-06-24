@@ -56,8 +56,13 @@ temporal consistency.
 3. [Mimic One](June%202025/17thJuneMimicOneDexterousHand.md) also used a U-Net based diffusion model as the policy.
 [Pi0.5](May%202025/24thMayPi0.5VLA.md) also uses a diffusion model to create fields to control the robots.
 
-### Open-Endedness and Auto Curriculums
+### Open-Endedness and Auto-Curriculums
 1. [POET](June%202025/9thJunePOETOpenEndedLearning.md) introduces new levels, checks they meet a minimum learnability criterion and then only adds the most novel.
 2. [Prioritised Level Replay](June%202025/18thJunePrioritisedLevekReplay.md) ranks previous levels on their temporal difference error to rate how useful they are.
+   - [Auto-Curriculum Learning for Driving Scenarios](June%202025/23rdJuneAutoCurriculumAutonomousDriving.md) does something
+   similar; it uses the **positive temporal difference value error** to rate learnability.
 3. [Kinetix](June%202025/21stJuneKInetixGenerealRL.md) generated random levels using a method called 'SFL' in which it 
 performs rollouts on randomly generated environments before picking the most learnable ones.
+4. [Auto-Curriculum Learning for Driving Scenarios](June%202025/23rdJuneAutoCurriculumAutonomousDriving.md), [POET](June%202025/9thJunePOETOpenEndedLearning.md) and many others
+methods introduces the idea of random generator + editor as the basic building blocks for creating levels. One creates random new levels 
+and the other perturbs existing interesting levels.
