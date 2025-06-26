@@ -66,3 +66,9 @@ performs rollouts on randomly generated environments before picking the most lea
 4. [Auto-Curriculum Learning for Driving Scenarios](June%202025/23rdJuneAutoCurriculumAutonomousDriving.md), [POET](June%202025/9thJunePOETOpenEndedLearning.md) and many others
 methods introduces the idea of random generator + editor as the basic building blocks for creating levels. One creates random new levels 
 and the other perturbs existing interesting levels.
+5. **Performance annealed exploration reward** [Curriculum Learning Self-Play] had a dense exploration reward thay it anneals by agent performance. I.e. when the agent is doing well it doesnt get rewarded
+for exploring, however when it does badly it gets encouraged to explore.
+
+#### MARL
+1. Population based methods are extremely popular to prevent overfitting and encourage diverse behaviours.
+2. Agent selection, weighted by ELO score, was presented in [link when on laptop]
