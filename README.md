@@ -68,6 +68,8 @@ methods introduces the idea of random generator + editor as the basic building b
 and the other perturbs existing interesting levels.
 5. **Performance annealed exploration reward** [Curriculum Learning Self-Play] had a dense exploration reward thay it anneals by agent performance. I.e. when the agent is doing well it doesnt get rewarded
 for exploring, however when it does badly it gets encouraged to explore.
+6. OMNI-EPIC showed that LLMs and foundation models can use logic and intuition learned from text to mimic human interestingness. It also showed that they can work as teams to code meaningful environment
+which could potentially lead to true open-ended learning due to the Turing completeness of Python
 
 #### MARL
 1. Population based methods are extremely popular to prevent overfitting and encourage diverse behaviours.
