@@ -4,6 +4,8 @@ I have been keeping up to date with deep learning but trying to read at least on
 Note: I often update this on my phone or iPad when I am out and about. Formatting is then tuned on my laptop
 in the following days.
 
+Note: **I intend to redesign the layout of this repository when I have some freetime**
+
 ## Interesting Methods and Lesson Learned
 This section outlines in a sentence or two some of the most interesting methods and common themes that I have seen in these papers.
 
