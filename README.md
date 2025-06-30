@@ -57,6 +57,7 @@ tends to improve when its used for RL even if the rewards are completely random.
 temporal consistency.
 3. [Mimic One](June%202025/17thJuneMimicOneDexterousHand.md) also used a U-Net based diffusion model as the policy.
 [Pi0.5](May%202025/24thMayPi0.5VLA.md) also uses a diffusion model to create fields to control the robots.
+4. V-JEPA was pre-trained on millions of YouTube videos to predict missing frames in embedding space. It was then fine-tuned on labelled action robot videos to understand cause and effect. It could then be used for planning. 
 
 ### Open-Endedness and Auto-Curriculums
 1. [POET](June%202025/9thJunePOETOpenEndedLearning.md) introduces new levels, checks they meet a minimum learnability criterion and then only adds the most novel.
