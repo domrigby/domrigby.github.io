@@ -1,15 +1,43 @@
-# Paper Diary
-## BY DOM RIGBY
+# <h1 align="center">Paper Diary</h1>
 
-> A daily log of deep learning research papers—summarizing key methods, insights, and themes.
+<p align="center">By Dom Rigby</p>
 
 ---
 
 ## 📌 Introduction
 
-I commit to reading at least one deep learning paper per day and track my progress in this repository. Entries are added on the go (often from my phone or iPad) and later refined on my laptop.
+Welcome to my Paper Diary! Due to the seemingly never ending supply of interesting reinforcement learning papers which have come out in the last few years, I began
+to try and read at least one every day. I was however having the issue that after a month of two I could not remember for the life of me where I had read that interesting fact,
+method or algorithm. I therefore began keeping a diary of the papers/blog posts I was reading. I recently decided I may as well start posting these incase anyone else find this
+interesting or useful!
+
+Entries are added on the go (often from my phone or iPad) and later refined on my laptop.
 
 > **Note:** Layout and formatting are continuously improved when time permits.
+
+
+## 🛠️ Method
+
+####  Identification of Papers
+   1. X (formerly Twitter): I follow a wide-array of AI accounts and researchers who post papers
+   2. Reddit: r/MachineLearning 
+   3. Conferences: I recently attend ICLR and came back with a treasure trove of interesting reads.
+   4. Paper references
+
+#### Use of LLMs
+   1. **LLMs are NOT used for the analysis of the papers**. They are however **used for checking**. My method is to read the paper, write down what I think are the key points. I then ask o4-mini-high
+      to do the same. If we agree then write up, if we disagree then I re-read and check that I haven't totally mis-interpreted the paper. 
+   2. Paper recommendations
+   3. Formatting and helping with markdown.
+   4. Quick analysis scripts.
+
+
+---
+
+## ⚙️ Website Workings
+
+This website is a user-friendly entry point and summary of the repository. This hosts the top level themes and parts I thought were interesting.
+All paper summaries are stored in **[this repository](https://github.com/domrigby/domrigby.github.io)**
 
 ---
 
