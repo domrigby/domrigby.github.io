@@ -19,10 +19,10 @@ Entries are added on the go (often from my phone or iPad) and later refined on m
 ## 🛠️ Method
 
 ####  Identification of Papers
-   1. X (formerly Twitter): I follow a wide-array of AI accounts and researchers who post papers
-   2. Reddit: r/MachineLearning 
-   3. Conferences: I recently attend ICLR and came back with a treasure trove of interesting reads.
-   4. Paper references
+   1. **X (formerly Twitter)**: I follow a wide-array of AI accounts and researchers who post papers
+   2. **Reddit**: r/MachineLearning 
+   3. **Conferences**: I recently attend ICLR and came back with a treasure trove of interesting reads.
+   4. **Paper references**
 
 #### Use of LLMs
    1. **LLMs are NOT used for the analysis of the papers**. They are however **used for checking**. I read the paper, write down what I think the key points are.
