@@ -120,6 +120,29 @@ Below are concise summaries of standout methods and recurring themes, organized 
 - Population‑based methods prevent overfitting and foster diverse behaviors.
 - Agent selection via ELO‑weighted sampling improves robustness and competitive balance.
 
+
+---
+
+### 7. Distribution
+
+1. This [blog post by Jeremy Jordan](distribution_and_gpu_acceleration/TrainingOnThousandsOfGPUs.md) covers the basics of how to 
+   train a network on thousands of GPUS. Some of the key methods spoke about were:
+   * **Types of parallelism**:
+     1. **Data parallelism**: each GPU has a copy of the model and a different batch of data. They then share gradients to do joint updates.
+     2. **Model parallelism**: for large models. Model layers are split over many GPUs.
+   * **Communication methods**: 
+     1. Scatter: send different data to each GPU
+     2. Broadcast: same data to all
+     3. Reduce: combine all data on one GPU.
+2. This [blog post on distributed PPO](distribution_and_gpu_acceleration/DistributedPPO.md) outlines some extra factors to think about:
+   1. **Synchronous**: waits for all agents to calculate their respective gradients before doing a weights update.
+   2. **Asynchronous**: doesn't wait.
+   3. **Centralised**: single server does all gradient accumulation and weights updates.
+   4. **Decentralised**: all share gradients (all-reduce) but have their own model.
+3. [IMPALA](distribution_and_gpu_acceleration/IMPALA_DistributedRL.md) outlines a now common, distributed reinforcement learning method with multiple actors and a single centralised learner 
+ which broadcasts weights update. This is mimicked in PyTorch in [TorchBeast](distribution_and_gpu_acceleration/TorchBeastDistributedPyTorch.md)
+4. [Docker](distribution_and_gpu_acceleration/DockerInRL.md) can be used like a lightweight virtual machine for distributing actors or learners across large clusters.
+
 ---
 
 ## ⚙️ Repository Structure
@@ -176,9 +199,14 @@ Below are concise summaries of standout methods and recurring themes, organized 
 * 30th: [Self-Supervised Video Models Enable Understanding, Prediction and Planning (V-JEPA)](general_training/V-JEPA2.md)
 
 ### July 2025
-1st: Open-Endedness is Essential for Artificial Superhuman Intelligence
-
-*Last updated: July 9, 2025*
+1st: [Open-Endedness is Essential for Artificial Superhuman Intelligence](open_endedness_and_auto_curriculums/SuperintelligenceFromFirstPrinciples.md)
+2nd: [SPIRAL: Self-Play on Zero-Sum Games Incentivizes Reasoning via Multi-Agent Multi-Turn Reinforcement Learning](LLM_reinforcement_learning/SelfPlayZeroSumGames.md)
+4th: [Training extremely large neural networks across thousands of GPUs by Jeremy Jordan](distribution_and_gpu_acceleration/TrainingOnThousandsOfGPUs.md)
+5th: [IMPALA: Scalable Distributed Deep-RL with Importance Weighted Actor-Learner Architectures](distribution_and_gpu_acceleration/IMPALA_DistributedRL.md)
+5th: [TorchBeast: A PyTorch Platform for Distributed RL](distribution_and_gpu_acceleration/TorchBeastDistributedPyTorch.md)
+7th: [Distributed PPO Blog Post](distribution_and_gpu_acceleration/DistributedPPO.md)
+8th: [Reinforcement Learning with Docker](distribution_and_gpu_acceleration/DockerInRL.md)
+9th: [FinCoT]
 
 &#x20;&#x20;
 
