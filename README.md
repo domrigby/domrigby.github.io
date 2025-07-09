@@ -25,8 +25,8 @@ Entries are added on the go (often from my phone or iPad) and later refined on m
    4. Paper references
 
 #### Use of LLMs
-   1. **LLMs are NOT used for the analysis of the papers**. They are however **used for checking**. My method is to read the paper, write down what I think are the key points. I then ask o4-mini-high
-      to do the same. If we agree then write up, if we disagree then I re-read and check that I haven't totally mis-interpreted the paper. 
+   1. **LLMs are NOT used for the analysis of the papers**. They are however **used for checking**. I read the paper, write down what I think the key points are.
+      I then ask o4-mini-high to do the same and double check if we disagree.
    2. Paper recommendations
    3. Formatting and helping with markdown.
    4. Quick analysis scripts.
