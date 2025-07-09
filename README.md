@@ -1,4 +1,4 @@
-# <h1 align="center">Paper Diary</h1>
+<h1 align="center">Paper Diary</h1>
 
 <p align="center">By Dom Rigby</p>
 
