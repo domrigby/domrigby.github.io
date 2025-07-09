@@ -2,6 +2,8 @@
 
 Date: 8th June 2025
 
+[arXiv link](https://arxiv.org/abs/2506.06941)
+
 ## Key Points
 - Uses puzzles with tunable complexify rather than maths problems (these suffer from data contamination).
 - Observations at different complexities:

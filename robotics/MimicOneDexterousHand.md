@@ -1,5 +1,8 @@
 # mimic-one: a Scalable Model Recipe for General Purpose Robot Dexterity
+
 Date: 18th June 2025. Fancied reading a robotics paper today!
+
+[arXiv link](https://arxiv.org/abs/2506.11916)
 
 ## Key Points
 - Paper was focused around a new 16 DOF freedom hand they had just developed

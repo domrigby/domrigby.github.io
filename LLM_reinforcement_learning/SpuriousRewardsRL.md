@@ -1,6 +1,9 @@
-## RLVF on Random Rewards (Blog Post)  
-**Date:** 2025-06-04  
-**arXiv Link:** _N/A (blog post)_  
+## Spurious Rewards: Rethinking Training Signals in RLVR
+
+**Date:** 4th June 2025 
+
+[arXiv link](https://arxiv.org/abs/2506.10947)  
+
 **Key Points:**  
 - Observes that applying reinforcement learning with verifiable rewards (RLVR) to Qwen‐2.5 Math models yields large 
 improvements on math benchmarks—even when rewards are random or extremely sparse.  

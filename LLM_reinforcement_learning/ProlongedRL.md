@@ -1,6 +1,9 @@
 ## ProRL: Prolonged Reinforcement Learning Expands Reasoning Boundaries in LLMs  
+
 **Date:** 4th June 2025  
-**arXiv Link:** https://arxiv.org/abs/2505.24864  
+
+[arXiv Link](https://arxiv.org/abs/2505.24864)
+
 **Key Points:**  
 - Proposes ProRL, a training paradigm that applies extended RL training (e.g., thousands of steps) to LLMs to uncover novel reasoning strategies not present in the base model.  
 - Shows that, contrary to beliefs that RL simply amplifies existing biases, prolonged RL can discover entirely new solution pathways that the base model could not sample.  

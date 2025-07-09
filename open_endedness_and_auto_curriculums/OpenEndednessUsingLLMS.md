@@ -2,8 +2,10 @@
 
 Date: 28th June 2025
 
+[arXiv link](https://arxiv.org/abs/2405.15568)
+
 # Key Points
-- Creates an open-ended leadning frame work based around leveraging the intuition and logic baked into LLMs and foundation models
+- Creates an open-ended learning framework based around leveraging the intuition and logic baked into LLMs and foundation models
 - Process:
     1. Most 'interesting' task is selected (covered later)
     2. A new more interesting task is generated using an FM. The **tasks are all described in text**.

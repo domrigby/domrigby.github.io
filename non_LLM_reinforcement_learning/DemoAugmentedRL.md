@@ -1,6 +1,6 @@
-## Demonstration-Augmented RL  
+## Learning Complex Dexterous Manipulation with Deep Reinforcement Learning and Demonstrations
 **Date:** 2025-06-04  
-**arXiv Link:** https://arxiv.org/abs/ (pending; often seen under “DemoRL” or “Demo-Augmented RL”)  
+[arXiv Link]:(https://arxiv.org/pdf/1709.10087)
 **Key Points:**  
 - Integrates expert demonstrations into RL by adding a demonstration‐constraint term to the policy gradient loss.  
 - Ensures that initially, the policy strongly mimics expert trajectories; over time, this imitation weight is annealed to allow exploration.  
