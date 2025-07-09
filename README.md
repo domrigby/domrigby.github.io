@@ -52,12 +52,12 @@ Below are concise summaries of standout methods and recurring themes, organized 
 2. **Token‑Wise Reasoning Pretraining**\
    [RL‑Pre‑Training](LLM_reinforcement_learning/RLPretraining.md) applies reasoning objectives at every token during pretraining and fine‑tuning.
 3. **Enhanced Exploration in PPO/GRPO**\
-   Higher clipping parameters and dynamic KL divergence terms (as in ProRL and Play to Generalise) improve exploration and stability.
+   Higher clipping parameters and dynamic KL divergence terms (as in [ProRL](LLM_reinforcement_learning/ProlongedRL.md) and [Play to Generalise](LLM_reinforcement_learning/ReasoningThroughGames.md)) improve exploration and stability.
 4. **Dual‑Outcome Reasoning**\
-   Generating both best and worst moves in game scenarios deepens model understanding of decision boundaries.
+   Generating both best and worst moves in game scenarios deepens model understanding of decision boundaries ([Play to Generalise](LLM_reinforcement_learning/ReasoningThroughGames.md))
 5. **GPU‑Resident Environments**\
-   Always host simulation environments on the GPU when possible to avoid costly data transfers.
-6. **Beware Spurious Rewards**\
+   Always host simulation environments on the GPU when possible to avoid costly data transfers ([JaxMARL](marl/JaxMARL.md), [Kinetix](distribution_and_gpu_acceleration/KInetixGeneralRL.md))
+6. **Beware When Using Qwen for RL**\
    [RL with Spurious Rewards](LLM_reinforcement_learning/SpuriousRewardsRL.md) shows that random reward signals can still drive code production due to clipping effects.
 
 ### 4. Robotics & Control
@@ -65,9 +65,11 @@ Below are concise summaries of standout methods and recurring themes, organized 
 1. **Action Chunk Prediction**\
    [Mimic One](robotics/MimicOneDexterousHand.md) predicts chunks of actions to enforce temporal consistency.
 2. **Diffusion‑Based Policies**\
-   U‑Net diffusion models generate continuous action fields for robot control ([Pi0.5](robotics/Pi0.5VLA.md)).
+   Diffusion models generate continuous action fields for robot control ([Pi0.5](robotics/Pi0.5VLA.md), [Mimic One](robotics/MimicOneDexterousHand.md)).
 3. **Frame Prediction for Planning**\
    V‑JEPA pretrains on millions of videos to predict missing frames, then fine‑tunes on robotic datasets for causal understanding and planning.
+4. **Pre-Training is Possible in Robotics**
+   * V-JEPA and [Pi0.5](robotics/Pi0.5VLA.md) both used huge amounts of internet video data to train world models to predict actions and effects.
 
 ### 5. Open‑Endedness & Auto‑Curricula
 
@@ -81,6 +83,8 @@ Below are concise summaries of standout methods and recurring themes, organized 
    Adaptive exploration rewards that decrease with success rate encourage focused learning when needed.
 5. **LLM‑Driven Environment Generation**\
    OMNI‑EPIC uses LLM teams to generate and refine Python‑based environments for truly open‑ended training.
+6. **Open-Endedness Requires Novel and Learnable Artefacts**\
+   To be considered open-ended a system must be able to generate new data from which it can learn new things from. This is dependent on the observer, the time hoz
 
 ### 6. Multi‑Agent Reinforcement Learning (MARL)
 

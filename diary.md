@@ -39,3 +39,6 @@ This file contains a record of which papers I read on which dates. I began keepi
 * 30th: [Self-Supervised Video Models Enable Understanding, Prediction and Planning (V-JEPA)](general_training/V-JEPA2.md)
 
 ## July 2025
+1st: Open-Endedness is Essential for Artificial Superhuman Intelligence
+2nd:
+3rd:
