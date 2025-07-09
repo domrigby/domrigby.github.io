@@ -88,6 +88,9 @@ Below are concise summaries of standout methods and recurring themes, organized 
    Always host simulation environments on the GPU when possible to avoid costly data transfers ([JaxMARL](marl/JaxMARL.md), [Kinetix](distribution_and_gpu_acceleration/KInetixGeneralRL.md))
 6. **Beware When Using Qwen for RL**\
    [RL with Spurious Rewards](LLM_reinforcement_learning/SpuriousRewardsRL.md) shows that random reward signals can still drive code production due to clipping effects.
+7. **Structured Chain of Thought Prompting**\
+   [FinCoT](finance_applications/FinCoT.md) generated structured chain of thought prompts using DeepResearch to identify methods to solve finance problems (these are fairly well known). These included well known methods for solving these problems.
+   This drastically improved the performance and provided a more auditable solution.
 
 ### 4. Robotics & Control
 
