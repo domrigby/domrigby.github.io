@@ -210,6 +210,7 @@ Below are concise summaries of standout methods and recurring themes, organized 
 * 7th: [Distributed PPO Blog Post](distribution_and_gpu_acceleration/DistributedPPO.md)
 * 8th: [Reinforcement Learning with Docker](distribution_and_gpu_acceleration/DockerInRL.md)
 * 9th: [FinCoT: Grounding Chain-of-Thought in Expert Financial Reasoning](finance_applications/FinCoT.md)
+* 10th: [Illuminating search spaces by mapping elites](open_endedness_and_auto_curriculums/MAP_Elites.md)
 
 &#x20;&#x20;
 
