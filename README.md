@@ -19,7 +19,7 @@ Entries are added on the go (often from my phone or iPad) and later refined on m
 ## 🛠️ Method
 
 ####  Identification of Papers
-   1. **X (formerly Twitter)**: there is a huge AI community on twitter which post papers with discussion in the comments.
+   1. **X (Twitter)**: there is a huge AI community on twitter which post papers with discussion in the comments.
       * **TIP**: If others choose to use this I would highly recommend using the 'Not Interested' feature on posts, otherwise your feed will rapidly deteriorate and show less papers.
    2. **Reddit**: r/MachineLearning 
    3. **Conferences**: I recently attend ICLR and came back with a treasure trove of interesting reads.
