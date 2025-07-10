@@ -19,7 +19,7 @@ Entries are added on the go (often from my phone or iPad) and later refined on m
 ## 🛠️ Method
 
 ####  Identification of Papers
-   1. **X (formerly Twitter)**: there is a huge AI community on twitter which post papers with discussion in the comments.
+   1. **X (Twitter)**: there is a huge AI community on twitter which post papers with discussion in the comments.
       * **TIP**: If others choose to use this I would highly recommend using the 'Not Interested' feature on posts, otherwise your feed will rapidly deteriorate and show less papers.
    2. **Reddit**: r/MachineLearning 
    3. **Conferences**: I recently attend ICLR and came back with a treasure trove of interesting reads.
@@ -44,7 +44,9 @@ All paper summaries are stored in **[this repository](https://github.com/domrigb
 
 ## 🔍 Highlights & Lessons Learned
 
-Below are concise summaries of standout methods and recurring themes, organized by topic:
+The following section includes:
+   * **Interesting ideas**: any ideas I saw in papers which might be useful if someone is tackling a similar problem.
+   * **Concise fundamentals**: try and explain the fundamentals of a topic in a few short bullet points!
 
 ### 1. Reinforcement Learning (RL)
 
@@ -56,7 +58,7 @@ Below are concise summaries of standout methods and recurring themes, organized 
    Writing‑Zero introduces preference training in non‑verifiable environments, then uses that model as a reward in competitive creative writing games.
 4. **Conditional Sequence MARL**\
    [JointPPO](marl/JointPPO.md) orders agents by decision importance, then uses a recurrent action‑conditioned network to generate actions sequentially.
-5. **Synthetic Experience Replay**\
+5. **Generative AI to expand experience buffer**\
    [SynthER](non_LLM_reinforcement_learning/SyntheticExperienceReplay.md) trains a diffusion model to expand the replay buffer with synthetic experiences for mixed real‑fake training.
 6. **Reasoning via Games**\
    [Play to Generalise](LLM_reinforcement_learning/ReasoningThroughGames.md) demonstrates that game‑based move prediction enhances specific reasoning capabilities.
