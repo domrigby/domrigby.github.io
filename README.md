@@ -44,7 +44,9 @@ All paper summaries are stored in **[this repository](https://github.com/domrigb
 
 ## 🔍 Highlights & Lessons Learned
 
-Below are concise summaries of standout methods and recurring themes, organized by topic:
+The following section includes:
+   1. **Interesting ideas**: any ideas I saw in papers which might be useful if someone is tackling a similar problem.
+   2. **Concise fundamentals**: try and explain the fundamentals of a topic in a few short bullet points!
 
 ### 1. Reinforcement Learning (RL)
 
