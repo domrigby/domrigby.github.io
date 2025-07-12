@@ -51,6 +51,7 @@ Below is a plot of a t-SNE dimensionality reduction
   frameborder="0"
   title="t-SNE of Paper Descriptions">
 </iframe>
+
 ---
 
 ## 🔍 Highlights & Lessons Learned
