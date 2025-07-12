@@ -40,9 +40,14 @@ Entries are added on the go (often from my phone or iPad) and later refined on m
 This website is a user-friendly entry point and summary of the repository. This hosts the top level themes and parts I thought were interesting.
 All paper summaries are stored in **[this repository](https://github.com/domrigby/domrigby.github.io)**
 
+---
+
 ## Fun Plots
 
-Below is a plot of a t-SNE dimensionality reduction 
+Inspired by [figure 2 of OMNI-EPIC](https://arxiv.org/pdf/2405.15568) and the method used to create the policy disvesity metrics in
+[Foundation Model Self Play](open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md). I created an embedding of each a desription
+of all the papers in this repo and then performed a t-SNE compression! Have a play around and you can see some of my neighbourhoods of interest.
+I hope to soon update the embedding model!
 
 <iframe
   src="tsne_papers.html"
