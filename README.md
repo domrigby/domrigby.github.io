@@ -40,6 +40,17 @@ Entries are added on the go (often from my phone or iPad) and later refined on m
 This website is a user-friendly entry point and summary of the repository. This hosts the top level themes and parts I thought were interesting.
 All paper summaries are stored in **[this repository](https://github.com/domrigby/domrigby.github.io)**
 
+## Fun Plots
+
+Below is a plot of a t-SNE dimensionality reduction 
+
+<iframe
+  src="tsne_papers.html"
+  width="100%"
+  height="600"
+  frameborder="0"
+  title="t-SNE of Paper Descriptions">
+</iframe>
 ---
 
 ## 🔍 Highlights & Lessons Learned
@@ -55,9 +66,9 @@ The following section includes:
    by other words so provide little information in te RL process when they are chosen. E.g. "I went to the shop", "to" and "the" are determined by the other words
 2. **Zone of Proximal Development**\
    Methods like [ProRL](LLM_reinforcement_learning/ProlongedRL.md) and [Absolute Zero Reasoner](LLM_reinforcement_learning/AbsoluteZeroReasoner.md) filter out consistently correct or incorrect prompts to focus learning in the optimal difficulty zone.
-   This is discussed in detail in [section 4](#4-openendedness--autocurricula).
+   This is discussed in detail in [section 2](#2-openendedness--autocurricula).
 3. **It is possible to make Non‑Verifiable Reward Models**
-   [Writing‑Zero](LLM_reinforcement_learning/WritingZeroNonVerifiableRewards.md) introduces LLM based preference training in non‑verifiable environments,
+   [Writing‑Zero](LLM_reinforcement_learning/WritingZeroNonVerifiableRewards.md) introduces LLM based prefserence training in non‑verifiable environments,
    then uses that model as a reward in competitive creative writing games.
 4. **You can use generative AI to expand experience buffer**\
    [SynthER](non_LLM_reinforcement_learning/SyntheticExperienceReplay.md) trains a diffusion model to expand the replay buffer with synthetic experiences for mixed real‑fake training.
@@ -71,29 +82,7 @@ The following section includes:
       * Create environments of interest ([OMNI-EPIC](open_endedness_and_auto_curriculums/OpenEndednessUsingLLMS.md))
       * Writing code based policies and suggesting improvements after view results ([Foundation Model Self-Play](open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md))
 
-### 2. Pretraining & General Training Tips
-
-1. **Heterogeneous Pretraining: think outside the box when it comes to data**\
-   [Pi0.5](robotics/Pi0.5VLA.md) and [V‑JEPA](general_training/V-JEPA2.md) both use video data to train robotics models. This video still contains information of interst to robotics.
-   Pre-training data can come from a wide range of sources!
-2. **Reasoning with Next Token Prediction (RNTP)**: (allowing the model to reason about the next token during pre-training) \
-   * [RL‑Pre‑Training](LLM_reinforcement_learning/RLPretraining.md) suggests using next token prediction for RL but only applies in fine-tuning.
-   * [Jack Morris' blog post on scaling RL](LLM_reinforcement_learning/ScalingRLto10^26FLOPS.md) suggest that this might be way to squeeze the absolute maximum 
-   out of our ['fossil fuel-like'](https://www.youtube.com/watch?v=YD-9NG1Ke5Y) internet data. Next token prediction is verifiable so should allow us to get further performance on this internet dataa. We just
-   need to work out how to scale LLM RL (see blog post and summary for further details).
-3. **Enhanced Exploration in PPO/GRPO**\
-   Higher clipping parameters and dynamic KL divergence terms (as in [ProRL](LLM_reinforcement_learning/ProlongedRL.md) and [Play to Generalise](LLM_reinforcement_learning/ReasoningThroughGames.md)) improve exploration and stability.
-4. **Dual‑Outcome Reasoning: knows what's bad is also useful!**\
-   Generating both best and worst moves in game scenarios deepens model understanding of decision boundaries ([Play to Generalise](LLM_reinforcement_learning/ReasoningThroughGames.md))
-5. **GPU Based Environments**\
-   Always host simulation environments on the GPU when possible. This allows you to run tens of thousands of environments in parallel ([JaxMARL](marl/JaxMARL.md), [Kinetix](distribution_and_gpu_acceleration/KInetixGeneralRL.md))
-6. **Beware When Using Qwen for RL**\
-   [RL with Spurious Rewards](LLM_reinforcement_learning/SpuriousRewardsRL.md) shows that random reward signals can still drive code production due to clipping effects.
-7. **Structured Chain of Thought Prompting**\
-   [FinCoT](finance_applications/FinCoT.md) generated structured chain of thought prompts using DeepResearch to identify methods to solve finance problems (these are fairly well known). These included well known methods for solving these problems.
-   This drastically improved the performance and provided a more auditable solution.
-
-### 3. Open‑Endedness & Auto‑Curricula
+### 2. Open‑Endedness & Auto‑Curricula
 1.  **Open-Endedness Requires Novel and Learnable Artefacts**\
    Open-ended is defined in [Open-Endedness is Key to ASI](open_endedness_and_auto_curriculums/OpenEndednessIsKeyToASI.md).
    A system is open-ended if it **continually creates novel and learnable artefacts**. This is dependent on the observer 
@@ -112,6 +101,28 @@ The following section includes:
 6. **Performance annealed exploration reward**:
    [Curriculum Learning and Population-based Self-Play](open_endedness_and_auto_curriculums/MultiAgentCurriculumSelfPlay.md) suggests using an exploration reward
    which is annealed according to agent performance. It therefore explores more when it is doing badly and exploits when it is doing well.
+
+### 3. Pretraining & General Training Tips
+
+1. **Heterogeneous Pretraining: think outside the box when it comes to data**\
+   [Pi0.5](robotics/Pi0.5VLA.md) and [V‑JEPA](general_training/V-JEPA2.md) both use video data to train robotics models. This video still contains information of interst to robotics.
+   Pre-training data can come from a wide range of sources!
+2. **Reasoning with Next Token Prediction (RNTP)**: (allowing the model to reason about the next token during pre-training) \
+   * [RL‑Pre‑Training](LLM_reinforcement_learning/RLPretraining.md) suggests using next token prediction for RL but only applies in fine-tuning.
+   * [Jack Morris' blog post on scaling RL](LLM_reinforcement_learning/ScalingRLto10^26FLOPS.md) suggest that this might be way to squeeze the absolute maximum 
+   out of our ['fossil fuel-like'](https://www.youtube.com/watch?v=YD-9NG1Ke5Y) internet data. Next token prediction is verifiable so should allow us to get further performance on this internet dataa. We just
+   need to work out how to scale LLM RL (see blog post and summary for further details).
+3. **When doing PPO/GRPO, make the upper bound clip larger ($|\epsilon_{clip, high} - 1|> |1 - \epsilon_{clip, low|}$)**\
+   The upper clip bound being higher increases the probability of unlikely choices and increases exploration (as in [ProRL](LLM_reinforcement_learning/ProlongedRL.md) and [Play to Generalise](LLM_reinforcement_learning/ReasoningThroughGames.md)) improve exploration and stability.
+4. **Dual‑Outcome Reasoning: knows what's bad is also useful!**\
+   Generating both best and worst moves in game scenarios deepens model understanding of decision boundaries ([Play to Generalise](LLM_reinforcement_learning/ReasoningThroughGames.md))
+5. **Always use a GPU based environment when possible**\
+   Always host simulation environments on the GPU when possible. This allows you to run tens of thousands of environments in parallel ([JaxMARL](marl/JaxMARL.md), [Kinetix](distribution_and_gpu_acceleration/KInetixGeneralRL.md))
+6. **Beware When Using Qwen for RL**\
+   [RL with Spurious Rewards](LLM_reinforcement_learning/SpuriousRewardsRL.md) shows that random reward signals can still drive code production due to clipping effects.
+7. **Telling the model how to think improves performance**\
+   [FinCoT](finance_applications/FinCoT.md) improved performance by giving the reasoning model **strucutred chain-of-thought prompts. For finance problems, methods to solve certain types of problems are well known, or at least the important things to look for.
+   These chain of thought patterns are generated using DeepResearch and then added to the prompt after the question as a suggestion of how to think.
 
 ### 4. Robotics & Control
 
