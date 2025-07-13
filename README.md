@@ -133,13 +133,13 @@ The following section includes:
 
 ### 4. Robotics & Control
 
-1. **Action Chunk Prediction**\
+1. **Predict multiple actions at once rather than one**\
    [Mimic One](robotics/MimicOneDexterousHand.md) predicts chunks of actions to enforce temporal consistency.
-2. **Diffusion‑Based Policies**\
+2. **Using diffusion models as policies**\
    Diffusion models generate continuous action fields for robot control ([Pi0.5](robotics/Pi0.5VLA.md), [Mimic One](robotics/MimicOneDexterousHand.md)).
-3. **Frame Prediction for Planning**\
+3. **Learning world models for large scale video data**\
    [V‑JEPA](general_training/V-JEPA2.md) pretrains on millions of videos to predict missing frames, then fine‑tunes on robotic datasets for causal understanding and planning.
-4. **Pre-Training is Possible in Robotics**
+4. **Pre-Training is possible in robotics**
    * [V-JEPA](general_training/V-JEPA2.md) and [Pi0.5](robotics/Pi0.5VLA.md) both used huge amounts of internet video data to train world models to predict actions and effects.
 
 ### 5. Distribution
@@ -176,8 +176,9 @@ The following section includes:
 ### 7. Self‑Improvement Strategies
 
 1. **LLMs can do self-play for reasoning, as long as their grounded to reality**\
-   [Absolute Zero Reasoner](LLM_reinforcement_learning/AbsoluteZeroReasoner.md) creates coding puzzles in a self-play method 
-2. **Unsupervised Self‑Dialog Games**\
+   [Absolute Zero Reasoner](LLM_reinforcement_learning/AbsoluteZeroReasoner.md) creates coding puzzles in a self-play method, [SPIRAL](LLM_reinforcement_learning/SelfPlayZeroSumGames.md) introduced a paradigm of self-play through text-based
+   games.
+2. **Unsupervised Self‑Dialog Games**
    VLMs play in‑domain “Guess Who” style games to self‑improve vision‑language reasoning. ([VLM Self‑Dialog Games](self_improvement/SelfDialogueGames.md))
 3. **Adaptive Prompting & Team Agents**\
    [Agents of Change](LLM_reinforcement_learning/LLMsForStrategicPlanning.md) evolve prompts and orchestrate agent teams (analyst, coder, researcher) for strategic planning tasks.
