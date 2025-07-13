@@ -2,7 +2,7 @@
 
 <p align="center">By Dom Rigby</p>
 
-> Note: this is GitHub Pages website. Go to [domrigby.github.io/](https://domrigby.github.io/) for full experience.
+> Note: this is GitHub Pages website. If viewing on GitHub, please go to [domrigby.github.io](https://domrigby.github.io/) for full experience.
 
 ---
 
