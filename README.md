@@ -46,8 +46,11 @@ All paper summaries are stored in **[this repository](https://github.com/domrigb
 ## 📈 Fun Plots
 
 Inspired by [figure 2 of OMNI-EPIC](https://arxiv.org/pdf/2405.15568) and the method used to create the policy diversity metrics in
-[Foundation Model Self Play](open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md). I created an embedding of each a desription
-of all the papers in this repo and then performed a t-SNE compression! Have a play around and you can see some of my neighbourhoods of interest.
+[Foundation Model Self Play](open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md). I got o4-mini-high to create a one a
+short description of each paper using [this prompt](data_analysis/tsne_embedding_description_prompt.txt) and then embedded this description
+using sentence-transformers python library. These embeddings were reduced to 2D using t-SNE and cluster using K-Means. The titles of the clusters
+are chosen by GPT-4o by giving it the title of each paper in the cluster.
+
 I hope to soon update the embedding model!
 
 There is an option to turn on convex hulls around clusters in the legend. There is a UMAP version of this plot in this [more plots](#more-plots) section.
