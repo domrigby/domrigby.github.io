@@ -50,6 +50,8 @@ Inspired by [figure 2 of OMNI-EPIC](https://arxiv.org/pdf/2405.15568) and the me
 of all the papers in this repo and then performed a t-SNE compression! Have a play around and you can see some of my neighbourhoods of interest.
 I hope to soon update the embedding model!
 
+There is an option to turn on convex hulls around clusters in the legend. There is a UMAP version of this plot in this [more plots](#more-plots) section.
+
 <iframe
   src="data_analysis/tsne_papers.html"
   width="100%"
@@ -269,6 +271,27 @@ The following section includes:
   frameborder="0"
   title="t-SNE of Paper Descriptions">
 </iframe>
+
+#### U-MAP
+
+<iframe
+  src="data_analysis/umap_papers.html"
+  width="100%"
+  height="600"
+  frameborder="0"
+  title="<b>UMAP of Paper Descriptions<\b>">
+</iframe>
+
+The t-SNE for comparison:
+
+<iframe
+  src="data_analysis/tsne_papers.html"
+  width="100%"
+  height="600"
+  frameborder="0"
+  title="<b>t-SNE of Paper Descriptions<\b>">
+</iframe>
+
 
 ---
 

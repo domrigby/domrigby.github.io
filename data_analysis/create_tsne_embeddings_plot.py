@@ -14,11 +14,14 @@ from sklearn.cluster import KMeans
 from scipy.spatial import ConvexHull
 
 # ─── 1. Configuration ──────────────────────────────────────────────────────────
-JSON_PATH = 'paper_one_sentence_descriptions.json'
-PCA_DIMS     = 30
-TSNE_PARAMS  = dict(n_components=2, random_state=42, perplexity=15)
-UMAP_PARAMS  = dict(n_components=2, random_state=42, metric='cosine')
-N_CLUSTERS   = 6
+JSON_PATH      = 'paper_one_sentence_descriptions.json'
+PCA_DIMS       = 30
+TSNE_PARAMS    = dict(n_components=2, random_state=42, perplexity=15)
+UMAP_PARAMS    = dict(n_components=2, random_state=42, metric='cosine')
+N_CLUSTERS     = 6
+
+# pick a consistent colour sequence
+COLOR_SEQ = px.colors.qualitative.Plotly
 
 # ─── 2. Load & Embed ───────────────────────────────────────────────────────────
 with open(JSON_PATH, 'r') as f:
@@ -27,8 +30,8 @@ with open(JSON_PATH, 'r') as f:
 titles = [d['title']   for d in data]
 descs  = [d['summary'] for d in data]
 
-# 2a. get sentence embeddings
-model = SentenceTransformer('all-MiniLM-L6-v2')
+# 2a. Sentence‑Transformer embeddings
+model        = SentenceTransformer('all-MiniLM-L6-v2')
 emb_original = model.encode(descs, convert_to_numpy=True, show_progress_bar=False)
 
 # 2b. PCA pre‑reduction
@@ -52,47 +55,56 @@ def plot_embedding(emb2, labels, method_name, out_html):
         'title': titles
     })
 
-    # base scatter
+    # base scatter with explicit color sequence
     fig = px.scatter(
-        df, x='x', y='y',
+        df,
+        x='x', y='y',
         color='cluster',
         hover_name='title',
+        color_discrete_sequence=COLOR_SEQ,
         labels={'x':'<b>Dim 1</b>', 'y':'<b>Dim 2</b>'},
         title=f'<b>{method_name} of Paper Descriptions</b>',
         template='plotly_white'
     )
     fig.update_layout(title_x=0.5)
 
-    # convex hulls
-    palette = px.colors.qualitative.Plotly
+    # convex hulls, one legend item "Convex Hulls"
     for i, cl in enumerate(sorted(df['cluster'].unique(), key=int)):
         pts = df[df['cluster']==cl][['x','y']].values
         if pts.shape[0] < 3:
             continue
+
         hull = ConvexHull(pts)
         hull_pts = pts[hull.vertices]
         hull_pts = np.vstack([hull_pts, hull_pts[0]])  # close polygon
 
-        r, g, b = hex_to_rgb(palette[i % len(palette)])
+        # get the cluster color
+        base_hex = COLOR_SEQ[i % len(COLOR_SEQ)]
+        r, g, b  = hex_to_rgb(base_hex)
+
         fig.add_trace(
             go.Scatter(
-                x=hull_pts[:,0], y=hull_pts[:,1],
+                x=hull_pts[:,0],
+                y=hull_pts[:,1],
                 fill='toself',
                 fillcolor=f'rgba({r},{g},{b},0.15)',
                 line=dict(color=f'rgba({r},{g},{b},1)', width=1),
                 hoverinfo='skip',
-                showlegend=False
+                visible='legendonly',      # off by default
+                legendgroup='hulls',       # group under one legend item
+                showlegend=(i==0),         # only first trace shows legend entry
+                name='Convex Hulls'
             )
         )
 
-    # export
+    # export HTML
     fig.write_html(out_html, include_plotlyjs='cdn')
     return fig
 
 # ─── 5. Generate & Show ───────────────────────────────────────────────────────
 fig_tsne = plot_embedding(emb_tsne, labels_tsne, 't‑SNE', 'tsne_papers.html')
-fig_umap = plot_embedding(emb_umap, labels_umap, 'UMAP',  'umap_papers.html')
+fig_umap = plot_embedding(emb_umap, labels_umap,  'UMAP',  'umap_papers.html')
 
-# show inline (optional)
+# if you're in a notebook or want immediate display:
 fig_tsne.show()
 fig_umap.show()
