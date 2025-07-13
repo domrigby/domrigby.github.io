@@ -2,6 +2,8 @@
 
 <p align="center">By Dom Rigby</p>
 
+Note: this is GitHub Pages website. Go to [domrigby.github.io/](https://domrigby.github.io/) for full experience.
+
 ---
 
 ## 📌 Introduction
