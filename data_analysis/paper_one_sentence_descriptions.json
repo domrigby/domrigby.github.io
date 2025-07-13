@@ -1,170 +1,254 @@
 [
   {
     "title": "Absolute Zero Reasoner",
+    "date_read": "2025-05-23",
+    "link": "LLM_reinforcement_learning/AbsoluteZeroReasoner.md",
     "summary": "Addresses enabling language models to learn reasoning from scratch without demonstrations. Introduces a reinforcement learning framework starting from zero examples and iteratively refining decision policies. Demonstrates improved logical coherence and problem-solving accuracy in diverse reasoning tasks."
   },
   {
     "title": "π_{0.5}: a Vision-Language-Action Model with Open-World Generalization",
+    "date_read": "2025-05-24",
+    "link": "robotics/Pi0.5VLA.md",
     "summary": "Targets robust perception and action in unstructured environments. Proposes π_{0.5}, a model integrating visual, linguistic, and motor modules with adaptive planning. Demonstrates generalization to novel real-world tasks, achieving stable performance across varied scenarios."
   },
   {
     "title": "TD-MPC2: Scalable, Robust World Models for Continuous Control",
+    "date_read": "2025-05-25",
+    "link": "non_LLM_reinforcement_learning/TDMPC2.md",
     "summary": "Addresses sample inefficiency in model-based control. Introduces TD-MPC2, which fuses predictive world models with temporal-difference updates to guide action selection. Demonstrates faster learning and greater robustness on continuous control benchmarks compared to prior methods."
   },
   {
-    "title": "JointPPO: Diving Deeper into the Effectiveness of PPO in Multi-Agent Reinforcement Learning",
+    "title": "JointPPO: Diving Deeper into the Effectiveness of PPO in Multi-Age Reinforcement Learning",
+    "date_read": "2025-05-26",
+    "link": "marl/JointPPO.md",
     "summary": "Investigates coordination in multi-agent settings using proximal policy optimization. Presents JointPPO, extending PPO to jointly optimize across agents with shared objectives. Demonstrates faster convergence and improved collaborative behaviors in cooperative control environments."
   },
   {
     "title": "Synthetic Experience Replay",
+    "date_read": "2025-05-29",
+    "link": "non_LLM_reinforcement_learning/SyntheticExperienceReplay.md",
     "summary": "Addresses limited real-data interactions in reinforcement learning. Proposes synthetic experience replay, generating artificial transitions to augment training. Demonstrates accelerated policy improvement and enhanced stability on standard control and navigation tasks."
   },
   {
     "title": "Reinforcing Multi-Turn Reasoning in LLM Agents via Turn-Level Credit Assignment",
+    "date_read": "2025-05-30",
+    "link": "LLM_reinforcement_learning/MultiTurnCreditAssignmentLLMRL.md",
     "summary": "Targets inconsistent multi-turn reasoning in conversational agents. Introduces a turn-level credit assignment mechanism that allocates feedback to individual inference steps. Demonstrates more coherent dialogue flows and higher success rates on complex conversational benchmarks."
   },
   {
     "title": "Ultimate Guide to Supervised Fine-Tuning",
+    "date_read": "2025-06-01",
+    "link": "general_training/UltimateGuideToSFT.md",
     "summary": "Addresses challenges in adapting pre-trained models to specific tasks. Outlines a structured supervised fine-tuning pipeline involving curated data selection, learning-rate schedules, and evaluation loops. Demonstrates consistent performance gains and improved generalization across varied downstream tasks."
   },
   {
     "title": "Learning Complex Dexterous Manipulation with Deep Reinforcement Learning and Demonstrations (Demo Augmented RL)",
+    "date_read": "2025-06-02",
+    "link": "non_LLM_reinforcement_learning/DemoAugmentedRL.md",
     "summary": "Targets fine-grained robotic manipulation. Combines deep reinforcement learning with demonstration augmentation to guide exploration. Demonstrates accelerated skill acquisition and higher manipulation precision in complex dexterous tasks compared to pure RL."
   },
   {
     "title": "Spurious Rewards: Rethinking Training Signals in RLVR",
+    "date_read": "2025-06-03",
+    "link": "LLM_reinforcement_learning/SpuriousRewardsRL.md",
     "summary": "Examines misleading feedback in reinforcement learning for vision-language tasks. Analyzes how spurious reward signals impair policy learning. Proposes refined reward shaping and gating mechanisms to filter noise. Demonstrates more stable training and improved task reliability."
   },
   {
     "title": "ProRL: Prolonged Reinforcement Learning Expands Reasoning Boundaries in Large Language Models",
+    "date_read": "2025-06-04",
+    "link": "LLM_reinforcement_learning/ProlongedRL.md",
     "summary": "Addresses limited multi-step inference in language models. Introduces ProRL, leveraging extended reinforcement learning cycles to deepen reasoning capacity. Demonstrates that prolonged training without architectural changes enhances complex problem-solving and inference depth."
   },
   {
     "title": "JaxMARL: Multi-Agent RL Environments and Algorithms in JAX",
+    "date_read": "2025-06-05",
+    "link": "marl/JaxMARL.md",
     "summary": "Addresses efficient multi-agent experimentation. Presents JaxMARL, a collection of cooperative and competitive environments and algorithms implemented in JAX. Demonstrates accelerated experimentation and scalable training, enabling rapid development of multi-agent strategies on modern hardware."
   },
   {
     "title": "Illusion of Thinking: Understanding Strengths and Limitations of Large Reasoning Models (LRMs)",
+    "date_read": "2025-06-08",
+    "link": "LLM_reinforcement_learning/IllusionOfThinking.md",
     "summary": "Investigates actual reasoning capabilities of advanced language models. Analyzes performance on benchmark tasks to differentiate true inference from pattern matching. Proposes a diagnostic framework revealing key strengths and failure modes alongside effective use cases."
   },
   {
     "title": "CHIRPs: Change-Induced Regret Proxy Metrics for Lifelong Reinforcement Learning",
+    "date_read": "2025-06-09",
+    "link": "non_LLM_reinforcement_learning/CHIRPLifeLongRL.md",
     "summary": "Addresses performance evaluation in continual learning. Introduces CHIRPs, proxy metrics quantifying regret from environmental shifts. Demonstrates that CHIRPs reliably predict long-term performance drops and guide adaptive policy updates for stable lifelong learning."
   },
   {
     "title": "Enhanced POET: Open-Ended Reinforcement Learning through Unbounded Invention of Learning Challenges and their Solutions",
+    "date_read": "2025-06-09",
+    "link": "open_endedness_and_auto_curriculums/EnhancedPOETOpenEndedLearning.md",
     "summary": "Targets stagnation in open-ended learning frameworks. Proposes Enhanced POET, which continuously generates novel environments and corresponding solutions without predefinition. Demonstrates emergent curriculum complexity and improved agent versatility across diverse tasks."
   },
   {
     "title": "Reinforcement Pre-Training",
+    "date_read": "2025-06-10",
+    "link": "LLM_reinforcement_learning/RLPretraining.md",
     "summary": "Addresses inefficiencies in model initialization for sequential decision-making. Introduces reinforcement pre-training, using simulated interactions to prime model weights before task-specific learning. Demonstrates faster convergence and higher initial performance across varied control and reasoning challenges."
   },
   {
     "title": "Reinforcement Learning Teachers of Test Time Scaling",
+    "date_read": "2025-06-11",
+    "link": "LLM_reinforcement_learning/CreatingRLTeachers.md",
     "summary": "Targets dynamic computational constraints at inference. Proposes a teacher-student reinforcement learning scheme that trains guidance policies for test-time model scaling. Demonstrates improved trade-offs between efficiency and accuracy under varying resource budgets."
   },
   {
     "title": "Beyond the 80/20 Rule: High-Entropy Minority Tokens Drive Effective Reinforcement Learning for LLM Reasoning",
+    "date_read": "2025-06-11",
+    "link": "LLM_reinforcement_learning/TokenEntropyRLVR.md",
     "summary": "Investigates the influence of rare inputs in language model training. Shows that emphasizing high-entropy minority tokens during reinforcement learning boosts reasoning robustness. Demonstrates enhanced inference accuracy and generalization on complex reasoning benchmarks."
   },
   {
     "title": "Writing-Zero: Bridge the Gap Between Non-verifiable Tasks and Verifiable Rewards",
+    "date_read": "2025-06-12",
+    "link": "LLM_reinforcement_learning/WritingZeroNonVerifiableRewards.md",
     "summary": "Addresses learning on tasks lacking explicit feedback. Introduces Writing-Zero, which decomposes tasks into subtasks with proxy reward functions. Demonstrates reliable policy learning in scenarios where direct performance metrics are unavailable."
   },
   {
     "title": "Play to Generalize: Learning to Reason Through Game Play",
+    "date_read": "2025-06-16",
+    "link": "LLM_reinforcement_learning/ReasoningThroughGames.md",
     "summary": "Explores interactive gameplay to foster reasoning adaptability. Trains models on diverse game environments, encouraging transfer of inference strategies. Demonstrates improved performance on novel reasoning tasks beyond the training games."
   },
   {
     "title": "mimic-one: a Scalable Model Recipe for General Purpose Robot Dexterity",
+    "date_read": "2025-06-17",
+    "link": "non_LLM_reinforcement_learning/DemoAugmentedRL.md",
     "summary": "Addresses scalable dexterity in robotics. Introduces mimic-one, a training recipe combining imitation learning with reinforcement signals to refine motor skills. Demonstrates robust transfer of complex manipulation abilities across varied robot platforms."
   },
   {
     "title": "Prioritised Level Replay",
+    "date_read": "2025-06-18",
+    "link": "open_endedness_and_auto_curriculums/PrioritisedLevelReplay.md",
     "summary": "Targets efficient curriculum learning. Proposes prioritized level replay, selecting training scenarios based on their estimated learning impact. Demonstrates accelerated skill acquisition and stronger generalization by focusing on the most informative levels."
   },
   {
     "title": "Self-Adapting Language Models",
+    "date_read": "2025-06-19",
+    "link": "LLM_reinforcement_learning/SelfAdaptingLanguageModels.md",
     "summary": "Addresses static performance in pre-trained language systems. Introduces a self-adaptation framework enabling models to adjust internal parameters based on real-time feedback. Demonstrates sustained performance improvements and flexibility across shifting input distributions."
   },
   {
     "title": "Agents of Change: Self-Evolving LLM Agents for Strategic Planning",
+    "date_read": "2025-06-20",
+    "link": "LLM_reinforcement_learning/LLMsForStrategicPlanning.md",
     "summary": "Targets long-term strategic planning adaptability. Presents self-evolving agent architectures that iteratively modify strategies using performance feedback. Demonstrates superior planning capabilities and dynamic policy refinement in complex decision environments."
   },
   {
     "title": "KINETIX: INVESTIGATING THE TRAINING OF GENERAL AGENTS THROUGH OPEN-ENDED PHYSICS-BASED CONTROL TASKS",
+    "date_read": "2025-06-21",
+    "link": "distribution_and_gpu_acceleration/KInetixGeneralRL.md",
     "summary": "Explores training general-purpose agents via physics simulations. Introduces KINETIX, a framework generating open-ended control challenges in simulated environments. Demonstrates agents capable of diverse skill acquisition and robust transfer across varied tasks."
   },
   {
     "title": "Superintelligence From First Principles (blog post)",
+    "date_read": "2025-06-22",
+    "link": "open_endedness_and_auto_curriculums/SuperintelligenceFromFirstPrinciples.md",
     "summary": "Examines theoretical foundations for superintelligent systems. Derives core principles of intelligence dynamics through first-principles analysis. Argues that open-ended learning and iterative self-improvement drive emergent superintelligence."
   },
   {
     "title": "Automatic Curriculum Learning for Driving Scenarios: Towards Robust and Efficient Reinforcement Learning",
+    "date_read": "2025-06-23",
+    "link": "open_endedness_and_auto_curriculums/AutoCurriculumAutonomousDriving.md",
     "summary": "Addresses curriculum adaptation in autonomous driving. Proposes automatic curriculum learning that adjusts scenario difficulty based on agent performance. Demonstrates faster, more robust policy learning in diverse simulated traffic environments."
   },
   {
     "title": "How Visual Representations Map to Language Feature Space in Multimodal LLMs",
+    "date_read": "2025-06-24",
+    "link": "general_training/SharedRepresentationsInVLMs.md",
     "summary": "Investigates alignment between image and text embeddings in multimodal models. Analyzes how visual features project into language spaces. Proposes mapping techniques to enhance cross-modal retrieval accuracy and reasoning consistency."
   },
   {
     "title": "Multi-Agent Training for Pommerman: Curriculum Learning and Population-based Self-Play Approach",
+    "date_read": "2025-06-25",
+    "link": "open_endedness_and_auto_curriculums/MultiAgentCurriculumSelfPlay.md",
     "summary": "Targets scalable multi-agent skill development in Pommerman. Combines curriculum learning with population-based self-play to evolve strategies. Demonstrates accelerated strategic adaptation and emergent cooperation among agents."
   },
   {
     "title": "Automatic Curriculum Design for Zero-Shot Human AI Coordination",
+    "date_read": "2025-06-26",
+    "link": "open_endedness_and_auto_curriculums/AutoCurriculumForHumanAICoordination.md",
     "summary": "Addresses AI-human collaboration without prior joint training. Proposes automatic curriculum design that scaffolds tasks to foster coordination. Demonstrates improved zero-shot collaboration and mutual adaptability in human-AI teams."
   },
   {
     "title": "OMNI-EPIC: Open-Endedness Via Models of Human Notions of Interestingness With Environments Programmed In Code",
+    "date_read": "2025-06-28",
+    "link": "open_endedness_and_auto_curriculums/OpenEndednessUsingLLMS.md",
     "summary": "Explores encoding human curiosity into environment generation. Introduces OMNI-EPIC, which models human-defined interest metrics to program dynamic challenges. Demonstrates richer open-ended exploration aligned with human preferences."
   },
   {
     "title": "Self-Supervised Video Models Enable Understanding, Prediction and Planning (V-JEPA)",
+    "date_read": "2025-06-30",
+    "link": "general_training/V-JEPA2.md",
     "summary": "Addresses dependency on labeled video data. Introduces V-JEPA, a self-supervised framework learning representations via masked frame prediction. Demonstrates improved video understanding, prediction accuracy, and planning capabilities without annotations."
   },
   {
     "title": "Open-Endedness is Essential for Artificial Superhuman Intelligence",
+    "date_read": "2025-07-01",
+    "link": "open_endedness_and_auto_curriculums/SuperintelligenceFromFirstPrinciples.md",
     "summary": "Argues continuous innovation is critical for superhuman AI. Analyzes theoretical bases of open-ended learning and self-improvement. Demonstrates that systems embracing perpetual novelty outperform static architectures in complex domains."
   },
   {
     "title": "SPIRAL: Self-Play on Zero-Sum Games Incentivizes Reasoning via Multi-Agent Multi-Turn Reinforcement Learning",
+    "date_read": "2025-07-02",
+    "link": "LLM_reinforcement_learning/SelfPlayZeroSumGames.md",
     "summary": "Targets enhanced reasoning through competitive play. Introduces SPIRAL, a multi-turn self-play framework on zero-sum games that refines strategies via reinforcement signals. Demonstrates deeper inference skills and superior adversarial task performance."
   },
   {
     "title": "Training extremely large neural networks across thousands of GPUs by Jeremy Jordan",
+    "date_read": "2025-07-04",
+    "link": "distribution_and_gpu_acceleration/TrainingOnThousandsOfGPUs.md",
     "summary": "Addresses scalability of massive model training. Presents system designs and optimization strategies for distributing workloads across thousands of GPUs. Demonstrates significant throughput gains and reduced training times on large-scale benchmarks."
   },
   {
     "title": "IMPALA: Scalable Distributed Deep-RL with Importance Weighted Actor-Learner Architectures",
+    "date_read": "2025-07-05",
+    "link": "distribution_and_gpu_acceleration/IMPALA_DistributedRL.md",
     "summary": "Addresses stability and efficiency in distributed RL. Introduces an importance-weighted actor-learner architecture enabling scalable parallel training. Demonstrates improved learning efficiency and stability on large-scale reinforcement learning tasks."
   },
   {
     "title": "TorchBeast: A PyTorch Platform for Distributed RL",
+    "date_read": "2025-07-05",
+    "link": "distribution_and_gpu_acceleration/TorchBeastDistributedPyTorch.md",
     "summary": "Addresses need for unified distributed RL frameworks. Presents TorchBeast, a PyTorch-based system streamlining large-scale agent training. Demonstrates efficient resource utilization and faster iteration on benchmark reinforcement learning challenges."
   },
   {
     "title": "Distributed PPO Blog Post",
+    "date_read": "2025-07-07",
+    "link": "distribution_and_gpu_acceleration/DistributedPPO.md",
     "summary": "Discusses scaling proximal policy optimization across distributed systems. Details architectural adaptations for efficient parallel updates. Demonstrates substantial throughput improvements and reduced convergence times in policy optimization workloads."
   },
   {
     "title": "Reinforcement Learning with Docker",
+    "date_read": "2025-07-08",
+    "link": "distribution_and_gpu_acceleration/DockerInRL.md",
     "summary": "Addresses reproducibility and environment consistency in RL experiments. Introduces Docker-based workflows encapsulating dependencies and environments. Demonstrates streamlined deployment and consistent results across varied hardware setups."
   },
   {
     "title": "FinCoT: Grounding Chain-of-Thought in Expert Financial Reasoning",
+    "date_read": "2025-07-09",
+    "link": "finance_applications/FinCoT.md",
     "summary": "Targets interpretability in financial decision-making. Proposes FinCoT, integrating chain-of-thought traces grounded in expert analysis. Demonstrates improved forecasting accuracy and transparent reasoning in investment strategy tasks."
   },
   {
     "title": "Illuminating search spaces by mapping elites",
+    "date_read": "2025-07-10",
+    "link": "open_endedness_and_auto_curriculums/MAP_Elites.md",
     "summary": "Addresses opaque optimization dynamics. Introduces an elite-mapping technique that visualizes high-performing solution regions. Demonstrates enhanced insight into algorithm behavior and guides improved parameter tuning for diverse optimization challenges."
   },
   {
     "title": "Foundation Model Self-Play: Open-Ended Strategy Innovation via Foundation Models",
+    "date_read": "2025-07-11",
+    "link": "open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md",
     "summary": "Targets automated strategy generation. Uses self-play with foundation models to invent and refine novel tactics. Demonstrates emergent complex strategies and continuous innovation without manual curriculum design."
   },
   {
     "title": "How to scale RL to 10^26 FLOPs blog by Jack Morris",
+    "date_read": "2025-07-12",
+    "link": "LLM_reinforcement_learning/ScalingRLto10^26FLOPS.md",
     "summary": "Addresses extreme compute scaling for reinforcement learning. Explores hardware and software optimizations to enable workloads at 10^26 floating-point operations. Demonstrates feasibility of massive-scale training with reduced overhead on specialized platforms."
   }
 ]

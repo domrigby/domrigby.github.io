@@ -7,9 +7,9 @@ You are an expert scientific summarizer. For each paper or blog post title I lis
 - Use clear, domain‑agnostic language (no citations or undefined acronyms).
 - Ensure all summaries are similarly structured and length‑balanced.
 
-Return your results as a JSON array of objects with “title” and “summary” fields.
+Return your results as a JSON array of objects with “title”, "date_read" and "link" and “summary” fields.
 
-The titles of the papers are in the square brackets below. The date and the link can be ignored. More info about these papers can be found in the the github respotiory https://github.com/domrigby/domrigby.github.io
+The titles of the papers are in the square brackets below. More info about these papers can be found in the the github respotiory https://github.com/domrigby/domrigby.github.io
 ### May 2025
 
 * 23rd: [Absolute Zero Reasoner](LLM_reinforcement_learning/AbsoluteZeroReasoner.md)

@@ -256,4 +256,17 @@ The following section includes:
 
 ---
 
+### More Plots
+
+#### Papers Read Over Time
+<iframe
+  src="data_analysis/cumulative_papers_read.html"
+  width="100%"
+  height="600"
+  frameborder="0"
+  title="t-SNE of Paper Descriptions">
+</iframe>
+
+---
+
 *Last updated: July 9, 2025*
