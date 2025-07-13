@@ -55,6 +55,7 @@ with open(JSON_PATH, 'r') as f:
 
 titles = [d['title'] for d in data]
 descs  = [d['summary'] for d in data]
+dates = [d['date_read'] for d in data]
 
 # Encode descriptions
 model = SentenceTransformer('all-MiniLM-L6-v2')
@@ -75,29 +76,38 @@ umap_cluster_titles = pd.DataFrame({'cluster': labels_umap, 'title': titles}) \
     .groupby('cluster')['title'].apply(list).to_dict()
 
 # Get human/LLM-provided theme labels
-tsne_cluster_labels = summarize_all_clusters(tsne_cluster_titles)
-umap_cluster_labels = summarize_all_clusters(umap_cluster_titles)
+tsne_cluster_labels = {"0":"RL Training Techniques","1":"Distributed RL Systems","2":"Open-Ended Agents","3":"Curriculum and Open-Endedness","4":"LLM Reasoning Systems","5":"Robotic Control & Simulation"} #summarize_all_clusters(tsne_cluster_titles)
+umap_cluster_labels = {"0":"RL Generalization Methods","1":"Distributed RL Infrastructure","2":"Open-Ended AI Agents","3":"Curriculum Learning & Self-Play","4":"LLM Reasoning & Self-Play","5":"Robotics & Control"} #summarize_all_clusters(umap_cluster_titles)
 
 # ─── 3. Plotting with Convex Hulls and Theme Labels ──────────────────────────
 def plot_embedding(emb2, labels, method_name, out_html, cluster_labels):
     df = pd.DataFrame({
         'x': emb2[:, 0],
         'y': emb2[:, 1],
-        'cluster': labels.astype(str)
+        'cluster': labels.astype(str),
+        'title': titles
     })
     df['theme'] = df['cluster'].map(cluster_labels)
+    df['date_read'] = dates
 
     fig = px.scatter(
         df,
         x='x', y='y',
         color='theme',
-        hover_data=['theme'],
+        hover_data=[],
+        custom_data=['title', 'theme'],
         labels={'x': '<b>Dim 1</b>', 'y': '<b>Dim 2</b>'},
-        title=f'<b>{method_name} with Themes & Convex Hulls</b>',
+        title=f'<b>{method_name} Dimension Reduction of Description Embeddings/b>',
         color_discrete_sequence=COLOR_SEQ,
         template='plotly_white'
     )
     fig.update_layout(title_x=0.5)
+    fig.update_traces(
+        hovertemplate=(
+                "<b>%{customdata[0]}</b><br>" +
+                "Cluster: %{customdata[1]}<extra></extra>"
+        )
+    )
 
     # Add convex hulls (off by default)
     for i, theme in enumerate(sorted(df['theme'].unique())):
@@ -126,6 +136,20 @@ def plot_embedding(emb2, labels, method_name, out_html, cluster_labels):
                 name='Convex Hulls'
             )
         )
+
+    order_df = df.sort_values('date_read')
+
+    fig.add_trace(
+        go.Scatter(
+            x=order_df['x'],
+            y=order_df['y'],
+            mode='lines',
+            line=dict(dash='dash', width=1),
+            hoverinfo='skip',
+            visible='legendonly',  # hide by default
+            name='Reading Order'
+        )
+    )
 
     fig.write_html(out_html, include_plotlyjs='cdn')
     return fig
