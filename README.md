@@ -32,7 +32,6 @@ Entries are added on the go (often from my phone or iPad) and later refined on m
    3. Formatting and helping with markdown.
    4. Quick analysis scripts.
 
-
 ---
 
 ## ⚙️ Website Workings
@@ -44,7 +43,7 @@ All paper summaries are stored in **[this repository](https://github.com/domrigb
 
 ## Fun Plots
 
-Inspired by [figure 2 of OMNI-EPIC](https://arxiv.org/pdf/2405.15568) and the method used to create the policy disvesity metrics in
+Inspired by [figure 2 of OMNI-EPIC](https://arxiv.org/pdf/2405.15568) and the method used to create the policy diversity metrics in
 [Foundation Model Self Play](open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md). I created an embedding of each a desription
 of all the papers in this repo and then performed a t-SNE compression! Have a play around and you can see some of my neighbourhoods of interest.
 I hope to soon update the embedding model!

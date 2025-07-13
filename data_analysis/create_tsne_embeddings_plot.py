@@ -3,16 +3,13 @@ import plotly.express as px
 import plotly.graph_objects as go
 from sentence_transformers import SentenceTransformer
 from sklearn.manifold import TSNE
-from sklearn.decomposition import PCA
 from sklearn.cluster import KMeans
 import json
 
-# 1. your existing data
-# 1. Dictionary of papers → one-sentence descriptions
+# 1. load your data
 with open('paper_one_sentence_descriptions.json', 'r') as f:
     data = json.load(f)
 papers = {entry['title']: entry['summary'] for entry in data}
-
 
 titles, descs = list(papers), list(papers.values())
 
@@ -31,16 +28,24 @@ df = pd.DataFrame({
     'title': titles
 })
 
-# 5. plotly express!
+# 5. plotly express scatter (markers only)
 fig = px.scatter(
     df, x='x', y='y',
     color='cluster',               # color‐by cluster
     hover_name='title',            # show paper title on hover
-    labels={'x':'**t-SNE dim 1**','y':'**t-SNE dim 2**'},
-    title="t-SNE of Paper Descriptions",
-    size_max = 15
+    labels={
+        'x':'<b>t‑SNE dim 1</b>',
+        'y':'<b>t‑SNE dim 2</b>'
+    },
+    title='<b>t‑SNE of Paper Descriptions</b>',
+    size_max=15
 )
-fig.update_layout(template='plotly_white', title_x=0.5)
 
-# 6. dump as a standalone HTML
+# center title, use white template
+fig.update_layout(
+    template='plotly_white',
+    title_x=0.5
+)
+
+# 6. dump as standalone HTML
 fig.write_html("tsne_papers.html", include_plotlyjs='cdn')
