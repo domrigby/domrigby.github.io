@@ -1,5 +1,7 @@
-## JointPPO  
+## JointPPO: Diving Deeper into the Effectiveness of PPO in Multi-Age Reinforcement Learning 
+
 **Date:** 28th May 2025
+
 [arXiv Link](https://arxiv.org/pdf/2404.11831)
 
 **Key Points:**  

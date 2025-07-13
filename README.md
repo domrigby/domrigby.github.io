@@ -50,7 +50,7 @@ of all the papers in this repo and then performed a t-SNE compression! Have a pl
 I hope to soon update the embedding model!
 
 <iframe
-  src="tsne_papers.html"
+  src="data_analysis/tsne_papers.html"
   width="100%"
   height="600"
   frameborder="0"
@@ -206,9 +206,9 @@ The following section includes:
 ### May 2025
 
 * 23rd: [Absolute Zero Reasoner](LLM_reinforcement_learning/AbsoluteZeroReasoner.md)
-* 24th: [Pi0.5](robotics/Pi0.5VLA.md)
-* 25th: [TD-MPC2](non_LLM_reinforcement_learning/TDMPC2.md)
-* 26th: [JointPPo](marl/JointPPO.md)
+* 24th: [π_{0.5}: a Vision-Language-Action Model with Open-World Generalization](robotics/Pi0.5VLA.md)
+* 25th: [TD-MPC2: Scalable, Robust World Models for Continuous Control](non_LLM_reinforcement_learning/TDMPC2.md)
+* 26th: [JointPPO: Diving Deeper into the Effectiveness of PPO in Multi-Age Reinforcement Learning ](marl/JointPPO.md)
 * 29th: [Synthetic Experience Replay](non_LLM_reinforcement_learning/SyntheticExperienceReplay.md)
 * 30th: [Reinforcing Multi-Turn Reasoning in LLM Agents via Turn-Level Credit Assignment](LLM_reinforcement_learning/MultiTurnCreditAssignmentLLMRL.md)
 
