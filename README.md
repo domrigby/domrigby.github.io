@@ -41,7 +41,7 @@ All paper summaries are stored in **[this repository](https://github.com/domrigb
 
 ---
 
-## Fun Plots
+## 📈 Fun Plots
 
 Inspired by [figure 2 of OMNI-EPIC](https://arxiv.org/pdf/2405.15568) and the method used to create the policy diversity metrics in
 [Foundation Model Self Play](open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md). I created an embedding of each a desription
@@ -53,7 +53,7 @@ I hope to soon update the embedding model!
   width="100%"
   height="600"
   frameborder="0"
-  title="t-SNE of Paper Descriptions">
+  title="<b>t-SNE of Paper Descriptions<\b>">
 </iframe>
 
 ---
