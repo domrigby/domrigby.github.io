@@ -1,51 +1,98 @@
 import pandas as pd
-import plotly.express as px
-import plotly.graph_objects as go
-from sentence_transformers import SentenceTransformer
-from sklearn.manifold import TSNE
-from sklearn.cluster import KMeans
+import numpy as np
 import json
 
-# 1. load your data
-with open('paper_one_sentence_descriptions.json', 'r') as f:
+import plotly.express as px
+import plotly.graph_objects as go
+from plotly.colors import hex_to_rgb
+
+from umap.umap_ import UMAP
+from sentence_transformers import SentenceTransformer
+from sklearn.decomposition import PCA
+from sklearn.manifold import TSNE
+from sklearn.cluster import KMeans
+from scipy.spatial import ConvexHull
+
+# ─── 1. Configuration ──────────────────────────────────────────────────────────
+JSON_PATH = 'paper_one_sentence_descriptions.json'
+PCA_DIMS     = 30
+TSNE_PARAMS  = dict(n_components=2, random_state=42, perplexity=15)
+UMAP_PARAMS  = dict(n_components=2, random_state=42, metric='cosine')
+N_CLUSTERS   = 6
+
+# ─── 2. Load & Embed ───────────────────────────────────────────────────────────
+with open(JSON_PATH, 'r') as f:
     data = json.load(f)
-papers = {entry['title']: entry['summary'] for entry in data}
 
-titles, descs = list(papers), list(papers.values())
+titles = [d['title']   for d in data]
+descs  = [d['summary'] for d in data]
 
-# 2. embed & project
+# 2a. get sentence embeddings
 model = SentenceTransformer('all-MiniLM-L6-v2')
-emb = model.encode(descs, convert_to_numpy=True, show_progress_bar=False)
-emb2 = TSNE(n_components=2, random_state=42, perplexity=15).fit_transform(emb)
+emb_original = model.encode(descs, convert_to_numpy=True, show_progress_bar=False)
 
-# 3. cluster
-labels = KMeans(n_clusters=6, random_state=42).fit_predict(emb2)
+# 2b. PCA pre‑reduction
+pca     = PCA(n_components=PCA_DIMS, random_state=42)
+emb_pca = pca.fit_transform(emb_original)
 
-# 4. build a DataFrame
-df = pd.DataFrame({
-    'x': emb2[:,0], 'y': emb2[:,1],
-    'cluster': labels.astype(str),
-    'title': titles
-})
+# 2c. manifold reductions
+emb_tsne = TSNE(**TSNE_PARAMS).fit_transform(emb_pca)
+emb_umap = UMAP(**UMAP_PARAMS).fit_transform(emb_pca)
 
-# 5. plotly express scatter (markers only)
-fig = px.scatter(
-    df, x='x', y='y',
-    color='cluster',               # color‐by cluster
-    hover_name='title',            # show paper title on hover
-    labels={
-        'x':'<b>t‑SNE dim 1</b>',
-        'y':'<b>t‑SNE dim 2</b>'
-    },
-    title='<b>t‑SNE of Paper Descriptions</b>',
-    size_max=15
-)
+# ─── 3. Clustering ─────────────────────────────────────────────────────────────
+labels_tsne = KMeans(n_clusters=N_CLUSTERS, random_state=42).fit_predict(emb_tsne)
+labels_umap = KMeans(n_clusters=N_CLUSTERS, random_state=42).fit_predict(emb_umap)
 
-# center title, use white template
-fig.update_layout(
-    template='plotly_white',
-    title_x=0.5
-)
+# ─── 4. Plotting Helper ───────────────────────────────────────────────────────
+def plot_embedding(emb2, labels, method_name, out_html):
+    df = pd.DataFrame({
+        'x': emb2[:,0],
+        'y': emb2[:,1],
+        'cluster': labels.astype(str),
+        'title': titles
+    })
 
-# 6. dump as standalone HTML
-fig.write_html("tsne_papers.html", include_plotlyjs='cdn')
+    # base scatter
+    fig = px.scatter(
+        df, x='x', y='y',
+        color='cluster',
+        hover_name='title',
+        labels={'x':'<b>Dim 1</b>', 'y':'<b>Dim 2</b>'},
+        title=f'<b>{method_name} of Paper Descriptions</b>',
+        template='plotly_white'
+    )
+    fig.update_layout(title_x=0.5)
+
+    # convex hulls
+    palette = px.colors.qualitative.Plotly
+    for i, cl in enumerate(sorted(df['cluster'].unique(), key=int)):
+        pts = df[df['cluster']==cl][['x','y']].values
+        if pts.shape[0] < 3:
+            continue
+        hull = ConvexHull(pts)
+        hull_pts = pts[hull.vertices]
+        hull_pts = np.vstack([hull_pts, hull_pts[0]])  # close polygon
+
+        r, g, b = hex_to_rgb(palette[i % len(palette)])
+        fig.add_trace(
+            go.Scatter(
+                x=hull_pts[:,0], y=hull_pts[:,1],
+                fill='toself',
+                fillcolor=f'rgba({r},{g},{b},0.15)',
+                line=dict(color=f'rgba({r},{g},{b},1)', width=1),
+                hoverinfo='skip',
+                showlegend=False
+            )
+        )
+
+    # export
+    fig.write_html(out_html, include_plotlyjs='cdn')
+    return fig
+
+# ─── 5. Generate & Show ───────────────────────────────────────────────────────
+fig_tsne = plot_embedding(emb_tsne, labels_tsne, 't‑SNE', 'tsne_papers.html')
+fig_umap = plot_embedding(emb_umap, labels_umap, 'UMAP',  'umap_papers.html')
+
+# show inline (optional)
+fig_tsne.show()
+fig_umap.show()
