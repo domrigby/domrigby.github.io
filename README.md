@@ -53,7 +53,8 @@ are chosen by GPT-4o by giving it the title of each paper in the cluster.
 
 I hope to soon update the embedding model!
 
-There is an option to turn on convex hulls around clusters in the legend. There is a UMAP version of this plot in this [more plots](#more-plots) section.
+There is an option to turn on convex hulls around clusters in the legend. There is a UMAP version of this plot in this [more plots](#more-plots) section. Hover
+over (on tap on mobile) any point to see the name of the paper.
 
 <iframe
   src="data_analysis/tsne_papers.html"

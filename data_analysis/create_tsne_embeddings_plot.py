@@ -97,7 +97,7 @@ def plot_embedding(emb2, labels, method_name, out_html, cluster_labels):
         hover_data=[],
         custom_data=['title', 'theme'],
         labels={'x': '<b>Dim 1</b>', 'y': '<b>Dim 2</b>'},
-        title=f'<b>{method_name} Dimension Reduction of Description Embeddings/b>',
+        title=f'<b>{method_name} Dimension Reduction of Description Embeddings</b>',
         color_discrete_sequence=COLOR_SEQ,
         template='plotly_white'
     )
@@ -160,7 +160,7 @@ def plot_embedding(emb2, labels, method_name, out_html, cluster_labels):
             x=0.5  # center it
         ),
         margin=dict(
-            b=80  # add some extra bottom margin so it doesn’t get cut off
+            b=150  # add some extra bottom margin so it doesn’t get cut off
         )
     )
 

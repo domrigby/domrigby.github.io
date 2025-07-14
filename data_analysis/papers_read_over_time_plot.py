@@ -42,19 +42,24 @@ fig.update_layout(
     title_x=0.5
 )
 
-# 6. add annotation for avg papers per day
+# 6. add annotation for avg papers per day, total papers, and number of days
 fig.add_annotation(
-    text=f"<b>Avg: {avg_per_day:.2f} papers/day</b>",
+    text=(
+        f"<b>Avg:</b> {avg_per_day:.2f} papers/day<br>"
+        f"<b>Total:</b> {total_papers} papers<br>"
+        f"<b>Days:</b> {date_range_days}"
+    ),
     xref="paper", yref="paper",
     x=0.95, y=0.05,
     showarrow=False,
-    font=dict(size=20),
+    font=dict(size=16),
     bordercolor="black",
     borderwidth=1,
     borderpad=5,
     bgcolor="white",
     opacity=0.9
 )
+
 
 # 7. save to standalone HTML
 fig.write_html("cumulative_papers_read.html", include_plotlyjs='cdn')
