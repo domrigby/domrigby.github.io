@@ -74,50 +74,50 @@ The following section includes:
 ### 1. Reinforcement Learning (RL)
 
 1. **High‑Entropy Token Training**\
-   Training only on high‑entropy (“forks in the road”) tokens yields significant performance gains in LLMs. ([80:20 Rule](LLM_reinforcement_learning/TokenEntropyRLVR.md)). Many tokens in language are determined
+   * Training only on high‑entropy (“forks in the road”) tokens yields significant performance gains in LLMs. ([80:20 Rule](LLM_reinforcement_learning/TokenEntropyRLVR.md)). Many tokens in language are determined
    by other words so provide little information in te RL process when they are chosen. E.g. "I went to the shop", "to" and "the" are determined by the other words
 2. **Zone of Proximal Development**\
-   Methods like [ProRL](LLM_reinforcement_learning/ProlongedRL.md) and [Absolute Zero Reasoner](LLM_reinforcement_learning/AbsoluteZeroReasoner.md) filter out consistently correct or incorrect prompts to focus learning in the optimal difficulty zone.
+   * Methods like [ProRL](LLM_reinforcement_learning/ProlongedRL.md) and [Absolute Zero Reasoner](LLM_reinforcement_learning/AbsoluteZeroReasoner.md) filter out consistently correct or incorrect prompts to focus learning in the optimal difficulty zone.
    This is discussed in detail in [section 2](#2-openendedness--autocurricula).
 3. **It is possible to make Non‑Verifiable Reward Models**
-   [Writing‑Zero](LLM_reinforcement_learning/WritingZeroNonVerifiableRewards.md) introduces LLM based prefserence training in non‑verifiable environments,
+   * [Writing‑Zero](LLM_reinforcement_learning/WritingZeroNonVerifiableRewards.md) introduces LLM based prefserence training in non‑verifiable environments,
    then uses that model as a reward in competitive creative writing games.
 4. **You can use generative AI to expand experience buffer**\
-   [SynthER](non_LLM_reinforcement_learning/SyntheticExperienceReplay.md) trains a diffusion model to expand the replay buffer with synthetic experiences for mixed real‑fake training.
+   * [SynthER](non_LLM_reinforcement_learning/SyntheticExperienceReplay.md) trains a diffusion model to expand the replay buffer with synthetic experiences for mixed real‑fake training.
 5. **You can learn to reason by simply playing games**\
-   [Play to Generalise](LLM_reinforcement_learning/ReasoningThroughGames.md) demonstrates that game‑based move prediction enhances specific reasoning capabilities.
+   * [Play to Generalise](LLM_reinforcement_learning/ReasoningThroughGames.md) demonstrates that game‑based move prediction enhances specific reasoning capabilities.
 6. **GPU‑Accelerated Environments provide monumental speeds up**\
-   Frameworks like [Kinetix](distribution_and_gpu_acceleration/KInetixGeneralRL.md) and [JaxMARL](marl/JaxMARL.md) allow you to run tens of thousands of environments in parallel, as well as minimise CPU-GPU overhead.
+   * Frameworks like [Kinetix](distribution_and_gpu_acceleration/KInetixGeneralRL.md) and [JaxMARL](marl/JaxMARL.md) allow you to run tens of thousands of environments in parallel, as well as minimise CPU-GPU overhead.
 7. **Foundation Models roles in RL:**
-   Foundation models have intuition about what humans find interesting. They are therefore capable of designing curriculums for RL or being involved in the policy improvement steps. 
+   * Foundation models have intuition about what humans find interesting. They are therefore capable of designing curriculums for RL or being involved in the policy improvement steps. 
    See more in the [open-endedness section of this blog](#4-openendedness--autocurricula). Summary of a few interesting methods:
       * Create environments of interest ([OMNI-EPIC](open_endedness_and_auto_curriculums/OpenEndednessUsingLLMS.md))
       * Writing code based policies and suggesting improvements after view results ([Foundation Model Self-Play](open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md))
 
 ### 2. Open‑Endedness & Auto‑Curricula
 1.  **Open-Endedness Requires Novel and Learnable Artefacts**\
-   Open-ended is defined in [Open-Endedness is Key to ASI](open_endedness_and_auto_curriculums/OpenEndednessIsKeyToASI.md).
+   * Open-ended is defined in [Open-Endedness is Key to ASI](open_endedness_and_auto_curriculums/OpenEndednessIsKeyToASI.md).
    A system is open-ended if it **continually creates novel and learnable artefacts**. This is dependent on the observer 
    and the time-horizon. E.g. a mouse can't learn chess and a computer will eventually plateau in performance.
 2. **Procedural Level Generation** is used to create novel environments to learn in
-   [POET](open_endedness_and_auto_curriculums/EnhancedPOETOpenEndedLearning.md) introduces new levels, checks they meet a minimum learnability criterion and then only adds the most novel.
+   * [POET](open_endedness_and_auto_curriculums/EnhancedPOETOpenEndedLearning.md) introduces new levels, checks they meet a minimum learnability criterion and then only adds the most novel.
 3. **Prioritized Level Replay** is way to order those environments such that they are **learnable**. This creates an **auto-curriculum**.
-   [Prioritized Level Replay](open_endedness_and_auto_curriculums/PrioritisedLevelReplay.md) suggest ranking levels by temporal‑difference error.
+   * [Prioritized Level Replay](open_endedness_and_auto_curriculums/PrioritisedLevelReplay.md) suggest ranking levels by temporal‑difference error.
    Other methods include simply [filter out examples in which the agent completely fails or always succeeds](LLM_reinforcement_learning/AbsoluteZeroReasoner.md)
 4. **Randomly generate a new level, or create a new one!**: this creates population or pool of environments for the agent to interact with
-   [Auto-Curriculum Learning for Driving Scenarios](open_endedness_and_auto_curriculums/AutoCurriculumAutonomousDriving.md), [POET](open_endedness_and_auto_curriculums/EnhancedPOETOpenEndedLearning.md) and many others methods introduces the idea of random generator + editor as the basic building blocks for creating levels. One creates random new levels 
+   * [Auto-Curriculum Learning for Driving Scenarios](open_endedness_and_auto_curriculums/AutoCurriculumAutonomousDriving.md), [POET](open_endedness_and_auto_curriculums/EnhancedPOETOpenEndedLearning.md) and many others methods introduces the idea of random generator + editor as the basic building blocks for creating levels. One creates random new levels 
    and the other perturbs existing interesting levels.
 5. **Foundation models can act as 'intelligent search operators** to create new learning opportunities based on what they have learned that humans would find interesting.
-   This is suggest as a ['key method on the road to ASI'](open_endedness_and_auto_curriculums/OpenEndednessIsKeyToASI.md). and is explored for level generation in [OMNI-EPIC](open_endedness_and_auto_curriculums/OpenEndednessUsingLLMS.md)
+   * This is suggest as a ['key method on the road to ASI'](open_endedness_and_auto_curriculums/OpenEndednessIsKeyToASI.md). and is explored for level generation in [OMNI-EPIC](open_endedness_and_auto_curriculums/OpenEndednessUsingLLMS.md)
    and for policy generation is [Foundation Model Self-Play](open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md)
 6. **Performance annealed exploration reward**:
-   [Curriculum Learning and Population-based Self-Play](open_endedness_and_auto_curriculums/MultiAgentCurriculumSelfPlay.md) suggests using an exploration reward
+   * [Curriculum Learning and Population-based Self-Play](open_endedness_and_auto_curriculums/MultiAgentCurriculumSelfPlay.md) suggests using an exploration reward
    which is annealed according to agent performance. It therefore explores more when it is doing badly and exploits when it is doing well.
 
-### 3. Pretraining & General Training Tips
+### 3. Pretraining, Fine-Tuning & General Training Tips
 
 1. **Heterogeneous Pretraining: think outside the box when it comes to data**\
-   [Pi0.5](robotics/Pi0.5VLA.md) and [V‑JEPA](general_training/V-JEPA2.md) both use video data to train robotics models. This video still contains information of interst to robotics.
+   * [Pi0.5](robotics/Pi0.5VLA.md) and [V‑JEPA](general_training/V-JEPA2.md) both use video data to train robotics models. This video still contains information of interst to robotics.
    Pre-training data can come from a wide range of sources!
 2. **Reasoning with Next Token Prediction (RNTP)**: (allowing the model to reason about the next token during pre-training) \
    * [RL‑Pre‑Training](LLM_reinforcement_learning/RLPretraining.md) suggests using next token prediction for RL but only applies in fine-tuning.
@@ -125,25 +125,28 @@ The following section includes:
    out of our ['fossil fuel-like'](https://www.youtube.com/watch?v=YD-9NG1Ke5Y) internet data. Next token prediction is verifiable so should allow us to get further performance on this internet dataa. We just
    need to work out how to scale LLM RL (see blog post and summary for further details).
 3. **When doing PPO/GRPO, make the upper bound clip larger ($|\epsilon_{clip, high} - 1|> |1 - \epsilon_{clip, low|}$)**\
-   The upper clip bound being higher increases the probability of unlikely choices and increases exploration (as in [ProRL](LLM_reinforcement_learning/ProlongedRL.md) and [Play to Generalise](LLM_reinforcement_learning/ReasoningThroughGames.md)) improve exploration and stability.
+   * The upper clip bound being higher increases the probability of unlikely choices and increases exploration (as in [ProRL](LLM_reinforcement_learning/ProlongedRL.md) and [Play to Generalise](LLM_reinforcement_learning/ReasoningThroughGames.md)) improve exploration and stability.
 4. **Dual‑Outcome Reasoning: knows what's bad is also useful!**\
-   Generating both best and worst moves in game scenarios deepens model understanding of decision boundaries ([Play to Generalise](LLM_reinforcement_learning/ReasoningThroughGames.md))
+   * Generating both best and worst moves in game scenarios deepens model understanding of decision boundaries ([Play to Generalise](LLM_reinforcement_learning/ReasoningThroughGames.md))
 5. **Always use a GPU based environment when possible**\
-   Always host simulation environments on the GPU when possible. This allows you to run tens of thousands of environments in parallel ([JaxMARL](marl/JaxMARL.md), [Kinetix](distribution_and_gpu_acceleration/KInetixGeneralRL.md))
+   * Always host simulation environments on the GPU when possible. This allows you to run tens of thousands of environments in parallel ([JaxMARL](marl/JaxMARL.md), [Kinetix](distribution_and_gpu_acceleration/KInetixGeneralRL.md))
 6. **Beware When Using Qwen for RL**\
-   [RL with Spurious Rewards](LLM_reinforcement_learning/SpuriousRewardsRL.md) shows that random reward signals can still drive code production due to clipping effects.
+   * [RL with Spurious Rewards](LLM_reinforcement_learning/SpuriousRewardsRL.md) shows that random reward signals can still drive code production due to clipping effects.
 7. **Telling the model how to think improves performance**\
-   [FinCoT](finance_applications/FinCoT.md) improved performance by giving the reasoning model **strucutred chain-of-thought prompts. For finance problems, methods to solve certain types of problems are well known, or at least the important things to look for.
+   * [FinCoT](finance_applications/FinCoT.md) improved performance by giving the reasoning model **strucutred chain-of-thought prompts. For finance problems, methods to solve certain types of problems are well known, or at least the important things to look for.
    These chain of thought patterns are generated using DeepResearch and then added to the prompt after the question as a suggestion of how to think.
+8. **Creating 'soups' of all your different hyperparameter fine-tuning models** can improve performance.
+   * [ModelSoups](general_training/ModelSoups.md) achieved SotA performance on ImageNet by doing a greedy mix (only add if it improves performance). This works as fine-tuned models
+    often end up in the same loss valley and therefore averaging their performance can lead to lower loss and better performance.
 
 ### 4. Robotics & Control
 
 1. **Predict multiple actions at once rather than one**\
-   [Mimic One](robotics/MimicOneDexterousHand.md) predicts chunks of actions to enforce temporal consistency.
+   * [Mimic One](robotics/MimicOneDexterousHand.md) predicts chunks of actions to enforce temporal consistency.
 2. **Using diffusion models as policies**\
-   Diffusion models generate continuous action fields for robot control ([Pi0.5](robotics/Pi0.5VLA.md), [Mimic One](robotics/MimicOneDexterousHand.md)).
+   * Diffusion models generate continuous action fields for robot control ([Pi0.5](robotics/Pi0.5VLA.md), [Mimic One](robotics/MimicOneDexterousHand.md)).
 3. **Learning world models for large scale video data**\
-   [V‑JEPA](general_training/V-JEPA2.md) pretrains on millions of videos to predict missing frames, then fine‑tunes on robotic datasets for causal understanding and planning.
+   * [V‑JEPA](general_training/V-JEPA2.md) pretrains on millions of videos to predict missing frames, then fine‑tunes on robotic datasets for causal understanding and planning.
 4. **Pre-Training is possible in robotics**
    * [V-JEPA](general_training/V-JEPA2.md) and [Pi0.5](robotics/Pi0.5VLA.md) both used huge amounts of internet video data to train world models to predict actions and effects.
 
@@ -170,9 +173,9 @@ The following section includes:
 ### 6. Multi‑Agent Reinforcement Learning (MARL)
 
 1. **Stabilise MARL by condition agents actions on the actions of other agents**\
-   [JointPPO](marl/JointPPO.md) orders agents by decision importance, then uses a recurrent action‑conditioned network to generate actions sequentially
+   * [JointPPO](marl/JointPPO.md) orders agents by decision importance, then uses a recurrent action‑conditioned network to generate actions sequentially
 2. **GPU based environments are key to tackling to complexity of MARL**
-   [JaxMARL](marl/JaxMARL.md) allows you to run the environment tens of thousands of times in parallel. This means the monumental search space can be explore
+   * [JaxMARL](marl/JaxMARL.md) allows you to run the environment tens of thousands of times in parallel. This means the monumental search space can be explore
    a bit more thoroughly.
 3. Population‑based methods prevent overfitting and foster diverse behaviors.
 4. Agent selection via ELO‑weighted sampling encourages robustness and competitive balance.
@@ -181,14 +184,14 @@ The following section includes:
 ### 7. Self‑Improvement Strategies
 
 1. **LLMs can do self-play for reasoning, as long as their grounded to reality**\
-   [Absolute Zero Reasoner](LLM_reinforcement_learning/AbsoluteZeroReasoner.md) creates coding puzzles in a self-play method, [SPIRAL](LLM_reinforcement_learning/SelfPlayZeroSumGames.md) introduced a paradigm of self-play through text-based
+   * [Absolute Zero Reasoner](LLM_reinforcement_learning/AbsoluteZeroReasoner.md) creates coding puzzles in a self-play method, [SPIRAL](LLM_reinforcement_learning/SelfPlayZeroSumGames.md) introduced a paradigm of self-play through text-based
    games.
 2. **Unsupervised Self‑Dialog Games**
-   VLMs play in‑domain “Guess Who” style games to self‑improve vision‑language reasoning. ([VLM Self‑Dialog Games](self_improvement/SelfDialogueGames.md))
+   * VLMs play in‑domain “Guess Who” style games to self‑improve vision‑language reasoning. ([VLM Self‑Dialog Games](self_improvement/SelfDialogueGames.md))
 3. **Adaptive Prompting & Team Agents**\
-   [Agents of Change](LLM_reinforcement_learning/LLMsForStrategicPlanning.md) evolve prompts and orchestrate agent teams (analyst, coder, researcher) for strategic planning tasks.
+   * [Agents of Change](LLM_reinforcement_learning/LLMsForStrategicPlanning.md) evolve prompts and orchestrate agent teams (analyst, coder, researcher) for strategic planning tasks.
 4. **Self‑Adapting LLMs**\
-   [SEAL](LLM_reinforcement_learning/SelfAdaptingLanguageModels.md) uses RL to generate synthetic edits and hyperparameters, enabling rapid adaptation to new tasks.
+   * [SEAL](LLM_reinforcement_learning/SelfAdaptingLanguageModels.md) uses RL to generate synthetic edits and hyperparameters, enabling rapid adaptation to new tasks.
 
 
 ---
@@ -196,7 +199,7 @@ The following section includes:
 ## ⚙️ Repository Structure
 
 ```text
-├── LLM_reinforcement_learning/     # Papers on RL with language models
+├── LLM_reinforcement_learning/    # Papers on RL with language models
 ├── marl/                          # Multi‑agent RL resources
 ├── non_LLM_reinforcement_learning/ # RL methods outside LLM context
 ├── robotics/                      # Robotic learning and control papers
@@ -258,6 +261,8 @@ The following section includes:
 * 10th: [Illuminating search spaces by mapping elites](open_endedness_and_auto_curriculums/MAP_Elites.md)
 * 11th: [Foundation Model Self-Play: Open-Ended Strategy Innovation via Foundation Models](open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md)
 * 12th: [How to scale RL to 10^26 FLOPs blog by Jack Morris](LLM_reinforcement_learning/ScalingRLto10^26FLOPS.md)
+* 13th: [INTELLECT-1 Technical Report](distribution_and_gpu_acceleration/Intellect_1_WorldDistributedTraining.md)
+* 14th: [Model soups: averaging weights of multiple fine-tuned models improves accuracy without increasing inference time](general_training/ModelSoups.md)
 
 
 &#x20;&#x20;

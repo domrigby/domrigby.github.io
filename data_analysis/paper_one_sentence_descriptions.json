@@ -250,5 +250,11 @@
     "date_read": "2025-07-12",
     "link": "LLM_reinforcement_learning/ScalingRLto10^26FLOPS.md",
     "summary": "Addresses extreme compute scaling for reinforcement learning. Explores hardware and software optimizations to enable workloads at 10^26 floating-point operations. Demonstrates feasibility of massive-scale training with reduced overhead on specialized platforms."
+  },
+  {
+    "title": "INTELLECT-1 Technical Report",
+    "date_read": "2025-07-14",
+    "link": "https://arxiv.org/html/2412.01152v1",
+    "summary": "Addresses centralized training limitations by enabling global, decentralized training of large language models. Introduces the Prime framework with ElasticDeviceMesh, hybrid FSDP-DiLoCo, and int8 ring-all-reduce for fault-tolerant distributed training. Demonstrates training a 10B-parameter model on 1T tokens across 14 heterogeneous nodes with >83% utilization."
   }
 ]
