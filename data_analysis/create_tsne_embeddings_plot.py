@@ -151,6 +151,19 @@ def plot_embedding(emb2, labels, method_name, out_html, cluster_labels):
         )
     )
 
+    fig.update_layout(
+        legend=dict(
+            orientation="h",  # horizontal legend
+            yanchor="bottom",  # anchor to the bottom of the legend box
+            y=-0.2,  # push it below the x-axis
+            xanchor="center",
+            x=0.5  # center it
+        ),
+        margin=dict(
+            b=80  # add some extra bottom margin so it doesn’t get cut off
+        )
+    )
+
     fig.write_html(out_html, include_plotlyjs='cdn')
     return fig
 
