@@ -110,7 +110,8 @@ def plot_embedding(emb2, labels, method_name, out_html, cluster_labels):
     )
 
     # Add convex hulls (off by default)
-    for i, theme in enumerate(sorted(df['theme'].unique())):
+    for i, theme in enumerate(df['theme'].unique()):
+
         pts = df[df['theme'] == theme][['x', 'y']].values
         if pts.shape[0] < 3:
             continue
@@ -130,7 +131,8 @@ def plot_embedding(emb2, labels, method_name, out_html, cluster_labels):
                 fillcolor=f'rgba({r},{g},{b},0.15)',
                 line=dict(color=f'rgba({r},{g},{b},1)', width=1),
                 hoverinfo='skip',
-                visible='legendonly',    # hide by default
+                # visible='legendonly',    # hide by default
+                visible = True,
                 legendgroup='hulls',
                 showlegend=(i == 0),
                 name='Convex Hulls'
