@@ -76,8 +76,12 @@ umap_cluster_titles = pd.DataFrame({'cluster': labels_umap, 'title': titles}) \
     .groupby('cluster')['title'].apply(list).to_dict()
 
 # Get human/LLM-provided theme labels
-tsne_cluster_labels = {"0":"RL Training Techniques","1":"Distributed RL Systems","2":"Open-Ended Agents","3":"Curriculum and Open-Endedness","4":"LLM Reasoning Systems","5":"Robotic Control & Simulation"} #summarize_all_clusters(tsne_cluster_titles)
-umap_cluster_labels = {"0":"RL Generalization Methods","1":"Distributed RL Infrastructure","2":"Open-Ended AI Agents","3":"Curriculum Learning & Self-Play","4":"LLM Reasoning & Self-Play","5":"Robotics & Control"} #summarize_all_clusters(umap_cluster_titles)
+tsne_cluster_labels = { "0": "LLM Reasoning via RL", "1": "Distributed RL Systems", "2": "Multi-Agent Curriculum Learning", "3": "Open-Ended AI Research", "4": "Foundation & Video Models", "5": "Robotics & Control RL" }
+umap_cluster_labels = { "0": "LLM Reasoning with RL", "1": "Distributed RL Systems", "2": "Multi-Agent Reasoning Games", "3": "Open-Ended AI Agents", "4": "Robotics & Curriculum RL", "5": "World Models & Pretraining" }
+
+# tsne_cluster_labels = summarize_all_clusters(tsne_cluster_titles)
+# umap_cluster_labels = summarize_all_clusters(umap_cluster_titles)
+
 
 # ─── 3. Plotting with Convex Hulls and Theme Labels ──────────────────────────
 def plot_embedding(emb2, labels, method_name, out_html, cluster_labels):
@@ -166,7 +170,32 @@ def plot_embedding(emb2, labels, method_name, out_html, cluster_labels):
         )
     )
 
-    fig.write_html(out_html, include_plotlyjs='cdn')
+    centroids = (
+        df
+        .groupby('theme')[['x', 'y']]
+        .mean()
+        .reset_index()
+    )
+
+    for _, row in centroids.iterrows():
+        fig.add_annotation(
+            x=row['x'], y=row['y'],
+            text=row['theme'],
+            showarrow=False,
+            font=dict(size=16, family="Arial", color="rgba(0,0,0,0.6)"),
+            xanchor="center", yanchor="middle",
+            opacity=0.8
+        )
+
+    # If you’re doing fig.show():
+    fig.show(config={'responsive': True})
+
+    # Or if you’re writing HTML:
+    fig.write_html(
+        out_html,
+        include_plotlyjs='cdn',
+        config={'responsive': True}
+    )
     return fig
 
 # Generate and display plots
