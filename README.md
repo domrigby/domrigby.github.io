@@ -206,7 +206,7 @@ The following section includes:
 1. [Rohit Bandaru's blog post](open_endedness_and_auto_curriculums/DeepDiveIntoYannLecunsJEPA.md) summaried Yann Lecuns JEPA architecture and made the following suggestions:
    1. A framework for human-level AI: includes a bunch of different parts which all play a role found in the human brain.
         <p align="center">
-          <img src="https://rohitbandaru.github.io/assets/img/blog/jepa/jepa_brain.png" alt="Architecture diagram" width="400"/>
+          <img src="https://rohitbandaru.github.io/assets/img/blog/jepa/jepa_brain.png" alt="Architecture diagram" style="max-width: 25%; height: auto;">/>
         </p>
         
         <p align="center">
