@@ -74,12 +74,15 @@ The following section includes:
 
 ### 1. Reinforcement Learning (RL)
 
-1. **High‑Entropy Token Training**\
-   * Training only on high‑entropy (“forks in the road”) tokens yields significant performance gains in LLMs. ([80:20 Rule](LLM_reinforcement_learning/TokenEntropyRLVR.md)). Many tokens in language are determined
-   by other words so provide little information in te RL process when they are chosen. E.g. "I went to the shop", "to" and "the" are determined by the other words
-2. **Zone of Proximal Development**\
-   * Methods like [ProRL](LLM_reinforcement_learning/ProlongedRL.md) and [Absolute Zero Reasoner](LLM_reinforcement_learning/AbsoluteZeroReasoner.md) filter out consistently correct or incorrect prompts to focus learning in the optimal difficulty zone.
-   This is discussed in detail in [section 2](#2-openendedness--autocurricula).
+1. **Moments of uncertainty are the best moments to learn from**\
+   * These moments of uncertainty or “forks in the road” are the high entropy tokens. These are the moments in which 
+   make uncertain decisions and learn the most. Unsurprisingly, training on these tokens yields  significant performance
+   gains in LLMs. ([80:20 Rule](LLM_reinforcement_learning/TokenEntropyRLVR.md)). Many tokens in language are determined mby other words 
+   so provide little information in te RL process when they are chosen. E.g. "I went to the shop", "to" and "the" are determined by the other words
+2. **You don't learn anything from always winning... but equally as little if you are always losing!**\
+   * There exists a **'zone of proximal development'** in which agents are learning the most about what is right and wrong.
+   This is shown simply in methods such as [ProRL](LLM_reinforcement_learning/ProlongedRL.md) and [Absolute Zero Reasoner](LLM_reinforcement_learning/AbsoluteZeroReasoner.md)
+   in which they filter out consistently correct or incorrect prompts. A far more indepth discussion of this is in [section 2](#2-openendedness--autocurricula).
 3. **It is possible to make Non‑Verifiable Reward Models**
    * [Writing‑Zero](LLM_reinforcement_learning/WritingZeroNonVerifiableRewards.md) introduces LLM based prefserence training in non‑verifiable environments,
    then uses that model as a reward in competitive creative writing games.
@@ -88,18 +91,20 @@ The following section includes:
 5. **You can learn to reason by simply playing games**\
    * [Play to Generalise](LLM_reinforcement_learning/ReasoningThroughGames.md) demonstrates that game‑based move prediction enhances specific reasoning capabilities.
 6. **GPU‑Accelerated Environments provide monumental speeds up**\
-   * Frameworks like [Kinetix](distribution_and_gpu_acceleration/KInetixGeneralRL.md) and [JaxMARL](marl/JaxMARL.md) allow you to run tens of thousands of environments in parallel, as well as minimise CPU-GPU overhead.
-7. **Foundation Models roles in RL:**
+   * Frameworks like [Kinetix](distribution_and_gpu_acceleration/KInetixGeneralRL.md) and [JaxMARL](marl/JaxMARL.md) allow you to run tens of thousands of environments in parallel,
+   as well as minimise CPU-GPU overhead. This could allow for some LLM-like RL 'pre-training' on vast amounts of data
+   on generic scenarios before fine-tuning to the ones of interest.
+7. **Foundation models have a large role to play in future RL**:
    * Foundation models have intuition about what humans find interesting. They are therefore capable of designing curriculums for RL or being involved in the policy improvement steps. 
    See more in the [open-endedness section of this blog](#4-openendedness--autocurricula). Summary of a few interesting methods:
       * Create environments of interest ([OMNI-EPIC](open_endedness_and_auto_curriculums/OpenEndednessUsingLLMS.md))
       * Writing code based policies and suggesting improvements after view results ([Foundation Model Self-Play](open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md))
 
 ### 2. Open‑Endedness & Auto‑Curricula
-1.  **Open-Endedness Requires Novel and Learnable Artefacts**\
-   * Open-ended is defined in [Open-Endedness is Key to ASI](open_endedness_and_auto_curriculums/OpenEndednessIsKeyToASI.md).
-   A system is open-ended if it **continually creates novel and learnable artefacts**. This is dependent on the observer 
-   and the time-horizon. E.g. a mouse can't learn chess and a computer will eventually plateau in performance.
+1. **Open-Endedness requires novel and learnable artefacts**:
+   * Open-ended is defined in [Open-Endedness is Key to ASI](open_endedness_and_auto_curriculums/OpenEndednessIsKeyToASI.md): a system is open-ended if it **continually creates 
+   novel and learnable artefacts**. This is dependent on the observer and the time-horizon. E.g. a mouse can't learn 
+   chess and a computer will eventually plateau in performance.
 2. **Procedural Level Generation** is used to create novel environments to learn in
    * [POET](open_endedness_and_auto_curriculums/EnhancedPOETOpenEndedLearning.md) introduces new levels, checks they meet a minimum learnability criterion and then only adds the most novel.
 3. **Prioritized Level Replay** is way to order those environments such that they are **learnable**. This creates an **auto-curriculum**.
@@ -109,7 +114,7 @@ The following section includes:
    * [Auto-Curriculum Learning for Driving Scenarios](open_endedness_and_auto_curriculums/AutoCurriculumAutonomousDriving.md), [POET](open_endedness_and_auto_curriculums/EnhancedPOETOpenEndedLearning.md) and many others methods introduces the idea of random generator + editor as the basic building blocks for creating levels. One creates random new levels 
    and the other perturbs existing interesting levels.
 5. **Foundation models can act as 'intelligent search operators** to create new learning opportunities based on what they have learned that humans would find interesting.
-   * This is suggest as a ['key method on the road to ASI'](open_endedness_and_auto_curriculums/OpenEndednessIsKeyToASI.md). and is explored for level generation in [OMNI-EPIC](open_endedness_and_auto_curriculums/OpenEndednessUsingLLMS.md)
+   * This is suggested as a ['key method on the road to ASI'](open_endedness_and_auto_curriculums/OpenEndednessIsKeyToASI.md). and is explored for level generation in [OMNI-EPIC](open_endedness_and_auto_curriculums/OpenEndednessUsingLLMS.md)
    and for policy generation is [Foundation Model Self-Play](open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md)
 6. **Performance annealed exploration reward**:
    * [Curriculum Learning and Population-based Self-Play](open_endedness_and_auto_curriculums/MultiAgentCurriculumSelfPlay.md) suggests using an exploration reward
@@ -194,7 +199,22 @@ The following section includes:
 4. **Self‑Adapting LLMs**\
    * [SEAL](LLM_reinforcement_learning/SelfAdaptingLanguageModels.md) uses RL to generate synthetic edits and hyperparameters, enabling rapid adaptation to new tasks.
 
+### 8. Architectures:
+1. [Rohit Bandaru's blog post](open_endedness_and_auto_curriculums/DeepDiveIntoYannLecunsJEPA.md) summaried Yann Lecuns JEPA architecture and made the following suggestions:
+   1. A framework for human-level AI: includes a bunch of different parts which all play a role found in the human brain.
+        <p align="center">
+          <img src="https://rohitbandaru.github.io/assets/img/blog/jepa/jepa_brain.png" alt="Architecture diagram" width="400"/>
+        </p>
+        
+        <p align="center">
+          <em>Figure 1: Yann Lecun's architecture for human level AI [source](https://openreview.net/pdf?id=BZ5a1r-kVsf)</em>
+        </p>
 
+   2. [Energy Based Models](https://en.wikipedia.org/wiki/Energy-based_model):
+      * Energy based models **predict how plausible a future state is**.
+      * It's impossible to know what will happen in the next state... but it possible to predict a latent representation of it.
+      * EBM aim to predict the distance between the embedding of current and future state.
+      * There is however still uncertainty, so a random variable is used in the prediction of future state to account for this randomness.
 ---
 
 ## ⚙️ Repository Structure
@@ -265,6 +285,8 @@ The following section includes:
 * 13th: [INTELLECT-1 Technical Report](distribution_and_gpu_acceleration/Intellect_1_WorldDistributedTraining.md)
 * 14th: [Model soups: averaging weights of multiple fine-tuned models improves accuracy without increasing inference time](general_training/ModelSoups.md)
 * 15th: [Synergizing Quality-Diversity with Descriptor-Conditioned Reinforcement Learning](open_endedness_and_auto_curriculums/QualityDiversityDescriptorConditionRL.md)
+* 16th: [What Has a Foundation Model Found? Using Inductive Bias to Probe for World Models](general_training/DoFoundationModelsLearnWorldModels.md)
+* 17th: [Deep Dive into Yann LeCun’s JEPA by Rohit Bandaru](open_endedness_and_auto_curriculums/DeepDiveIntoYannLecunsJEPA.md)
 
 &#x20;&#x20;
 
