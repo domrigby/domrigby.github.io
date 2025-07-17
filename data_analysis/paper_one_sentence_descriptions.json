@@ -256,5 +256,18 @@
     "date_read": "2025-07-14",
     "link": "https://arxiv.org/html/2412.01152v1",
     "summary": "Addresses centralized training limitations by enabling global, decentralized training of large language models. Introduces the Prime framework with ElasticDeviceMesh, hybrid FSDP-DiLoCo, and int8 ring-all-reduce for fault-tolerant distributed training. Demonstrates training a 10B-parameter model on 1T tokens across 14 heterogeneous nodes with >83% utilization."
+  },
+  {
+    "title": "Model soups: averaging weights of multiple fine-tuned models improves accuracy without increasing inference time",
+    "date_read": "2025-07-14",
+    "link": "https://arxiv.org/abs/2203.05482",
+    "summary": "Addresses inefficiencies in hyperparameter sweeps where only a single fine-tuned model is selected. Introduces “model soups,” averaging weights from multiple fine-tuned models into one without extra inference cost. Demonstrates improved accuracy and robustness on ImageNet and diverse downstream benchmarks."
+  },
+  {
+    "title": "Synergizing Quality-Diversity with Descriptor-Conditioned Reinforcement Learning",
+    "date_read": "2025-07-15",
+    "link": "https://arxiv.org/abs/2401.08632",
+    "summary": "Addresses inefficiencies of evolutionary quality-diversity methods in high-dimensional spaces due to random mutations. Introduces DCRL-MAP-Elites, leveraging a descriptor-conditioned reinforcement learning actor as a generative model to propose diverse solutions each generation. Demonstrates improved solution quality, diversity, and descriptor reproducibility over prior approaches."
   }
+
 ]
