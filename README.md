@@ -137,14 +137,12 @@ The following section includes:
    * The upper clip bound being higher increases the probability of unlikely choices and increases exploration (as in [ProRL](LLM_reinforcement_learning/ProlongedRL.md) and [Play to Generalise](LLM_reinforcement_learning/ReasoningThroughGames.md)) improve exploration and stability.
 4. **Dual‑Outcome Reasoning: knows what's bad is also useful!**\
    * Generating both best and worst moves in game scenarios deepens model understanding of decision boundaries ([Play to Generalise](LLM_reinforcement_learning/ReasoningThroughGames.md))
-5. **Always use a GPU based environment when possible**\
-   * Always host simulation environments on the GPU when possible. This allows you to run tens of thousands of environments in parallel ([JaxMARL](marl/JaxMARL.md), [Kinetix](distribution_and_gpu_acceleration/KInetixGeneralRL.md))
-6. **Beware When Using Qwen for RL**\
+5. **Beware When Using Qwen for RL**\
    * [RL with Spurious Rewards](LLM_reinforcement_learning/SpuriousRewardsRL.md) shows that random reward signals can still drive code production due to clipping effects.
-7. **Telling the model how to think improves performance**\
+6. **Telling the model how to think improves performance**\
    * [FinCoT](finance_applications/FinCoT.md) improved performance by giving the reasoning model **strucutred chain-of-thought prompts. For finance problems, methods to solve certain types of problems are well known, or at least the important things to look for.
    These chain of thought patterns are generated using DeepResearch and then added to the prompt after the question as a suggestion of how to think.
-8. **Creating 'soups' of all your different hyperparameter fine-tuning models** can improve performance.
+7. **Creating 'soups' of all your different hyperparameter fine-tuning models** can improve performance.
    * [ModelSoups](general_training/ModelSoups.md) achieved SotA performance on ImageNet by doing a greedy mix (only add if it improves performance). This works as fine-tuned models
     often end up in the same loss valley and therefore averaging their performance can lead to lower loss and better performance.
 
