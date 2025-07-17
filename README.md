@@ -133,7 +133,7 @@ The following section includes:
    * [Jack Morris' blog post on scaling RL](LLM_reinforcement_learning/ScalingRLto10^26FLOPS.md) suggest that this might be way to squeeze the absolute maximum 
    out of our ['fossil fuel-like'](https://www.youtube.com/watch?v=YD-9NG1Ke5Y) internet data. Next token prediction is verifiable so should allow us to get further performance on this internet dataa. We just
    need to work out how to scale LLM RL (see blog post and summary for further details).
-3. **When doing PPO/GRPO, make the upper bound clip larger ($|\epsilon_{clip, high} - 1|> |1 - \epsilon_{clip, low|}$)**\
+3. **When doing PPO/GRPO, make the upper bound clip larger**\
    * The upper clip bound being higher increases the probability of unlikely choices and increases exploration (as in [ProRL](LLM_reinforcement_learning/ProlongedRL.md) and [Play to Generalise](LLM_reinforcement_learning/ReasoningThroughGames.md)) improve exploration and stability.
 4. **Dual‑Outcome Reasoning: knows what's bad is also useful!**\
    * Generating both best and worst moves in game scenarios deepens model understanding of decision boundaries ([Play to Generalise](LLM_reinforcement_learning/ReasoningThroughGames.md))
@@ -216,7 +216,7 @@ The following section includes:
    2. [Energy Based Models](https://en.wikipedia.org/wiki/Energy-based_model):
       * Energy based models **predict how plausible a future state is**.
       * It's impossible to know what will happen in the next state... but it possible to predict a latent representation of it.
-      * EBM aim to predict the distance between the embedding of current and future state.
+      * EBM aim to predict the distance between the embedding of current and future state. 
       * There is however still uncertainty, so a random variable is used in the prediction of future state to account for this randomness.
       
 ----
