@@ -46,16 +46,19 @@ All paper summaries are stored in **[this repository](https://github.com/domrigb
 ## 📈 Fun Plots
 
 Inspired by [figure 2 of OMNI-EPIC](https://arxiv.org/pdf/2405.15568) and the method used to create the policy diversity metrics in
-[Foundation Model Self Play](open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md). I got o4-mini-high to create a one a
-short description of each paper using [this prompt](data_analysis/tsne_embedding_description_prompt.txt) and then embedded this description
-using sentence-transformers python library. These embeddings were reduced to 2D using t-SNE and cluster using K-Means. The titles of the clusters
-are chosen by GPT-4o by giving it the title of each paper in the cluster.
+[Foundation Model Self Play](open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md). 
+
+**Embedding**: I got o4-mini-high to create a one sentence, 
+short description of each paper using [this prompt](data_analysis/tsne_embedding_description_prompt.txt). This descrition is then embedded 
+using sentence-transformers python library. These embeddings were reduced to 2D using PCA and then t-SNE.
+
+**Clustering**: The resultant 2D data points are then clustered using K-Means. A list of the titles of each paper are fed into GPT-4o using
+this prompt (link pending), which asks it to come up with a title for each cluster. This gives me some interesting second opinion into the theme
+I am exploring.
 
 I hope to soon update the embedding model!
 
-There is an option to turn on convex hulls around clusters in the legend. There is a UMAP version of this plot in this [more plots](#more-plots) section. Hover
-over (on tap on mobile) any point to see the name of the paper.
-
+Hover over, or tap on mobile, any data point to see the name of the paper/blog post.
 <iframe
   src="data_analysis/tsne_papers.html"
   width="100%"
