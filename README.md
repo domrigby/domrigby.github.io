@@ -206,7 +206,7 @@ The following section includes:
 1. [Rohit Bandaru's blog post](open_endedness_and_auto_curriculums/DeepDiveIntoYannLecunsJEPA.md) summaried Yann Lecuns JEPA architecture and made the following suggestions:
    1. A framework for human-level AI: includes a bunch of different parts which all play a role found in the human brain.
         <p align="center">
-          <img src="https://rohitbandaru.github.io/assets/img/blog/jepa/jepa_brain.png" alt="Architecture diagram" width="250"/>
+          <img src="https://rohitbandaru.github.io/assets/img/blog/jepa/jepa_brain.png" alt="Architecture diagram" width="300"/>
         </p>
         
         <p align="center">
@@ -218,7 +218,8 @@ The following section includes:
       * It's impossible to know what will happen in the next state... but it possible to predict a latent representation of it.
       * EBM aim to predict the distance between the embedding of current and future state.
       * There is however still uncertainty, so a random variable is used in the prediction of future state to account for this randomness.
----
+      
+----
 
 ## ⚙️ Repository Structure
 
