@@ -268,6 +268,18 @@
     "date_read": "2025-07-15",
     "link": "https://arxiv.org/abs/2401.08632",
     "summary": "Addresses inefficiencies of evolutionary quality-diversity methods in high-dimensional spaces due to random mutations. Introduces DCRL-MAP-Elites, leveraging a descriptor-conditioned reinforcement learning actor as a generative model to propose diverse solutions each generation. Demonstrates improved solution quality, diversity, and descriptor reproducibility over prior approaches."
+  },
+  {
+    "title": "What Has a Foundation Model Found? Using Inductive Bias to Probe for World Models",
+    "date_read": "2025-07-16",
+    "link": "https://github.com/domrigby/domrigby.github.io/blob/main/general_training/DoFoundationModelsLearnWorldModels.md",
+    "summary": "Assessing whether large prediction models internalize underlying systems instead of surface patterns remains challenging. This study designs an inductive bias probe by adapting models to synthetic data from known world dynamics. It reveals models learn task-specific heuristics but fail to adopt true generative laws, hindering generalization."
+  },
+  {
+    "title": "Deep Dive into Yann LeCun’s JEPA by Rohit Bandaru",
+    "date_read": "2025-07-17",
+    "link": "https://github.com/domrigby/domrigby.github.io/blob/main/open_endedness_and_auto_curriculums/DeepDiveIntoYannLecunsJEPA.md",
+    "summary": "Large language models lack planning and common-sense inference due to token-based generation constraints. This analysis examines JEPA, an energy-based joint embedding predictive architecture combining hierarchical modules to predict latent future representations. It highlights JEPA’s capacity to generate plausible future states, offering a route to improve reasoning and planning capabilities."
   }
 
 ]
