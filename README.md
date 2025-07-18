@@ -116,7 +116,7 @@ The following section includes:
 4. **Randomly generate a new level, or create a new one!**: this creates population or pool of environments for the agent to interact with
    * [Auto-Curriculum Learning for Driving Scenarios](open_endedness_and_auto_curriculums/AutoCurriculumAutonomousDriving.md), [POET](open_endedness_and_auto_curriculums/EnhancedPOETOpenEndedLearning.md) and many others methods introduces the idea of random generator + editor as the basic building blocks for creating levels. One creates random new levels 
    and the other perturbs existing interesting levels.
-5. **Foundation models can act as 'intelligent search operators** to create new learning opportunities based on what they have learned that humans would find interesting.
+5. **Foundation models can act as 'intelligent search operators'** to create new learning opportunities based on what they have learned that humans would find interesting.
    * This is suggested as a ['key method on the road to ASI'](open_endedness_and_auto_curriculums/OpenEndednessIsKeyToASI.md). and is explored for level generation in [OMNI-EPIC](open_endedness_and_auto_curriculums/OpenEndednessUsingLLMS.md)
    and for policy generation is [Foundation Model Self-Play](open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md)
 6. **Performance annealed exploration reward**:
