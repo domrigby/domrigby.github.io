@@ -77,6 +77,7 @@ Hover over, or tap on mobile, any data point to see the name of the paper/blog p
 
 The following section includes:
    * **Interesting ideas**: any ideas I saw in papers which might be useful if someone is tackling a similar problem.
+   * **Useful methods**: adding tools to your mental toolbox.
    * **Concise fundamentals**: try and explain the fundamentals of a topic in a few short bullet points!
 
 ### 1. Reinforcement Learning (RL)
@@ -91,8 +92,8 @@ The following section includes:
    This is shown simply in methods such as [ProRL](LLM_reinforcement_learning/ProlongedRL.md) and [Absolute Zero Reasoner](LLM_reinforcement_learning/AbsoluteZeroReasoner.md)
    in which they filter out consistently correct or incorrect prompts. A far more indepth discussion of this is in [section 2](#2-openendedness--autocurricula).
 3. **It is possible to make Non‑Verifiable Reward Models**
-   * [Writing‑Zero](LLM_reinforcement_learning/WritingZeroNonVerifiableRewards.md) introduces LLM based prefserence training in non‑verifiable environments,
-   then uses that model as a reward in competitive creative writing games.
+   * [Writing‑Zero](LLM_reinforcement_learning/WritingZeroNonVerifiableRewards.md) introduces LLM based preference training in non‑verifiable environments, then uses that model as
+   a reward in competitive creative writing games.
 4. **You can use generative AI to expand experience buffer**\
    * [SynthER](non_LLM_reinforcement_learning/SyntheticExperienceReplay.md) trains a diffusion model to expand the replay buffer with synthetic experiences for mixed real‑fake training.
 5. **You can learn to reason by simply playing games**\
