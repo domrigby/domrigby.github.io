@@ -43,20 +43,23 @@ All paper summaries are stored in **[this repository](https://github.com/domrigb
 
 ---
 
-## 📈 Fun Plots
+## 📈 My Interest Areas
 
-Inspired by [figure 2 of OMNI-EPIC](https://arxiv.org/pdf/2405.15568) and the method used to create the policy diversity metrics in
-[Foundation Model Self Play](open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md). 
+I am fascinated by emergent behaviour, especially when this behaviour is diverse and unexpected. I therefore focus tend to
+focus on **reinforcement learning, auto-curriculums and open-endedness**, but also enjoy reading how this is made possible through 
+clever engineer and distribution.
 
-**Embedding**: I got o4-mini-high to create a one sentence, 
-short description of each paper using [this prompt](data_analysis/tsne_embedding_description_prompt.txt). This descrition is then embedded 
-using sentence-transformers python library. These embeddings were reduced to 2D using PCA and then t-SNE.
+In order to get a second opinion on my interests, and inspired by [figure 2 of OMNI-EPIC](https://arxiv.org/pdf/2405.15568) and policy diversity method in
+[Foundation Model Self Play](open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md), I clustered my papers read to identify any unseen structure. I followed this process:
+
+**Embedding**: I got o4-mini-high to create a one sentence, short description of each paper using [this prompt](data_analysis/tsne_embedding_description_prompt.txt). 
+This description is then embedded using [Sentence-Transformers](https://huggingface.co/sentence-transformers) python library.
+The embedding dimension is then reduced from 384D to 30D using [PCA](https://en.wikipedia.org/wiki/Principal_component_analysis)
+and then to 2D using [t-SNE](https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding).
 
 **Clustering**: The resultant 2D data points are then clustered using K-Means. A list of the titles of each paper are fed into GPT-4o using
 this prompt (link pending), which asks it to come up with a title for each cluster. This gives me some interesting second opinion into the theme
 I am exploring.
-
-I hope to soon update the embedding model!
 
 Hover over, or tap on mobile, any data point to see the name of the paper/blog post.
 <iframe
@@ -102,6 +105,9 @@ The following section includes:
    See more in the [open-endedness section of this blog](#4-openendedness--autocurricula). Summary of a few interesting methods:
       * Create environments of interest ([OMNI-EPIC](open_endedness_and_auto_curriculums/OpenEndednessUsingLLMS.md))
       * Writing code based policies and suggesting improvements after view results ([Foundation Model Self-Play](open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md))
+8. **Quality Diversity can be used for testing**:
+   * [MADRID](marl/MADRID.md) uses a [MAP-Elites]() style quality diversity search to get diverse set of scenarios the algorithm
+   struggles with. It does this by maximising regret across the search grid.
 
 ### 2. Open‑Endedness & Auto‑Curricula
 1. **Open-Endedness requires novel and learnable artefacts**:
@@ -290,7 +296,7 @@ The following section includes:
 * 16th: [What Has a Foundation Model Found? Using Inductive Bias to Probe for World Models](general_training/DoFoundationModelsLearnWorldModels.md)
 * 17th: [Deep Dive into Yann LeCun’s JEPA by Rohit Bandaru](open_endedness_and_auto_curriculums/DeepDiveIntoYannLecunsJEPA.md)
 * 18th: [All AI Models Might Be The Same by Jack Morris](general_training/AllModelsMightBeTheSameBlog.md)
-* 19th: [marl/MADRID.md]
+* 19th: [Multi-Agent Diagnostics for Robustness via Illuminated  (MADRID)](marl/MADRID.md)
 
 &#x20;&#x20;
 
@@ -330,4 +336,4 @@ The t-SNE for comparison:
 
 ---
 
-*Last updated: 19th July 2025*
+*Last updated: 20th July 2025*

@@ -280,6 +280,17 @@
     "date_read": "2025-07-17",
     "link": "https://github.com/domrigby/domrigby.github.io/blob/main/open_endedness_and_auto_curriculums/DeepDiveIntoYannLecunsJEPA.md",
     "summary": "Large language models lack planning and common-sense inference due to token-based generation constraints. This analysis examines JEPA, an energy-based joint embedding predictive architecture combining hierarchical modules to predict latent future representations. It highlights JEPA’s capacity to generate plausible future states, offering a route to improve reasoning and planning capabilities."
+  },
+  {
+    "title": "All AI Models Might Be The Same by Jack Morris",
+    "date_read": "2025-07-18",
+    "link": "https://blog.jxmo.io/p/there-is-only-one-model",
+    "summary": "Investigates whether differences between AI models reflect distinct solutions or converge to a single optimal compression. It frames learning as data compression via information theory. Shows that models converge toward a unique representation, explaining why varied architectures yield similar performance."
+  },
+  {
+    "title": "Multi-Agent Diagnostics for Robustness via Illuminated  (MADRID)",
+    "date_read": "2025-07-19",
+    "link": "https://arxiv.org/abs/2401.13460",
+    "summary": "Addresses robustness gaps in multi-agent reinforcement learning by adversarially searching for failure scenarios. Applies MAP-Elites over ball positions in a simulated football environment, using regret against reference policies as fitness. Reveals diverse weaknesses in trained policies across the pitch."
   }
-
 ]
