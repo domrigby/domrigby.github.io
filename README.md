@@ -17,29 +17,14 @@ Entries are added on the go (often from my phone or iPad) and later refined on m
 
 > **Note:** Layout and formatting are continuously improved when time permits.
 
-
-## 🛠️ Method
-
-####  Identification of Papers
-   1. **X (Twitter)**: there is a huge AI community on twitter which post papers with discussion in the comments.
-      * **TIP**: If others choose to use this I would highly recommend using the 'Not Interested' feature on posts, otherwise your feed will rapidly deteriorate and show less papers.
-   2. **Reddit**: r/MachineLearning 
-   3. **Conferences**: I recently attend ICLR and came back with a treasure trove of interesting reads.
-   4. **Paper references**
-
-#### Use of LLMs
-   1. **LLMs are NOT used for the analysis of the papers**. They are however **used for checking**. I read the paper, write down what I think the key points are.
-      I then ask o4-mini-high to do the same and double check if we disagree.
-   2. Paper recommendations
-   3. Formatting and helping with markdown.
-   4. Quick analysis scripts.
-
 ---
 
 ## ⚙️ Website Workings
 
 This website is a user-friendly entry point and summary of the repository. This hosts the top level themes and parts I thought were interesting.
-All paper summaries are stored in **[this repository](https://github.com/domrigby/domrigby.github.io)**
+All paper summaries are stored in **[this repository](https://github.com/domrigby/domrigby.github.io)**.
+
+A list of papers read and links to their summaries is in the **[full diary section](#-full-diary)**.
 
 ---
 
@@ -50,7 +35,7 @@ focus on **reinforcement learning, auto-curriculums and open-endedness**, but al
 clever engineer and distribution.
 
 Inspired by [figure 2 of OMNI-EPIC](https://arxiv.org/pdf/2405.15568) and policy diversity method in [Foundation Model Self Play](open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md), I clustered 
-my papers read to identify any unseen structure. 
+my papers read using the following method:
 
 1. **Embedding**: I get o4-mini-high to create a one sentence, short description of each paper using [this prompt](data_analysis/tsne_embedding_description_prompt.txt). 
 This description is then embedded using [Sentence-Transformers](https://huggingface.co/sentence-transformers) python library.
@@ -62,7 +47,8 @@ and then to 2D using [t-SNE](https://en.wikipedia.org/wiki/T-distributed_stochas
 this prompt (link pending), which asks it to come up with a title for each cluster. This gives me some interesting second opinion into the theme
 I am exploring.
 
-Hover over, or tap on mobile, any data point to see the name of the paper/blog post.
+Hover over any data point to see the name of the paper/blog post. On mobile, go into landscape mode and tap.
+
 <iframe
   src="data_analysis/tsne_papers.html"
   width="100%"
@@ -87,7 +73,7 @@ The following section includes:
    make uncertain decisions and learn the most. Unsurprisingly, training on these tokens yields  significant performance
    gains in LLMs. ([80:20 Rule](LLM_reinforcement_learning/TokenEntropyRLVR.md)). Many tokens in language are determined mby other words 
    so provide little information in te RL process when they are chosen. E.g. "I went to the shop", "to" and "the" are determined by the other words
-2. **You don't learn anything from always winning... but equally as little if you are always losing!**\
+2. **You don't learn anything from always winning... but equally little if you are always losing!**\
    * There exists a **'zone of proximal development'** in which agents are learning the most about what is right and wrong.
    This is shown simply in methods such as [ProRL](LLM_reinforcement_learning/ProlongedRL.md) and [Absolute Zero Reasoner](LLM_reinforcement_learning/AbsoluteZeroReasoner.md)
    in which they filter out consistently correct or incorrect prompts. A far more indepth discussion of this is in [section 2](#2-openendedness--autocurricula).
@@ -146,7 +132,8 @@ The following section includes:
 4. **Dual‑Outcome Reasoning: knows what's bad is also useful!**\
    * Generating both best and worst moves in game scenarios deepens model understanding of decision boundaries ([Play to Generalise](LLM_reinforcement_learning/ReasoningThroughGames.md))
 5. **Beware When Using Qwen for RL**\
-   * [RL with Spurious Rewards](LLM_reinforcement_learning/SpuriousRewardsRL.md) shows that random reward signals can still drive code production due to clipping effects.
+   * [RL with Spurious Rewards](LLM_reinforcement_learning/SpuriousRewardsRL.md) shows that random reward signals can still improve performance on Qwen-2.5-maths. The authors explain that this is likely caused
+   by RL encouraging the model to produce more code.
 6. **Telling the model how to think improves performance**\
    * [FinCoT](finance_applications/FinCoT.md) improved performance by giving the reasoning model **strucutred chain-of-thought prompts. For finance problems, methods to solve certain types of problems are well known, or at least the important things to look for.
    These chain of thought patterns are generated using DeepResearch and then added to the prompt after the question as a suggestion of how to think.
@@ -227,6 +214,24 @@ The following section includes:
       
 ----
 
+## 🛠️ Method
+
+####  Identification of Papers
+   1. **X (Twitter)**: there is a huge AI community on twitter which post papers with discussion in the comments.
+      * **TIP**: If others choose to use this I would highly recommend using the 'Not Interested' feature on posts, otherwise your feed will rapidly deteriorate and show less papers.
+   2. **Reddit**: r/MachineLearning 
+   3. **Conferences**: I recently attend ICLR and came back with a treasure trove of interesting reads.
+   4. **Paper references**
+
+#### Use of LLMs
+   1. **LLMs are NOT used for the analysis of the papers**. They are however **used for checking**. I read the paper, write down what I think the key points are.
+      I then ask o4-mini-high to do the same and double check if we disagree.
+   2. Paper recommendations
+   3. Formatting and helping with markdown.
+   4. Quick analysis scripts.
+
+---
+
 ## ⚙️ Repository Structure
 
 ```text
@@ -299,6 +304,8 @@ The following section includes:
 * 17th: [Deep Dive into Yann LeCun’s JEPA by Rohit Bandaru](open_endedness_and_auto_curriculums/DeepDiveIntoYannLecunsJEPA.md)
 * 18th: [All AI Models Might Be The Same by Jack Morris](general_training/AllModelsMightBeTheSameBlog.md)
 * 19th: [Multi-Agent Diagnostics for Robustness via Illuminated  (MADRID)](marl/MADRID.md)
+* 20th: [Assessing the Zero-Shot Capabilities of LLMs for Action Evaluation in RL](non_LLM_reinforcement_learning/ZeroShotCapabilityOfLLMsForActionEvalInRL.md)
+* 20th: [TiZero: Mastering Multi-Agent Football with Curriculum Learning and Self-Play](marl/TiZero.md)
 
 &#x20;&#x20;
 

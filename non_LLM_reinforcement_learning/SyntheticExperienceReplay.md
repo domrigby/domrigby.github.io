@@ -7,7 +7,7 @@
 - Demonstrates that augmenting real data with diffusion‐generated rollouts yields higher policy performance in fewer environment interactions.  
 
 **Key Methods:**  
-- **Residual MLP diffusion model:** models the transition distribution $p(s_{t+1}, r_t | s_t, a_t)$ by learning to reverse a noise‐corrupted version of real transitions.  
-- **Experience augmentation:** sample synthetic transitions from the diffusion model and add them to the replay buffer alongside real experience.  
+- **Residual MLP diffusion model:** data generation model is a residual MLP diffusion model. 
+- **Experience augmentation:** sample synthetic transitions from the diffusion model and add them to the replay buffer. Training are batches are mixed with real experience.  
 - **Importance weighting:** assign lower weights to synthetic transitions if their log‐probability under the learned diffusion model is low, mitigating model bias.  
-- **Agent training loop:** alternate between collecting real experiences with the current policy, retraining the diffusion model, and generating new synthetic data for policy updates.  
+- **Training loop:** alternate between collecting real experiences with the current policy, retraining the diffusion model, and generating new synthetic data for policy updates.  

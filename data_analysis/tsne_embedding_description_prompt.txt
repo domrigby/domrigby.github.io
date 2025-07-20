@@ -12,5 +12,5 @@ Return your results as a JSON array of objects with “title”, "date_read" and
 The titles of the papers are in the square brackets below. More info about these papers can be found in this github respotiory https://github.com/domrigby/domrigby.github.io
 
 ### July 2025
-* 18th: [All AI Models Might Be The Same by Jack Morris](general_training/AllModelsMightBeTheSameBlog.md)
-* 19th: [Multi-Agent Diagnostics for Robustness via Illuminated  (MADRID)](marl/MADRID.md)
+* 20th: [Assessing the Zero-Shot Capabilities of LLMs for Action Evaluation in RL](non_LLM_reinforcement_learning/ZeroShotCapabilityOfLLMsForActionEvalInRL.md)
+* 20th: [TiZero: Mastering Multi-Agent Football with Curriculum Learning and Self-Play](marl/TiZero.md)

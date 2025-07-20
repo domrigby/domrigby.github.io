@@ -292,5 +292,17 @@
     "date_read": "2025-07-19",
     "link": "https://arxiv.org/abs/2401.13460",
     "summary": "Addresses robustness gaps in multi-agent reinforcement learning by adversarially searching for failure scenarios. Applies MAP-Elites over ball positions in a simulated football environment, using regret against reference policies as fitness. Reveals diverse weaknesses in trained policies across the pitch."
+  },
+  {
+    "title": "Assessing the Zero-Shot Capabilities of LLMs for Action Evaluation in RL",
+    "date_read": "2025-07-20",
+    "link": "https://arxiv.org/abs/2409.12798",
+    "summary": "Addresses sparse and delayed reward assignment in reinforcement learning by using a language model to decompose tasks into subgoals and shape rewards. The proposed approach assigns auxiliary rewards when subgoals are met via zero-shot model evaluation. Experiments on MiniHack show effective credit assignment without additional training."
+  },
+  {
+    "title": "TiZero: Mastering Multi-Agent Football with Curriculum Learning and Self-Play",
+    "date_read": "2025-07-20",
+    "link": "https://arxiv.org/abs/2302.07515",
+    "summary": "Tackles the challenge of learning coordinated strategies in complex multi-agent environments by combining curriculum learning and self-play. The approach gradually increases scenario difficulty while teams train against evolving opponents. Evaluations on a simulated football platform show a 30%+ boost in win rates and robustness across varied game settings."
   }
 ]
