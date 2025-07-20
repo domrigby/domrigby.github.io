@@ -49,15 +49,16 @@ I am fascinated by emergent behaviour, especially when this behaviour is diverse
 focus on **reinforcement learning, auto-curriculums and open-endedness**, but also enjoy reading how this is made possible through 
 clever engineer and distribution.
 
-In order to get a second opinion on my interests, and inspired by [figure 2 of OMNI-EPIC](https://arxiv.org/pdf/2405.15568) and policy diversity method in
-[Foundation Model Self Play](open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md), I clustered my papers read to identify any unseen structure. I followed this process:
+Inspired by [figure 2 of OMNI-EPIC](https://arxiv.org/pdf/2405.15568) and policy diversity method in [Foundation Model Self Play](open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md), I clustered 
+my papers read to identify any unseen structure. I followed this process:
 
-**Embedding**: I got o4-mini-high to create a one sentence, short description of each paper using [this prompt](data_analysis/tsne_embedding_description_prompt.txt). 
+1. **Embedding**: I get o4-mini-high to create a one sentence, short description of each paper using [this prompt](data_analysis/tsne_embedding_description_prompt.txt). 
 This description is then embedded using [Sentence-Transformers](https://huggingface.co/sentence-transformers) python library.
-The embedding dimension is then reduced from 384D to 30D using [PCA](https://en.wikipedia.org/wiki/Principal_component_analysis)
-and then to 2D using [t-SNE](https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding).
 
-**Clustering**: The resultant 2D data points are then clustered using K-Means. A list of the titles of each paper are fed into GPT-4o using
+2. **Dimensionality Reduction**: The embedding dimension is then reduced from 384D to 30D using [PCA](https://en.wikipedia.org/wiki/Principal_component_analysis)
+and then to 2D using [t-SNE](https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding) and UMAP (in [more plots section](#more-plots))
+
+3. **Clustering**: The resultant 2D data points are then clustered using K-Means. A list of the titles of each paper are fed into GPT-4o using
 this prompt (link pending), which asks it to come up with a title for each cluster. This gives me some interesting second opinion into the theme
 I am exploring.
 
