@@ -106,7 +106,7 @@ The following section includes:
       * Create environments of interest ([OMNI-EPIC](open_endedness_and_auto_curriculums/OpenEndednessUsingLLMS.md))
       * Writing code based policies and suggesting improvements after view results ([Foundation Model Self-Play](open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md))
 8. **Quality Diversity can be used for testing**:
-   * [MADRID](marl/MADRID.md) uses a [MAP-Elites]() style quality diversity search to get diverse set of scenarios the algorithm
+   * [MADRID](marl/MADRID.md) uses a [MAP-Elites](open_endedness_and_auto_curriculums/MAP_Elites.md) style quality diversity search to get diverse set of scenarios the algorithm
    struggles with. It does this by maximising regret across the search grid.
 
 ### 2. Open‑Endedness & Auto‑Curricula
