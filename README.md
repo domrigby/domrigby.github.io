@@ -50,7 +50,7 @@ focus on **reinforcement learning, auto-curriculums and open-endedness**, but al
 clever engineer and distribution.
 
 Inspired by [figure 2 of OMNI-EPIC](https://arxiv.org/pdf/2405.15568) and policy diversity method in [Foundation Model Self Play](open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md), I clustered 
-my papers read to identify any unseen structure. I followed this process:
+my papers read to identify any unseen structure. 
 
 1. **Embedding**: I get o4-mini-high to create a one sentence, short description of each paper using [this prompt](data_analysis/tsne_embedding_description_prompt.txt). 
 This description is then embedded using [Sentence-Transformers](https://huggingface.co/sentence-transformers) python library.

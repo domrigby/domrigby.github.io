@@ -13,3 +13,4 @@ Date: 19th July 2025
   * Regret: difference between current policy and optimal policy's reward. We don't know the optimal policy so we use 
     a set of policies to get a lower bound. These reference policies tend to be old checkpoints and/or heuristics.
   * MAP-Elites descriptor: x and y start position of the ball. This gives a range of scenarios across the pitch
+* Results: identified a diverse set of, sometimes unexpected, failure modes in TiZero football.
