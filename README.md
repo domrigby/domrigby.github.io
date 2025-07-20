@@ -289,6 +289,8 @@ The following section includes:
 * 15th: [Synergizing Quality-Diversity with Descriptor-Conditioned Reinforcement Learning](open_endedness_and_auto_curriculums/QualityDiversityDescriptorConditionRL.md)
 * 16th: [What Has a Foundation Model Found? Using Inductive Bias to Probe for World Models](general_training/DoFoundationModelsLearnWorldModels.md)
 * 17th: [Deep Dive into Yann LeCun’s JEPA by Rohit Bandaru](open_endedness_and_auto_curriculums/DeepDiveIntoYannLecunsJEPA.md)
+* 18th: [All AI Models Might Be The Same by Jack Morris](general_training/AllModelsMightBeTheSameBlog.md)
+* 19th: [marl/MADRID.md]
 
 &#x20;&#x20;
 
@@ -328,4 +330,4 @@ The t-SNE for comparison:
 
 ---
 
-*Last updated: 17th July 2025*
+*Last updated: 19th July 2025*
