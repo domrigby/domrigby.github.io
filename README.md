@@ -184,9 +184,13 @@ The following section includes:
 2. **GPU based environments are key to tackling to complexity of MARL**
    * [JaxMARL](marl/JaxMARL.md) allows you to run the environment tens of thousands of times in parallel. This means the monumental search space can be explore
    a bit more thoroughly.
-3. Population‑based methods prevent overfitting and foster diverse behaviors and can help tackle non-transivity.
+3. **Population‑based methods prevent overfitting and foster diverse behaviors and can help tackle non-transivity**
+    * Technique is used in [TiZero](marl/TiZero.md), [OpenAI Five](https://en.wikipedia.org/wiki/OpenAI_Five),
+   [AlphaStar](https://storage.googleapis.com/deepmind-media/research/alphastar/AlphaStar_unformatted.pdf) and more
 4. Agent selection via ELO‑weighted sampling encourages robustness and competitive balance.
-   * This is used in [Multi-Agent Pommerman](open_endedness_and_auto_curriculums/MultiAgentCurriculumSelfPlay.md). More simple heuristics can be used (e.g. [TiZero](marl/TiZero.md)).
+   * This is used in [Multi-Agent Pommerman](open_endedness_and_auto_curriculums/MultiAgentCurriculumSelfPlay.md), [AlphaStar](https://storage.googleapis.com/deepmind-media/research/alphastar/AlphaStar_unformatted.pdf)
+   and more. More simple heuristics can be used (e.g. [TiZero](marl/TiZero.md) used $(1-p)^2$ (p: probability of victory against opponent)
+   to define the probability distribution).
    5. **[TiZero](marl/TiZero.md) Football: Strong implementation example of many-on-many competitive and collaborative game**
    * Their paper provides a strong example of a system designed to play many-on-many games and gives a detailed account of the 
    architecture choices, curriculum and self-play methodology.
