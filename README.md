@@ -189,9 +189,10 @@ The following section includes:
    [AlphaStar](https://storage.googleapis.com/deepmind-media/research/alphastar/AlphaStar_unformatted.pdf) and more
 4. Agent selection via ELO‑weighted sampling encourages robustness and competitive balance.
    * This is used in [Multi-Agent Pommerman](open_endedness_and_auto_curriculums/MultiAgentCurriculumSelfPlay.md), [AlphaStar](https://storage.googleapis.com/deepmind-media/research/alphastar/AlphaStar_unformatted.pdf)
-   and more. More simple heuristics can be used (e.g. [TiZero](marl/TiZero.md) used $(1-p)^2$ (p: probability of victory against opponent)
+   and more.
+   * More simple heuristics can be used (e.g. [TiZero](marl/TiZero.md) used $(1-p)^2$ (p: probability of victory against opponent)
    to define the probability distribution).
-   5. **[TiZero](marl/TiZero.md) Football: Strong implementation example of many-on-many competitive and collaborative game**
+5. **[TiZero](marl/TiZero.md) Football: Strong implementation example of many-on-many competitive and collaborative game**
    * Their paper provides a strong example of a system designed to play many-on-many games and gives a detailed account of the 
    architecture choices, curriculum and self-play methodology.
 
