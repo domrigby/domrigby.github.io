@@ -11,7 +11,7 @@ of new, interesting and sufficiently challenging environments
 - Disadvantage: it is a bit random. You don't know if it will achieve your desired goal. It can go off on tangents.
 
 ### Key Methods:
-- Population of agent-envrionment pairs. New environments are created by mutating the ones in which the agent has 
+- Population of agent-environment pairs. New environments are created by mutating the ones in which the agent has 
 performed sufficiently. Mutating is done on the embedding vector of the environment.
 - New environments are then assessed for difficulty (run their parent's agent on it) and ones which are in zone of proximal development stay.
 - Inter-environment transfer: every N steps we test all agents on all the other environments. A fine-tuning optimisation step is done first.

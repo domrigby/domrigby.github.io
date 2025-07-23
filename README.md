@@ -9,7 +9,7 @@
 ## 📌 Introduction
 
 Welcome to my Paper Diary! Due to the seemingly never ending supply of interesting reinforcement learning papers which have come out in the last few years, I began
-to try and read at least one every day. I was however having the issue that after a month of two I could not remember for the life of me where I had read that interesting fact,
+to try and read at least one per day. I was however having the issue that after a month of two I could not remember for the life of me where I had read that interesting fact,
 method or algorithm. I therefore began keeping a diary of the papers/blog posts I was reading. I recently decided I may as well start posting these incase anyone else find this
 interesting or useful!
 
@@ -64,15 +64,16 @@ Hover over any data point to see the name of the paper/blog post. On mobile, go 
 The following section includes:
    * **Interesting ideas**: any ideas I saw in papers which might be useful if someone is tackling a similar problem.
    * **Useful methods**: adding tools to your mental toolbox.
-   * **Concise fundamentals**: try and explain the fundamentals of a topic in a few short bullet points!
+   * **Concise fundamentals**: I try and explain the fundamentals of a topic in a few short bullet points!
 
 ### 1. Reinforcement Learning (RL)
 
 1. **Moments of uncertainty are the best moments to learn from**\
-   * These moments of uncertainty or “forks in the road” are the high entropy tokens. These are the moments in which 
-   make uncertain decisions and learn the most. Unsurprisingly, training on these tokens yields  significant performance
-   gains in LLMs. ([80:20 Rule](LLM_reinforcement_learning/TokenEntropyRLVR.md)). Many tokens in language are determined mby other words 
-   so provide little information in te RL process when they are chosen. E.g. "I went to the shop", "to" and "the" are determined by the other words
+   * You learn the most when a decision is uncertain as these correspond to “forks in the road”. These moments can be described
+   mathematically as high entropy tokens. Unsurprisingly, training on these tokens yields significant performance
+   gains in when training reasoning models ([80:20 Rule](LLM_reinforcement_learning/TokenEntropyRLVR.md)). Intuition: Many tokens in language are determined my other words 
+   so provide little information in te RL process when they are chosen. E.g. "I went to the shop", "to" and "the" are determined by
+   other words so provide little information.
 2. **You don't learn anything from always winning... but equally little if you are always losing!**\
    * There exists a **'zone of proximal development'** in which agents are learning the most about what is right and wrong.
    This is shown simply in methods such as [ProRL](LLM_reinforcement_learning/ProlongedRL.md) and [Absolute Zero Reasoner](LLM_reinforcement_learning/AbsoluteZeroReasoner.md)
@@ -93,6 +94,7 @@ The following section includes:
    See more in the [open-endedness section of this blog](#4-openendedness--autocurricula). Summary of a few interesting methods:
       * Create environments of interest ([OMNI-EPIC](open_endedness_and_auto_curriculums/OpenEndednessUsingLLMS.md))
       * Writing code based policies and suggesting improvements after view results ([Foundation Model Self-Play](open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md))
+      * Reward shaping by [CALM](non_LLM_reinforcement_learning/ZeroShotCapabilityOfLLMsForActionEvalInRL.md)
 8. **Quality Diversity can be used for testing**:
    * [MADRID](marl/MADRID.md) uses a [MAP-Elites](open_endedness_and_auto_curriculums/MAP_Elites.md) style quality diversity search to get diverse set of scenarios the algorithm
    struggles with. It does this by maximising regret across the search grid.
@@ -179,9 +181,11 @@ The following section includes:
 2. **GPU based environments are key to tackling to complexity of MARL**
    * [JaxMARL](marl/JaxMARL.md) allows you to run the environment tens of thousands of times in parallel. This means the monumental search space can be explore
    a bit more thoroughly.
-3. Population‑based methods prevent overfitting and foster diverse behaviors.
+3. Population‑based methods prevent overfitting and foster diverse behaviors and can help tackle non-transivity.
 4. Agent selection via ELO‑weighted sampling encourages robustness and competitive balance.
-   This is used in [Foundation Model Self Play](open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md), [Multi-Agent Pommerman](open_endedness_and_auto_curriculums/MultiAgentCurriculumSelfPlay.md)
+   This is used in [Foundation Model Self Play](open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md), [Multi-Agent Pommerman](open_endedness_and_auto_curriculums/MultiAgentCurriculumSelfPlay.md). More simple heuristics can be used (e.g. [TiZero](marl/TiZero.md)).
+5. [TiZero](marl/TiZero.md) provides a strong example of a system designed to play many-on-many games and gives a detailed 
+    account of the architecture choices, curriculum and self-play methodology.
 
 ### 7. Self‑Improvement Strategies
 
@@ -196,7 +200,7 @@ The following section includes:
    * [SEAL](LLM_reinforcement_learning/SelfAdaptingLanguageModels.md) uses RL to generate synthetic edits and hyperparameters, enabling rapid adaptation to new tasks.
 
 ### 8. Architectures:
-1. [Rohit Bandaru's blog post](open_endedness_and_auto_curriculums/DeepDiveIntoYannLecunsJEPA.md) summaried Yann Lecuns JEPA architecture and made the following suggestions:
+1. [Rohit Bandaru's blog post](general_training/DeepDiveIntoYannLecunsJEPA.md) summaried Yann Lecuns JEPA architecture and made the following suggestions:
    1. A framework for human-level AI: includes a bunch of different parts which all play a role found in the human brain.
         <p align="center">
           <img src="https://rohitbandaru.github.io/assets/img/blog/jepa/jepa_brain.png" alt="Architecture diagram" width="300"/>
@@ -286,7 +290,7 @@ The following section includes:
 * 30th: [Self-Supervised Video Models Enable Understanding, Prediction and Planning (V-JEPA)](general_training/V-JEPA2.md)
 
 ### July 2025
-* 1st: [Open-Endedness is Essential for Artificial Superhuman Intelligence](open_endedness_and_auto_curriculums/SuperintelligenceFromFirstPrinciples.md)
+* 1st: [Open-Endedness is Essential for Artificial Superhuman Intelligence](open_endedness_and_auto_curriculums/OpenEndednessIsKeyToASI.md)
 * 2nd: [SPIRAL: Self-Play on Zero-Sum Games Incentivizes Reasoning via Multi-Agent Multi-Turn Reinforcement Learning](LLM_reinforcement_learning/SelfPlayZeroSumGames.md)
 * 4th: [Training extremely large neural networks across thousands of GPUs by Jeremy Jordan](distribution_and_gpu_acceleration/TrainingOnThousandsOfGPUs.md)
 * 5th: [IMPALA: Scalable Distributed Deep-RL with Importance Weighted Actor-Learner Architectures](distribution_and_gpu_acceleration/IMPALA_DistributedRL.md)
@@ -301,7 +305,7 @@ The following section includes:
 * 14th: [Model soups: averaging weights of multiple fine-tuned models improves accuracy without increasing inference time](general_training/ModelSoups.md)
 * 15th: [Synergizing Quality-Diversity with Descriptor-Conditioned Reinforcement Learning](open_endedness_and_auto_curriculums/QualityDiversityDescriptorConditionRL.md)
 * 16th: [What Has a Foundation Model Found? Using Inductive Bias to Probe for World Models](general_training/DoFoundationModelsLearnWorldModels.md)
-* 17th: [Deep Dive into Yann LeCun’s JEPA by Rohit Bandaru](open_endedness_and_auto_curriculums/DeepDiveIntoYannLecunsJEPA.md)
+* 17th: [Deep Dive into Yann LeCun’s JEPA by Rohit Bandaru](general_training/DeepDiveIntoYannLecunsJEPA.md)
 * 18th: [All AI Models Might Be The Same by Jack Morris](general_training/AllModelsMightBeTheSameBlog.md)
 * 19th: [Multi-Agent Diagnostics for Robustness via Illuminated  (MADRID)](marl/MADRID.md)
 * 20th: [Assessing the Zero-Shot Capabilities of LLMs for Action Evaluation in RL](non_LLM_reinforcement_learning/ZeroShotCapabilityOfLLMsForActionEvalInRL.md)
