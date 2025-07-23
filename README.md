@@ -72,8 +72,8 @@ The following section includes:
    * You learn the most when a decision is uncertain as these correspond to “forks in the road”. These moments can be described
    mathematically as high entropy tokens. Unsurprisingly, training on these tokens yields significant performance
    gains in when training reasoning models ([80:20 Rule](LLM_reinforcement_learning/TokenEntropyRLVR.md)). Intuition: Many tokens in language are determined my other words 
-   so provide little information in te RL process when they are chosen. E.g. "I went to the shop", "to" and "the" are determined by
-   other words so provide little information.
+   so provide little information in te RL process when they are chosen. 
+    > E.g. "I went to the shop", "to" and "the" are determined by other words so provide little information.
 2. **You don't learn anything from always winning... but equally little if you are always losing!**\
    * There exists a **'zone of proximal development'** in which agents are learning the most about what is right and wrong.
    This is shown simply in methods such as [ProRL](LLM_reinforcement_learning/ProlongedRL.md) and [Absolute Zero Reasoner](LLM_reinforcement_learning/AbsoluteZeroReasoner.md)
@@ -102,8 +102,8 @@ The following section includes:
 ### 2. Open‑Endedness & Auto‑Curricula
 1. **Open-Endedness requires novel and learnable artefacts**:
    * Open-ended is defined in [Open-Endedness is Key to ASI](open_endedness_and_auto_curriculums/OpenEndednessIsKeyToASI.md): a system is open-ended if it **continually creates 
-   novel and learnable artefacts**. This is dependent on the observer and the time-horizon. E.g. a mouse can't learn 
-   chess and a computer will eventually plateau in performance.
+   novel and learnable artefacts**. This is dependent on the observer and the time-horizon.
+   > E.g. a mouse can't learn chess and a computer will eventually plateau in performance. Open-endedness depends on the observer.
 2. **Procedural Level Generation** is used to create novel environments to learn in
    * [POET](open_endedness_and_auto_curriculums/EnhancedPOETOpenEndedLearning.md) introduces new levels, checks they meet a minimum learnability criterion and then only adds the most novel.
 3. **Prioritized Level Replay** is way to order those environments such that they are **learnable**. This creates an **auto-curriculum**.
@@ -118,6 +118,9 @@ The following section includes:
 6. **Performance annealed exploration reward**:
    * [Curriculum Learning and Population-based Self-Play](open_endedness_and_auto_curriculums/MultiAgentCurriculumSelfPlay.md) suggests using an exploration reward
    which is annealed according to agent performance. It therefore explores more when it is doing badly and exploits when it is doing well.
+7. **Euclidean distance in an embedding space as a novelty metric**:
+   * Many papers use Euclidean distance in the embedding space or feature space as a novelty metric: [Foundation Model Self-Play](open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md),
+   [Enhanced POET](open_endedness_and_auto_curriculums/EnhancedPOETOpenEndedLearning.md), [OMNI-EPIC](open_endedness_and_auto_curriculums/OpenEndednessUsingLLMS.md)
 
 ### 3. Pretraining, Fine-Tuning & General Training Tips
 
