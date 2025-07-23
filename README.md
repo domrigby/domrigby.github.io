@@ -134,7 +134,7 @@ The following section includes:
    need to work out how to scale LLM RL (see blog post and summary for further details).
 3. **When doing PPO/GRPO, make the upper bound clip larger**\
    * The upper clip bound being higher increases the probability of unlikely choices and increases exploration (as in [ProRL](LLM_reinforcement_learning/ProlongedRL.md) and [Play to Generalise](LLM_reinforcement_learning/ReasoningThroughGames.md)) improve exploration and stability.
-4. **Dual‑Outcome Reasoning: knows what's bad is also useful!**\
+4. **Dual‑Outcome Reasoning: knowing what's bad is also useful!**\
    * Generating both best and worst moves in game scenarios deepens model understanding of decision boundaries ([Play to Generalise](LLM_reinforcement_learning/ReasoningThroughGames.md))
 5. **Beware When Using Qwen for RL**\
    * [RL with Spurious Rewards](LLM_reinforcement_learning/SpuriousRewardsRL.md) shows that random reward signals can still improve performance on Qwen-2.5-maths. The authors explain that this is likely caused
@@ -186,9 +186,10 @@ The following section includes:
    a bit more thoroughly.
 3. Population‑based methods prevent overfitting and foster diverse behaviors and can help tackle non-transivity.
 4. Agent selection via ELO‑weighted sampling encourages robustness and competitive balance.
-   This is used in [Foundation Model Self Play](open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md), [Multi-Agent Pommerman](open_endedness_and_auto_curriculums/MultiAgentCurriculumSelfPlay.md). More simple heuristics can be used (e.g. [TiZero](marl/TiZero.md)).
-5. [TiZero](marl/TiZero.md) provides a strong example of a system designed to play many-on-many games and gives a detailed 
-    account of the architecture choices, curriculum and self-play methodology.
+   * This is used in [Multi-Agent Pommerman](open_endedness_and_auto_curriculums/MultiAgentCurriculumSelfPlay.md). More simple heuristics can be used (e.g. [TiZero](marl/TiZero.md)).
+   5. **[TiZero](marl/TiZero.md) Football: Strong implementation example of many-on-many competitive and collaborative game**
+   * Their paper provides a strong example of a system designed to play many-on-many games and gives a detailed account of the 
+   architecture choices, curriculum and self-play methodology.
 
 ### 7. Self‑Improvement Strategies
 
