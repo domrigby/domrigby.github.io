@@ -100,7 +100,7 @@ The following section includes:
    struggles with. It does this by maximising regret across the search grid.
 
 ### 2. Open‑Endedness & Auto‑Curricula
-1. **Open-Endedness requires novel and learnable artefacts**:
+1. **Open-Endedness requires the generation of novel and learnable artefacts**:
    * Open-ended is defined in [Open-Endedness is Key to ASI](open_endedness_and_auto_curriculums/OpenEndednessIsKeyToASI.md): a system is open-ended if it **continually creates 
    novel and learnable artefacts**. This is dependent on the observer and the time-horizon.
    > E.g. a mouse can't learn chess and a computer will eventually plateau in performance. Open-endedness depends on the observer.
@@ -118,9 +118,14 @@ The following section includes:
 6. **Performance annealed exploration reward**:
    * [Curriculum Learning and Population-based Self-Play](open_endedness_and_auto_curriculums/MultiAgentCurriculumSelfPlay.md) suggests using an exploration reward
    which is annealed according to agent performance. It therefore explores more when it is doing badly and exploits when it is doing well.
-7. **Euclidean distance in an embedding space as a novelty metric**:
+7. **Euclidean distance in the embedding space as a novelty metric**:
    * Many papers use Euclidean distance in the embedding space or feature space as a novelty metric: [Foundation Model Self-Play](open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md),
-   [Enhanced POET](open_endedness_and_auto_curriculums/EnhancedPOETOpenEndedLearning.md), [OMNI-EPIC](open_endedness_and_auto_curriculums/OpenEndednessUsingLLMS.md)
+   [Enhanced POET](open_endedness_and_auto_curriculums/EnhancedPOETOpenEndedLearning.md), [OMNI-EPIC](open_endedness_and_auto_curriculums/OpenEndednessUsingLLMS.md). The closer a new datapoint is to 
+   the others, the less novel it is.
+8. **We can learn to learn to generate curriculums**
+   * [MM-ACL](open_endedness_and_auto_curriculums/MetaCurriculumLearning.md) introduces a method to learn a model which predicts the improvement 
+   an agent will gain on a new level, from a history of its past performances. It is then used to generate new levels which have the highest 
+   possible performance improvement.
 
 ### 3. Pretraining, Fine-Tuning & General Training Tips
 
@@ -319,6 +324,7 @@ The following section includes:
 * 19th: [Multi-Agent Diagnostics for Robustness via Illuminated  (MADRID)](marl/MADRID.md)
 * 20th: [Assessing the Zero-Shot Capabilities of LLMs for Action Evaluation in RL](non_LLM_reinforcement_learning/ZeroShotCapabilityOfLLMsForActionEvalInRL.md)
 * 20th: [TiZero: Mastering Multi-Agent Football with Curriculum Learning and Self-Play](marl/TiZero.md)
+* 22nd: [Model-Based Meta Automatic Curriculum Learning](open_endedness_and_auto_curriculums/MetaCurriculumLearning.md)
 
 &#x20;&#x20;
 
@@ -358,4 +364,4 @@ The t-SNE for comparison:
 
 ---
 
-*Last updated: 20th July 2025*
+*Last updated: 23rd July 2025*

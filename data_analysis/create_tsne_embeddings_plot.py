@@ -77,7 +77,7 @@ umap_cluster_titles = pd.DataFrame({'cluster': labels_umap, 'title': titles}) \
 
 # Get human/LLM-provided theme labels
 # tsne_cluster_labels = { "0": "LLM Reasoning via RL", "1": "Distributed RL Systems", "2": "Multi-Agent Curriculum Learning", "3": "Open-Ended AI Research", "4": "Foundation & Video Models", "5": "Robotics & Control RL" }
-# umap_cluster_labels = { "0": "LLM Reasoning with RL", "1": "Distributed RL Systems", "2": "Multi-Agent Reasoning Games", "3": "Open-Ended AI Agents", "4": "Robotics & Curriculum RL", "5": "World Models & Pretraining" }
+# umap_cluster_labels = { "0": "LLM Reasoning via RL", "1": "Distributed RL Systems", "2": "Multi-Agent Curriculum Learning", "3": "Open-Ended AI Research", "4": "Foundation & Video Models", "5": "Robotics & Control RL" }
 
 tsne_cluster_labels = summarize_all_clusters(tsne_cluster_titles)
 umap_cluster_labels = summarize_all_clusters(umap_cluster_titles)

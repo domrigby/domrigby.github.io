@@ -304,5 +304,11 @@
     "date_read": "2025-07-20",
     "link": "https://arxiv.org/abs/2302.07515",
     "summary": "Tackles the challenge of learning coordinated strategies in complex multi-agent environments by combining curriculum learning and self-play. The approach gradually increases scenario difficulty while teams train against evolving opponents. Evaluations on a simulated football platform show a 30%+ boost in win rates and robustness across varied game settings."
+  },
+  {
+    "title": "Model-Based Meta Automatic Curriculum Learning",
+    "date_read": "2025-07-23",
+    "link": "https://openreview.net/pdf?id=Kp716SJ5dbJ",
+    "summary": "Addresses how to generate effective sequences of intermediate tasks to accelerate learning across varied target tasks. Introduces MM-ACL, which learns a model predicting performance gains between tasks and greedily selects curricula. Shows improved sample efficiency in a navigation benchmark compared to random and bandit baselines."
   }
 ]
