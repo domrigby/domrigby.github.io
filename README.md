@@ -92,7 +92,7 @@ The following section includes:
 7. **Foundation models have a large role to play in future RL**:
    * Foundation models have intuition about what humans find interesting. They are therefore capable of designing curriculums for RL or being involved in the policy improvement steps. 
    See more in the [open-endedness section of this blog](#4-openendedness--autocurricula). Summary of a few interesting methods:
-      * Create environments of interest ([OMNI-EPIC](open_endedness_and_auto_curriculums/OpenEndednessUsingLLMS.md))
+      * Create environments of interest ([OMNI-EPIC](open_endedness_and_auto_curriculums/OpenEndednessUsingLLMS.md), [Eurekaverse](open_endedness_and_auto_curriculums/Eurekaverse.md))
       * Writing code based policies and suggesting improvements after view results ([Foundation Model Self-Play](open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md))
       * Reward shaping by [CALM](non_LLM_reinforcement_learning/ZeroShotCapabilityOfLLMsForActionEvalInRL.md)
 8. **Quality Diversity can be used for testing**:
@@ -325,6 +325,7 @@ The following section includes:
 * 20th: [Assessing the Zero-Shot Capabilities of LLMs for Action Evaluation in RL](non_LLM_reinforcement_learning/ZeroShotCapabilityOfLLMsForActionEvalInRL.md)
 * 20th: [TiZero: Mastering Multi-Agent Football with Curriculum Learning and Self-Play](marl/TiZero.md)
 * 22nd: [Model-Based Meta Automatic Curriculum Learning](open_endedness_and_auto_curriculums/MetaCurriculumLearning.md)
+* 23rd: [Eurekaverse: Environment Curriculum Generation via Large Language Models](open_endedness_and_auto_curriculums/Eurekaverse.md)
 
 &#x20;&#x20;
 
@@ -364,4 +365,4 @@ The t-SNE for comparison:
 
 ---
 
-*Last updated: 23rd July 2025*
+*Last updated: 24th July 2025*

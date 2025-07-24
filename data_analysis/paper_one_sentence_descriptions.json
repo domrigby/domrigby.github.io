@@ -310,5 +310,11 @@
     "date_read": "2025-07-23",
     "link": "https://openreview.net/pdf?id=Kp716SJ5dbJ",
     "summary": "Addresses how to generate effective sequences of intermediate tasks to accelerate learning across varied target tasks. Introduces MM-ACL, which learns a model predicting performance gains between tasks and greedily selects curricula. Shows improved sample efficiency in a navigation benchmark compared to random and bandit baselines."
+  },
+  {
+    "title": "Eurekaverse: Environment Curriculum Generation via Large Language Models",
+    "date_read": "2025-07-23",
+    "link": "https://arxiv.org/abs/2411.01775",
+    "summary": "Addresses the challenge of designing environment curricula for open-ended agent training. Proposes Eurekaverse, which uses a language model to propose successive environment modifications based on agent feedback. Experiments in grid-world tasks show accelerated skill acquisition and increased behavioral diversity compared to manual or random curricula."
   }
 ]
