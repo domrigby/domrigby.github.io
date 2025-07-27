@@ -126,6 +126,7 @@ The following section includes:
    * [MM-ACL](open_endedness_and_auto_curriculums/MetaCurriculumLearning.md) introduces a method to learn a model which predicts the improvement 
    an agent will gain on a new level, from a history of its past performances. It is then used to generate new levels which have the highest 
    possible performance improvement.
+9. ****
 
 ### 3. Pretraining, Fine-Tuning & General Training Tips
 
@@ -326,6 +327,8 @@ The following section includes:
 * 20th: [TiZero: Mastering Multi-Agent Football with Curriculum Learning and Self-Play](marl/TiZero.md)
 * 22nd: [Model-Based Meta Automatic Curriculum Learning](open_endedness_and_auto_curriculums/MetaCurriculumLearning.md)
 * 23rd: [Eurekaverse: Environment Curriculum Generation via Large Language Models](open_endedness_and_auto_curriculums/Eurekaverse.md)
+* 25th: [Benchmarking Population-Based Reinforcement Learning across Robotic Tasks with GPU-Accelerated Simulation](distribution_and_gpu_acceleration/PopulationHyperParameterSearch.md)
+* 26th: [DISCOVER: Automated Curricula for Sparse-Reward Reinforcement Learning](open_endedness_and_auto_curriculums/DiscoverAutoCurriculaForSparseRewards.md)
 
 &#x20;&#x20;
 
