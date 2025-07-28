@@ -126,7 +126,12 @@ The following section includes:
    * [MM-ACL](open_endedness_and_auto_curriculums/MetaCurriculumLearning.md) introduces a method to learn a model which predicts the improvement 
    an agent will gain on a new level, from a history of its past performances. It is then used to generate new levels which have the highest 
    possible performance improvement.
-9. ****
+9. **[DISCOVER](open_endedness_and_auto_curriculums/DiscoverAutoCurriculaForSparseRewards.md) uses value and uncertainty of an ensemble of critics to form an auto-curriculum for sparse-rewards**
+   * Policy and values are conditioned on intermediate goal states (g) which are chosen to maximise **novelty, achievability and relevance** to goal state (g*).
+   * Insight:
+     * High V(s0, g) means tasks is likely achievable from start state s0.
+     * High std(s0, g) means this is not reliable and therefore likely novel
+     * High V(g, g*) means the sub-goal g is close to the target goal g*
 
 ### 3. Pretraining, Fine-Tuning & General Training Tips
 
@@ -329,6 +334,7 @@ The following section includes:
 * 23rd: [Eurekaverse: Environment Curriculum Generation via Large Language Models](open_endedness_and_auto_curriculums/Eurekaverse.md)
 * 25th: [Benchmarking Population-Based Reinforcement Learning across Robotic Tasks with GPU-Accelerated Simulation](distribution_and_gpu_acceleration/PopulationHyperParameterSearch.md)
 * 26th: [DISCOVER: Automated Curricula for Sparse-Reward Reinforcement Learning](open_endedness_and_auto_curriculums/DiscoverAutoCurriculaForSparseRewards.md)
+* 27th:[Winner Takes It All: Training Performant RL Populations for Combinatorial Optimization](general_training/WinnerTakesItAllPopulationBasedRL.md)
 
 &#x20;&#x20;
 
