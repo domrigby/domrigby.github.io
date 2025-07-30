@@ -334,5 +334,23 @@
     "date_read": "2025-07-27",
     "link": "general_training/WinnerTakesItAllPopulationBasedRL.md",
     "summary": "Solving combinatorial design problems with single policies limits solution diversity. This work develops a population training scheme that rewards only the best-performing agent per instance, causing implicit specialization. Results on multiple combinatorial benchmarks show improved solution quality and inference efficiency over existing methods."
+  },
+  {
+    "title": "Dispelling the Mirage of Progress in Offline MARL through Standardised Baselines and Evaluation",
+    "date_read": "2025-07-28",
+    "link": "https://github.com/domrigby/domrigby.github.io/blob/main/marl/StandardisingOfflineMARLResearch.md",
+    "summary": "The paper addresses misleading progress in offline multi‑agent reinforcement learning by proposing consistent baseline implementations and unified evaluation protocols. Experiments using these standards reveal that many recent methods underperform, underscoring the necessity of rigorous and reproducible benchmarking."
+  },
+  {
+    "title": "Communicative Reinforcement Learning Agents for Landmark Detection in Brain Images",
+    "date_read": "2025-07-29",
+    "link": "https://github.com/domrigby/domrigby.github.io/blob/main/marl/MARLForBrainImaging.md",
+    "summary": "This work tackles efficient anatomical landmark detection in brain scans by designing reinforcement learning agents that exchange compact messages. Through collaborative communication, these agents achieve more accurate and faster landmark localization compared to independent approaches, demonstrating the value of inter‑agent messaging."
+  },
+  {
+    "title": "Intelligent Railway Capacity and Traffic Management Using Multi-Agent Deep Reinforcement Learning",
+    "date_read": "2025-07-30",
+    "link": "https://github.com/domrigby/domrigby.github.io/blob/main/marl/TrainSchedulingWithMARL.md",
+    "summary": "The study tackles scheduling and dispatching challenges in congested rail networks by deploying multi‑agent deep reinforcement learning within a detailed train simulator. The learned policies significantly boost on‑time performance and rapidly adapt to disruptions, offering a scalable approach for automated traffic management."
   }
 ]

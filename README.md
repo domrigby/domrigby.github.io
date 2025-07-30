@@ -235,6 +235,8 @@ The following section includes:
       * It's impossible to know what will happen in the next state... but it possible to predict a latent representation of it.
       * EBM aim to predict the distance between the embedding of current and future state. 
       * There is however still uncertainty, so a random variable is used in the prediction of future state to account for this randomness.
+2. **Interesting Observation Spaces**:
+   * [CTMS for the German Deutsche Bahn](marl/TrainSchedulingWithMARL.md) used 
       
 ----
 
@@ -336,7 +338,11 @@ Click the links to see the summaries and get links to the original paper.
 * 23rd: [Eurekaverse: Environment Curriculum Generation via Large Language Models](open_endedness_and_auto_curriculums/Eurekaverse.md)
 * 25th: [Benchmarking Population-Based Reinforcement Learning across Robotic Tasks with GPU-Accelerated Simulation](distribution_and_gpu_acceleration/PopulationHyperParameterSearch.md)
 * 26th: [DISCOVER: Automated Curricula for Sparse-Reward Reinforcement Learning](open_endedness_and_auto_curriculums/DiscoverAutoCurriculaForSparseRewards.md)
-* 27th:[Winner Takes It All: Training Performant RL Populations for Combinatorial Optimization](general_training/WinnerTakesItAllPopulationBasedRL.md)
+* 27th: [Winner Takes It All: Training Performant RL Populations for Combinatorial Optimization](general_training/WinnerTakesItAllPopulationBasedRL.md)
+* 28th: [Dispelling the Mirage of Progress in Offline MARL through Standardised Baselines and Evaluation](marl/StandardisingOfflineMARLResearch.md)
+* 29th: [Communicative Reinforcement Learning Agents for Landmark Detection in Brain Images](marl/MARLForBrainImaging.md)
+* 30th: [Intelligent Railway Capacity and Traffic Management Using Multi-Agent Deep Reinforcement Learning](marl/TrainSchedulingWithMARL.md)
+
 
 &#x20;&#x20;
 
