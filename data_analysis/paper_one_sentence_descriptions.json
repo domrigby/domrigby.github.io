@@ -316,5 +316,23 @@
     "date_read": "2025-07-23",
     "link": "https://arxiv.org/abs/2411.01775",
     "summary": "Addresses the challenge of designing environment curricula for open-ended agent training. Proposes Eurekaverse, which uses a language model to propose successive environment modifications based on agent feedback. Experiments in grid-world tasks show accelerated skill acquisition and increased behavioral diversity compared to manual or random curricula."
+  },
+   {
+    "title": "Benchmarking Population-Based Reinforcement Learning across Robotic Tasks with GPU-Accelerated Simulation",
+    "date_read": "2025-07-25",
+    "link": "distribution_and_gpu_acceleration/PopulationHyperParameterSearch.md",
+    "summary": "Population-based reinforcement learning methods often require extensive simulation time for robotic tasks. This work introduces a GPU-accelerated simulation framework to benchmark and tune diverse agent populations efficiently. Experiments across multiple robotic environments demonstrate substantial speedups and performance gains compared to CPU-based baselines."
+  },
+  {
+    "title": "DISCOVER: Automated Curricula for Sparse-Reward Reinforcement Learning",
+    "date_read": "2025-07-26",
+    "link": "open_endedness_and_auto_curriculums/DiscoverAutoCurriculaForSparseRewards.md",
+    "summary": "Sparse-feedback learning agents struggle to solve tasks where rewards are rare. This work proposes an automated curriculum algorithm that dynamically adjusts task difficulty based on agent progress. Tests on challenging benchmarks show faster learning and higher success rates than fixed or manual curricula."
+  },
+  {
+    "title": "Winner Takes It All: Training Performant RL Populations for Combinatorial Optimization",
+    "date_read": "2025-07-27",
+    "link": "general_training/WinnerTakesItAllPopulationBasedRL.md",
+    "summary": "Solving combinatorial design problems with single policies limits solution diversity. This work develops a population training scheme that rewards only the best-performing agent per instance, causing implicit specialization. Results on multiple combinatorial benchmarks show improved solution quality and inference efficiency over existing methods."
   }
 ]

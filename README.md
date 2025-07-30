@@ -273,6 +273,8 @@ The following section includes:
 
 # 📖 Full Diary
 
+Click the links to see the summaries and get links to the original paper.
+
 ### May 2025
 
 * 23rd: [Absolute Zero Reasoner](LLM_reinforcement_learning/AbsoluteZeroReasoner.md)

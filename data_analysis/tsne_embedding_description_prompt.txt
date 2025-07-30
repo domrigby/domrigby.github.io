@@ -12,5 +12,6 @@ Return your results as a JSON array of objects with “title”, "date_read" and
 The titles of the papers are in the square brackets below. More info about these papers can be found in this github respotiory https://github.com/domrigby/domrigby.github.io
 
 ### July 2025
-* 20th: [Assessing the Zero-Shot Capabilities of LLMs for Action Evaluation in RL](non_LLM_reinforcement_learning/ZeroShotCapabilityOfLLMsForActionEvalInRL.md)
-* 20th: [TiZero: Mastering Multi-Agent Football with Curriculum Learning and Self-Play](marl/TiZero.md)
+* 25th: [Benchmarking Population-Based Reinforcement Learning across Robotic Tasks with GPU-Accelerated Simulation](distribution_and_gpu_acceleration/PopulationHyperParameterSearch.md)
+* 26th: [DISCOVER: Automated Curricula for Sparse-Reward Reinforcement Learning](open_endedness_and_auto_curriculums/DiscoverAutoCurriculaForSparseRewards.md)
+* 27th:[Winner Takes It All: Training Performant RL Populations for Combinatorial Optimization](general_training/WinnerTakesItAllPopulationBasedRL.md)
