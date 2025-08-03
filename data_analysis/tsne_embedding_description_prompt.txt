@@ -9,9 +9,11 @@ You are an expert scientific summarizer. For each paper or blog post title I lis
 
 Return your results as a JSON array of objects with “title”, "date_read" and "link" and “summary” fields.
 
-The titles of the papers are in the square brackets below. More info about these papers can be found in this github respotiory https://github.com/domrigby/domrigby.github.io
+The titles of the papers are in the square brackets below. More info about these papers can be found in this github repository https://github.com/domrigby/domrigby.github.io
 
 ### July 2025
-* 28th: [Dispelling the Mirage of Progress in Offline MARL through Standardised Baselines and Evaluation](marl/StandardisingOfflineMARLResearch.md)
-* 29th: [Communicative Reinforcement Learning Agents for Landmark Detection in Brain Images](marl/MARLForBrainImaging.md)
-* 30th: [Intelligent Railway Capacity and Traffic Management Using Multi-Agent Deep Reinforcement Learning](marl/TrainSchedulingWithMARL.md)
+* 31st: [Gym4ReaL: A Suite for Benchmarking Real-World Reinforcement Learning](non_LLM_reinforcement_learning/Gym4Real.md)
+
+### August 2025
+* 1st: [GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning](LLMs/GEPAPromptEngineering.md)
+* 2nd: [Forecaster: Towards Temporally Abstract Tree-Search Planning from Pixels](non_LLM_reinforcement_learning/FORECASTER_TimeAbstractedPlanning.md)

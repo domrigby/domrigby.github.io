@@ -114,7 +114,7 @@ The following section includes:
    and the other perturbs existing interesting levels.
 5. **Foundation models can act as 'intelligent search operators'** to create new learning opportunities based on what they have learned that humans would find interesting.
    * This is suggested as a ['key method on the road to ASI'](open_endedness_and_auto_curriculums/OpenEndednessIsKeyToASI.md). and is explored for level generation in [OMNI-EPIC](open_endedness_and_auto_curriculums/OpenEndednessUsingLLMS.md)
-   and for policy generation is [Foundation Model Self-Play](open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md)
+   and for policy generation is [Foundation Model Self-Play](open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md). LLMs are also used to iteratively improve prompts in [GEPA](LLMs/GEPAPromptEngineering.md).
 6. **Performance annealed exploration reward**:
    * [Curriculum Learning and Population-based Self-Play](open_endedness_and_auto_curriculums/MultiAgentCurriculumSelfPlay.md) suggests using an exploration reward
    which is annealed according to agent performance. It therefore explores more when it is doing badly and exploits when it is doing well.
@@ -156,6 +156,12 @@ The following section includes:
 7. **Creating 'soups' of all your different hyperparameter fine-tuning models** can improve performance.
    * [ModelSoups](general_training/ModelSoups.md) achieved SotA performance on ImageNet by doing a greedy mix (only add if it improves performance). This works as fine-tuned models
     often end up in the same loss valley and therefore averaging their performance can lead to lower loss and better performance.
+8. **Prompt optimisation can outperform RL on single tasks**
+   * [GEPA](LLMs/GEPAPromptEngineering.md) showed that optimising prompts can be far more effective and sample efficient than GRPO. This done by mutating prompts according 
+   to feedback on the chain of thought from other LLMs ([intelligent search operators! (1.7)](#1-reinforcement-learning-rl)). This makes sense if RL just increases the likelihood of using knowledge already baked into the model.
+9. **Temporally abstractedp planning**:
+   * [Forecaster](non_LLM_reinforcement_learning/FORECASTER_TimeAbstractedPlanning.md) introduces a manager-worker world model framework in which the manager
+   pick high level goals with which to condition the worker on. It then performs tree search across a set of possible goals in order to pick which one is best.
 
 ### 4. Robotics & Control
 
@@ -342,6 +348,11 @@ Click the links to see the summaries and get links to the original paper.
 * 28th: [Dispelling the Mirage of Progress in Offline MARL through Standardised Baselines and Evaluation](marl/StandardisingOfflineMARLResearch.md)
 * 29th: [Communicative Reinforcement Learning Agents for Landmark Detection in Brain Images](marl/MARLForBrainImaging.md)
 * 30th: [Intelligent Railway Capacity and Traffic Management Using Multi-Agent Deep Reinforcement Learning](marl/TrainSchedulingWithMARL.md)
+* 31st: [Gym4ReaL: A Suite for Benchmarking Real-World Reinforcement Learning](non_LLM_reinforcement_learning/Gym4Real.md)
+
+### August 2025
+* 1st: [GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning](LLMs/GEPAPromptEngineering.md)
+* 2nd: [Forecaster: Towards Temporally Abstract Tree-Search Planning from Pixels](non_LLM_reinforcement_learning/FORECASTER_TimeAbstractedPlanning.md)
 
 
 &#x20;&#x20;

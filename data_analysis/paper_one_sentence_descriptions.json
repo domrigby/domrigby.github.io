@@ -352,5 +352,23 @@
     "date_read": "2025-07-30",
     "link": "https://github.com/domrigby/domrigby.github.io/blob/main/marl/TrainSchedulingWithMARL.md",
     "summary": "The study tackles scheduling and dispatching challenges in congested rail networks by deploying multi‑agent deep reinforcement learning within a detailed train simulator. The learned policies significantly boost on‑time performance and rapidly adapt to disruptions, offering a scalable approach for automated traffic management."
+  },
+    {
+    "title": "Gym4ReaL: A Suite for Benchmarking Real-World Reinforcement Learning",
+    "date_read": "2025-07-31",
+    "link": "https://github.com/domrigby/domrigby.github.io/blob/main/non_LLM_reinforcement_learning/Gym4ReaL.md",
+    "summary": "Reinforcement learning benchmarks often ignore real-world complexities like non-stationarity and partial observability. The authors present Gym4ReaL, a suite of diverse environments simulating practical constraints. Experiments show standard RL methods remain competitive against rule-based baselines, underscoring the need for advanced algorithms."
+  },
+  {
+    "title": "GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning",
+    "date_read": "2025-08-01",
+    "link": "https://github.com/domrigby/domrigby.github.io/blob/main/LLMs/GEPAPromptEngineering.md",
+    "summary": "Optimizing complex prompts for large language models is inefficient with traditional reinforcement learning due to costly rollouts and noisy feedback. The authors introduce GEPA, combining natural language reflection and genetic-Pareto search to evolve prompts iteratively. GEPA achieves 10–20% better performance with up to 35× fewer rollouts."
+  },
+  {
+    "title": "Forecaster: Towards Temporally Abstract Tree-Search Planning from Pixels",
+    "date_read": "2025-08-02",
+    "link": "https://github.com/domrigby/domrigby.github.io/blob/main/non_LLM_reinforcement_learning/FORECASTER_TimeAbstractedPlanning.md",
+    "summary": "Planning in high-dimensional environments with sparse rewards often requires long-horizon reasoning. The authors propose Forecaster, a hierarchical method that learns temporally abstract world models and uses tree-search to select high-level goals, alongside a low-level policy for execution. It improves sample efficiency and generalizes in AntMaze tasks."
   }
 ]
