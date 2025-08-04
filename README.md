@@ -159,9 +159,12 @@ The following section includes:
 8. **Prompt optimisation can outperform RL on single tasks**
    * [GEPA](LLMs/GEPAPromptEngineering.md) showed that optimising prompts can be far more effective and sample efficient than GRPO. This done by mutating prompts according 
    to feedback on the chain of thought from other LLMs ([intelligent search operators! (1.7)](#1-reinforcement-learning-rl)). This makes sense if RL just increases the likelihood of using knowledge already baked into the model.
-9. **Temporally abstractedp planning**:
+9. **Temporally abstracted planning**:
    * [Forecaster](non_LLM_reinforcement_learning/FORECASTER_TimeAbstractedPlanning.md) introduces a manager-worker world model framework in which the manager
    pick high level goals with which to condition the worker on. It then performs tree search across a set of possible goals in order to pick which one is best.
+10. **Scaling test time computer**
+   * [Hierarchical Reasoning Model](general_training/HierarchicalReasoningModel.md) uses a DQN to decide whether the model should continue reasoning (or could be
+   planning if using MCTS or other model based method) or finish. This allows the network to switch between [**system 1 and system 2 thinking**](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow&ved=2ahUKEwiY3eGH4_GOAxXudUEAHXugKX8QFnoECHEQAQ&usg=AOvVaw0LE50nrE-ivx9x1_Qq-J_0) (thinking longer about harder tasks).
 
 ### 4. Robotics & Control
 
@@ -241,8 +244,15 @@ The following section includes:
       * It's impossible to know what will happen in the next state... but it possible to predict a latent representation of it.
       * EBM aim to predict the distance between the embedding of current and future state. 
       * There is however still uncertainty, so a random variable is used in the prediction of future state to account for this randomness.
-2. **Interesting Observation Spaces**:
-   * [CTMS for the German Deutsche Bahn](marl/TrainSchedulingWithMARL.md) used 
+
+2. **Hierarchical mutli-timescale planning**:
+   * When humans plan we do it at multiple timescales. When you think "I'm going to go to work", you don't think about every single joint movement
+   you are going to do to get there. You plan the highest level actions and then break them down into sub-tasks. This is what [Yann Lecun suggests](general_training/DeepDiveIntoYannLecunsJEPA.md) and 
+   is what [Hierarchical Reasoning Model](general_training/HierarchicalReasoningModel.md) implements. A high level planner runs at a low frequency while a high frequency recurrent neural network 
+   performs the plans which the high level planner creates.
+      
+3. **Interesting Observation Spaces**:
+   * [CTMS for the German Deutsche Bahn](marl/TrainSchedulingWithMARL.md) used tree structure to model the railway in front of each train
       
 ----
 
@@ -353,7 +363,7 @@ Click the links to see the summaries and get links to the original paper.
 ### August 2025
 * 1st: [GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning](LLMs/GEPAPromptEngineering.md)
 * 2nd: [Forecaster: Towards Temporally Abstract Tree-Search Planning from Pixels](non_LLM_reinforcement_learning/FORECASTER_TimeAbstractedPlanning.md)
-
+* 4th: [Hierarchical Reasoning Model](general_training/HierarchicalReasoningModel.md)
 
 &#x20;&#x20;
 
