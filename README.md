@@ -370,6 +370,7 @@ Click the links to see the summaries and get links to the original paper.
 * 2nd: [Forecaster: Towards Temporally Abstract Tree-Search Planning from Pixels](non_LLM_reinforcement_learning/FORECASTER_TimeAbstractedPlanning.md)
 * 4th: [Hierarchical Reasoning Model](general_training/HierarchicalReasoningModel.md)
 * 5th: [GOAL: A Generalist Combinatorial Optimization Agent Learner](non_LLM_reinforcement_learning/GOAL_general_transformer_for_CO.md)
+* 6th: [A Survey of Graph Transformers: Architectures, Theories and Applications](general_training/SurveyOfGraphTransformers.md)
 
 &#x20;&#x20;
 
