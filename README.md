@@ -165,6 +165,11 @@ The following section includes:
 10. **Scaling test time computer**
    * [Hierarchical Reasoning Model](general_training/HierarchicalReasoningModel.md) uses a DQN to decide whether the model should continue reasoning (or could be
    planning if using MCTS or other model based method) or finish. This allows the network to switch between [**system 1 and system 2 thinking**](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow&ved=2ahUKEwiY3eGH4_GOAxXudUEAHXugKX8QFnoECHEQAQ&usg=AOvVaw0LE50nrE-ivx9x1_Qq-J_0) (thinking longer about harder tasks).
+11. **General solvers through pre-training**:
+    * [GOAL](non_LLM_reinforcement_learning/GOAL_general_transformer_for_CO.md) trained a transformer to solve a set of
+     combinatorial optimisation problems. Whilst it did perform slightly worse than tailor made solutions, it showed that features of these problems are 
+     shared and meant specialist solvers could be fine-tuned quickly. This was however trained on problems solved by dynamic programming. It would be interesting to see how this could be combined with DRL,
+     perhaps using GPU environments to generate the vast amounts of data needed.
 
 ### 4. Robotics & Control
 
@@ -364,6 +369,7 @@ Click the links to see the summaries and get links to the original paper.
 * 1st: [GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning](LLMs/GEPAPromptEngineering.md)
 * 2nd: [Forecaster: Towards Temporally Abstract Tree-Search Planning from Pixels](non_LLM_reinforcement_learning/FORECASTER_TimeAbstractedPlanning.md)
 * 4th: [Hierarchical Reasoning Model](general_training/HierarchicalReasoningModel.md)
+* 5th: [GOAL: A Generalist Combinatorial Optimization Agent Learner](non_LLM_reinforcement_learning/GOAL_general_transformer_for_CO.md)
 
 &#x20;&#x20;
 
