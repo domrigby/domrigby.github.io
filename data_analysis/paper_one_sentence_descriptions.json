@@ -370,5 +370,47 @@
     "date_read": "2025-08-02",
     "link": "https://github.com/domrigby/domrigby.github.io/blob/main/non_LLM_reinforcement_learning/FORECASTER_TimeAbstractedPlanning.md",
     "summary": "Planning in high-dimensional environments with sparse rewards often requires long-horizon reasoning. The authors propose Forecaster, a hierarchical method that learns temporally abstract world models and uses tree-search to select high-level goals, alongside a low-level policy for execution. It improves sample efficiency and generalizes in AntMaze tasks."
+  },
+    {
+    "title": "Gym4ReaL: A Suite for Benchmarking Real-World Reinforcement Learning",
+    "date_read": "2025-07-31",
+    "link": "non_LLM_reinforcement_learning/Gym4Real.md",
+    "summary": "Addresses the lack of standardized testing for real-world reinforcement learning. Introduces a suite of benchmark environments emulating practical constraints like delays and noise. Demonstrates its use for comparing algorithms, revealing performance gaps between simulated and realistic conditions."
+  },
+  {
+    "title": "Hierarchical Reasoning Model",
+    "date_read": "2025-08-04",
+    "link": "general_training/HierarchicalReasoningModel.md",
+    "summary": "Tackles the challenge of multi-step reasoning over complex inputs. Proposes a model that decomposes reasoning into hierarchical levels, each handling progressively abstract tasks. Shows improved accuracy and interpretability on reasoning benchmarks compared to flat, single-level approaches."
+  },
+  {
+    "title": "GOAL: A Generalist Combinatorial Optimization Agent Learner",
+    "date_read": "2025-08-05",
+    "link": "non_LLM_reinforcement_learning/GOAL_general_transformer_for_CO.md",
+    "summary": "Targets generalization across combinatorial optimization problems. Develops a transformer-based agent trained on diverse problem instances with reinforcement learning. Finds the model can adapt to unseen tasks with minimal fine-tuning, outperforming specialized solvers in cross-domain tests."
+  },
+  {
+    "title": "A Survey of Graph Transformers: Architectures, Theories and Applications",
+    "date_read": "2025-08-06",
+    "link": "architectures/SurveyOfGraphTransformers.md",
+    "summary": "Examines the integration of transformer mechanisms into graph processing. Reviews architectures, theoretical foundations, and application domains. Concludes that graph transformers improve scalability and expressiveness over traditional methods, but face open challenges in efficiency and handling large-scale graphs."
+  },
+  {
+    "title": "A Gentle Introduction to Graph Neural Networks",
+    "date_read": "2025-08-07",
+    "link": "architectures/IntroToGraphNNs.md",
+    "summary": "Introduces the basics of learning on graph-structured data. Explains message passing, node and edge features, and common architectures. Demonstrates how GNNs capture structural relationships, enabling effective predictions in tasks like classification and link prediction."
+  },
+  {
+    "title": "Graph Based Deep Reinforcement Learning Aided by Transformers for Multi-Agent Cooperation",
+    "date_read": "2025-08-08",
+    "link": "non_LLM_reinforcement_learning/GraphTransformersForControllingSwarms.md",
+    "summary": "Addresses coordination in multi-agent systems with complex interactions. Proposes combining graph neural networks and transformers to model dynamic relationships. Shows improved cooperation and scalability in simulated swarm control tasks compared to conventional message-passing approaches."
+  },
+  {
+    "title": "Open-Ended Learning Leads to Generally Capable Agents",
+    "date_read": "2025-08-09",
+    "link": "open_endedness_and_auto_curriculums/OpenEndedLearningLeadstoGenerallyCapableAgents.md",
+    "summary": "Seeks to create agents that continually acquire new skills. Uses a procedurally generated multi-agent world with evolving tasks and open-ended training. Finds agents develop general capabilities, zero-shot transfer, and emergent behaviors like tool use and cooperation."
   }
 ]

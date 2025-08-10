@@ -11,9 +11,10 @@ Return your results as a JSON array of objects with “title”, "date_read" and
 
 The titles of the papers are in the square brackets below. More info about these papers can be found in this github repository https://github.com/domrigby/domrigby.github.io
 
-### July 2025
-* 31st: [Gym4ReaL: A Suite for Benchmarking Real-World Reinforcement Learning](non_LLM_reinforcement_learning/Gym4Real.md)
-
 ### August 2025
-* 1st: [GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning](LLMs/GEPAPromptEngineering.md)
-* 2nd: [Forecaster: Towards Temporally Abstract Tree-Search Planning from Pixels](non_LLM_reinforcement_learning/FORECASTER_TimeAbstractedPlanning.md)
+* 4th: [Hierarchical Reasoning Model](general_training/HierarchicalReasoningModel.md)
+* 5th: [GOAL: A Generalist Combinatorial Optimization Agent Learner](non_LLM_reinforcement_learning/GOAL_general_transformer_for_CO.md)
+* 6th: [A Survey of Graph Transformers: Architectures, Theories and Applications](architectures/SurveyOfGraphTransformers.md)
+* 7th: [A Gentle Introduction to Graph Neural Networks](architectures/IntroToGraphNNs.md)
+* 8th: [Graph Based Deep Reinforcement Learning Aided by Transformers for Multi-Agent Cooperation](non_LLM_reinforcement_learning/GraphTransformersForControllingSwarms.md)
+* 9th: [Open‑Ended Learning Leads to Generally Capable Agents](open_endedness_and_auto_curriculums/OpenEndedLearningLeadstoGenerallyCapableAgents.md)
