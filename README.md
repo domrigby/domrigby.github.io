@@ -111,7 +111,7 @@ The following section includes:
    Other methods include simply [filter out examples in which the agent completely fails or always succeeds](LLM_reinforcement_learning/AbsoluteZeroReasoner.md)
 4. **Randomly generate a new level, or create a new one!**: this creates population or pool of environments for the agent to interact with
    * [Auto-Curriculum Learning for Driving Scenarios](open_endedness_and_auto_curriculums/AutoCurriculumAutonomousDriving.md), [POET](open_endedness_and_auto_curriculums/EnhancedPOETOpenEndedLearning.md) and many others methods introduces the idea of random generator + editor as the basic building blocks for creating levels. One creates random new levels 
-   and the other perturbs existing interesting levels.
+   and the other perturbs existing interesting levels. These new random levels are then tested and filtered to ensure they are sufficiently learnable. 
 5. **Foundation models can act as 'intelligent search operators'** to create new learning opportunities based on what they have learned that humans would find interesting.
    * This is suggested as a ['key method on the road to ASI'](open_endedness_and_auto_curriculums/OpenEndednessIsKeyToASI.md). and is explored for level generation in [OMNI-EPIC](open_endedness_and_auto_curriculums/OpenEndednessUsingLLMS.md)
    and for policy generation is [Foundation Model Self-Play](open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md). LLMs are also used to iteratively improve prompts in [GEPA](LLMs/GEPAPromptEngineering.md).
@@ -146,7 +146,8 @@ The following section includes:
 3. **When doing PPO/GRPO, make the upper bound clip larger**\
    * The upper clip bound being higher increases the probability of unlikely choices and increases exploration (as in [ProRL](LLM_reinforcement_learning/ProlongedRL.md) and [Play to Generalise](LLM_reinforcement_learning/ReasoningThroughGames.md)) improve exploration and stability.
 4. **Dual‑Outcome Reasoning: knowing what's bad is also useful!**\
-   * Generating both best and worst moves in game scenarios deepens model understanding of decision boundaries ([Play to Generalise](LLM_reinforcement_learning/ReasoningThroughGames.md))
+   * Generating both best and worst moves in game scenarios deepens model understanding of decision boundaries ([Play to Generalise](LLM_reinforcement_learning/ReasoningThroughGames.md)). [XLand](open_endedness_and_auto_curriculums/ OpenEndedLearningLeadstoGenerallyCapableAgents.md)
+   did something analagous with their self reward-play, in which agents had to learn to achieve a goal but then also learn how to undo it, which increased their generalisability. 
 5. **Beware When Using Qwen for RL**\
    * [RL with Spurious Rewards](LLM_reinforcement_learning/SpuriousRewardsRL.md) shows that random reward signals can still improve performance on Qwen-2.5-maths. The authors explain that this is likely caused
    by RL encouraging the model to produce more code.
@@ -234,7 +235,7 @@ The following section includes:
    * [SEAL](LLM_reinforcement_learning/SelfAdaptingLanguageModels.md) uses RL to generate synthetic edits and hyperparameters, enabling rapid adaptation to new tasks.
 
 ### 8. Architectures:
-1. [Rohit Bandaru's blog post](general_training/DeepDiveIntoYannLecunsJEPA.md) summaried Yann Lecuns JEPA architecture and made the following suggestions:
+1. [Rohit Bandaru's blog post](architectures/DeepDiveIntoYannLecunsJEPA.md) summaried Yann Lecuns JEPA architecture and made the following suggestions:
    1. A framework for human-level AI: includes a bunch of different parts which all play a role found in the human brain.
         <p align="center">
           <img src="https://rohitbandaru.github.io/assets/img/blog/jepa/jepa_brain.png" alt="Architecture diagram" width="300"/>
@@ -252,12 +253,18 @@ The following section includes:
 
 2. **Hierarchical mutli-timescale planning**:
    * When humans plan we do it at multiple timescales. When you think "I'm going to go to work", you don't think about every single joint movement
-   you are going to do to get there. You plan the highest level actions and then break them down into sub-tasks. This is what [Yann Lecun suggests](general_training/DeepDiveIntoYannLecunsJEPA.md) and 
+   you are going to do to get there. You plan the highest level actions and then break them down into sub-tasks. This is what [Yann Lecun suggests](architectures/DeepDiveIntoYannLecunsJEPA.md) and 
    is what [Hierarchical Reasoning Model](general_training/HierarchicalReasoningModel.md) implements. A high level planner runs at a low frequency while a high frequency recurrent neural network 
    performs the plans which the high level planner creates.
       
 3. **Interesting Observation Spaces**:
    * [CTMS for the German Deutsche Bahn](marl/TrainSchedulingWithMARL.md) used tree structure to model the railway in front of each train
+
+4. Graphs are great way to represent data which includes relationships
+   * [Intro to Graph Neural Networks](architectures/IntroToGraphNNs.md) provides a great intro to graphs and how we can build neural networks to learn things about them. 
+   It also introduces key ideas like how to present the network the edges, how to batch varying sized graphs and message passing. 
+   * [Graph Transformers](architectures/SurveyOfGraphTransformers.md) provide a highly capable model for evaluating graphs. Their self-attention models connections
+   between all nodes and/or edges. As is the case with transformers, this does come at high compute and memory cost. A GT was applied in RL context in this [paper](non_LLM_reinforcement_learning/GraphTransformersForControllingSwarms.md).
       
 ----
 
@@ -350,7 +357,7 @@ Click the links to see the summaries and get links to the original paper.
 * 14th: [Model soups: averaging weights of multiple fine-tuned models improves accuracy without increasing inference time](general_training/ModelSoups.md)
 * 15th: [Synergizing Quality-Diversity with Descriptor-Conditioned Reinforcement Learning](open_endedness_and_auto_curriculums/QualityDiversityDescriptorConditionRL.md)
 * 16th: [What Has a Foundation Model Found? Using Inductive Bias to Probe for World Models](general_training/DoFoundationModelsLearnWorldModels.md)
-* 17th: [Deep Dive into Yann LeCun’s JEPA by Rohit Bandaru](general_training/DeepDiveIntoYannLecunsJEPA.md)
+* 17th: [Deep Dive into Yann LeCun’s JEPA by Rohit Bandaru](architectures/DeepDiveIntoYannLecunsJEPA.md)
 * 18th: [All AI Models Might Be The Same by Jack Morris](general_training/AllModelsMightBeTheSameBlog.md)
 * 19th: [Multi-Agent Diagnostics for Robustness via Illuminated  (MADRID)](marl/MADRID.md)
 * 20th: [Assessing the Zero-Shot Capabilities of LLMs for Action Evaluation in RL](non_LLM_reinforcement_learning/ZeroShotCapabilityOfLLMsForActionEvalInRL.md)
@@ -370,7 +377,10 @@ Click the links to see the summaries and get links to the original paper.
 * 2nd: [Forecaster: Towards Temporally Abstract Tree-Search Planning from Pixels](non_LLM_reinforcement_learning/FORECASTER_TimeAbstractedPlanning.md)
 * 4th: [Hierarchical Reasoning Model](general_training/HierarchicalReasoningModel.md)
 * 5th: [GOAL: A Generalist Combinatorial Optimization Agent Learner](non_LLM_reinforcement_learning/GOAL_general_transformer_for_CO.md)
-* 6th: [A Survey of Graph Transformers: Architectures, Theories and Applications](general_training/SurveyOfGraphTransformers.md)
+* 6th: [A Survey of Graph Transformers: Architectures, Theories and Applications](architectures/SurveyOfGraphTransformers.md)
+* 7th: [A Gentle Introduction to Graph Neural Networks](architectures/IntroToGraphNNs.md)
+* 8th: [Graph Based Deep Reinforcement Learning Aided by Transformers for Multi-Agent Cooperation](non_LLM_reinforcement_learning/GraphTransformersForControllingSwarms.md)
+* 9th: [Open‑Ended Learning Leads to Generally Capable Agents](open_endedness_and_auto_curriculums/OpenEndedLearningLeadstoGenerallyCapableAgents.md)
 
 &#x20;&#x20;
 
