@@ -132,6 +132,10 @@ The following section includes:
      * High V(s0, g) means tasks is likely achievable from start state s0.
      * High std(s0, g) means this is not reliable and therefore likely novel
      * High V(g, g*) means the sub-goal g is close to the target goal g*
+10. **Parallelisable planning for model-based RL(on the GPU?!)**
+    * [SMX](non_LLM_reinforcement_learning/model_based_methods/SMX_ParticleFilterPolicyImprovement.md) uses a particle filtering method to perform rollouts
+    and identify and perform policy improvement. This method is entirely parallelisable (GPU-able!), doesn't require storing a tree and works for continuous and discrete
+    action spaces.
 
 ### 3. Pretraining, Fine-Tuning & General Training Tips
 
@@ -381,6 +385,8 @@ Click the links to see the summaries and get links to the original paper.
 * 7th: [A Gentle Introduction to Graph Neural Networks](architectures/IntroToGraphNNs.md)
 * 8th: [Graph Based Deep Reinforcement Learning Aided by Transformers for Multi-Agent Cooperation](non_LLM_reinforcement_learning/GraphTransformersForControllingSwarms.md)
 * 9th: [Open‑Ended Learning Leads to Generally Capable Agents](open_endedness_and_auto_curriculums/OpenEndedLearningLeadstoGenerallyCapableAgents.md)
+* 10th: WRITE UP PENDING
+* 11th: [SMX: Sequential Monte Carlo Planning for Expert Iteration](non_LLM_reinforcement_learning/model_based_methods/SMX_ParticleFilterPolicyImprovement.md)
 
 &#x20;&#x20;
 
