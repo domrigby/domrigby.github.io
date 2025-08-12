@@ -130,7 +130,7 @@ and we can constantly try new experiments and create new artefacts in which us h
 how we could do this for reinforcement learning agents. Could we: 1) Create environments which are sufficiently complex to be constantly learnable (world models)?
 (see [Genie](https://deepmind.google/discover/blog/genie-3-a-new-frontier-for-world-models/) for the most advanced version of this) 2) Create algorithms which can explore this vast search space in a meaningful way?
 
-If you are interested in this, I would highly recommend reading some [Jeff Clune](https://scholar.google.com/citations?user=5TZ7f5wAAAAJ&hl=en)
+If you are interested in this, I would highly recommend reading some [Jeff Clune's](https://scholar.google.com/citations?user=5TZ7f5wAAAAJ&hl=en)
 or [UCL Dark's](https://ucldark.com/) work on this.
 
 #### Common Themes in Open-Endedness and Auto-Curriculums Research:
