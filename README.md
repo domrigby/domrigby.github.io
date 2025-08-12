@@ -125,9 +125,12 @@ The following section includes:
 1. **Open-Endedness requires the generation of novel and learnable artefacts**:
    * Open-ended is defined in [Open-Endedness is Key to ASI](open_endedness_and_auto_curriculums/OpenEndednessIsKeyToASI.md): a system is open-ended if it **continually creates 
    novel and learnable artefacts**. This is dependent on the observer, the memory and the time horizon.
-   > Observer example: a mouse can't learn chess and a computer will eventually plateau in performance. Open-endedness depends on the observer.
-   > Time-horizon example: AlphaZero is open-ended in chess, but given enough time it will eventually plateau in performance.
-   > Memory example: Wikipedia might appear open-ended to a human, who could constantly read it and learn new things they had forgotten the last time they read it. An LLM however might be able to memorise the entire thing, given enough weights.
+   > **Observer example**: a mouse can't learn chess and a computer will eventually plateau in performance. Open-endedness depends on the observer.
+   > 
+   > **Time-horizon example**: AlphaZero is open-ended in chess, but given enough time it will eventually plateau in performance.
+   > 
+   > **Memory example**: Wikipedia might appear open-ended to a human, who could constantly read it and learn new things they had forgotten the last time they read it. An LLM however might be able to memorise the entire thing, given enough weights.
+
 2. **Learnability metrics**:
    * Auto-curriculums need a way to be able to rank the novelness and learnability of levels. The main themes I have come across are:
    1. Learning errors: if the network can't make good predictions about this state, it is likely learnable
