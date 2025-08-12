@@ -10,12 +10,12 @@
 
 Welcome to my Paper Diary! Due to the seemingly never ending supply of interesting reinforcement learning papers which have come out in the last few years, I began
 to try and read at least one per day. I was however having the issue that after a month of two I could not remember for the life of me where I had read that interesting fact,
-method or algorithm. I therefore began keeping a diary of the papers/blog posts I was reading. I recently decided I may as well start posting these incase anyone else find this
-interesting or useful!
+method or algorithm. I therefore began keeping a diary of the papers/blog posts I was reading. I recently decided to start compressing the key points papers into short,
+bite-size summaries. I hope you find out something useful!
 
-Entries are added on the go (often from my phone or iPad) and later refined on my laptop.
-
-> **Note:** Layout and formatting are continuously improved when time permits.
+> **Notes:**
+>   * Layout and formatting are continuously improved when time permits.
+>   * Entries are added on the go (often from my phone or iPad) and later refined on my laptop.
 
 ---
 
@@ -69,10 +69,10 @@ The following section includes:
 ### 1. Reinforcement Learning (RL)
 
 1. **Moments of uncertainty are the best moments to learn from**\
-   * You learn the most when a decision is uncertain as these correspond to “forks in the road”. These moments can be described
-   mathematically as high entropy tokens. Unsurprisingly, training on these tokens yields significant performance
-   gains in when training reasoning models ([80:20 Rule](LLM_reinforcement_learning/TokenEntropyRLVR.md)). Intuition: Many tokens in language are determined my other words 
-   so provide little information in te RL process when they are chosen. 
+   * You learn the most when a decision is uncertain as these correspond to “forks in the road” in which making a decision will likely strongly affect the outcome.
+   * These moments can be described mathematically as high entropy tokens or decisions.
+   * Unsurprisingly, training on these tokens yields significant performance gains when training reasoning models ([80:20 Rule](LLM_reinforcement_learning/TokenEntropyRLVR.md)).
+   * A bit of intuition behind this: Many tokens in language are determined my other words so provide little information in te RL process when they are chosen. 
     > E.g. "I went to the shop", "to" and "the" are determined by other words so provide little information.
 2. **You don't learn anything from always winning... but equally little if you are always losing!**\
    * There exists a **'zone of proximal development'** in which agents are learning the most about what is right and wrong.
@@ -195,9 +195,9 @@ The following section includes:
      1. **Data parallelism**: each GPU has a copy of the model and a different batch of data. They then share gradients to do joint updates.
      2. **Model parallelism**: for large models. Model layers are split over many GPUs.
    * **Communication methods**: 
-     1. Scatter: send different data to each GPU
-     2. Broadcast: same data to all
-     3. Reduce: combine all data on one GPU.
+     1. **Scatter**: send different data to each GPU
+     2. **Broadcast**: same data to all
+     3. **Reduce**: combine all data on one GPU.
 2. This [blog post on distributed PPO](distribution_and_gpu_acceleration/DistributedPPO.md) outlines some extra factors to think about:
    1. **Synchronous**: waits for all agents to calculate their respective gradients before doing a weights update.
    2. **Asynchronous**: doesn't wait.
