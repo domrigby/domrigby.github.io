@@ -122,6 +122,18 @@ The following section includes:
    (thinking longer about harder tasks).
 
 ### 2. Open‑Endedness & Auto‑Curricula
+
+Open-endedness and auto-curriculums are crucial for building truly intelligent agents. In the same way that humans didn't go to the moon by starting
+working on a rocket, agents can't achieve superintelligence by just training on a set of pre-defined tasks. Human technology and intelligence has advanced
+by constantly solving iteratively harder tasks, but the knowledge from the old tasks helps us solve them. We can do this because the world around us is open-ended,
+and we can constantly try new experiments and create new artefacts in which us humans can learn new things from. Research in open-endedness tends to focus around
+how we could do this for reinforcement learning agents. Could we: 1) Create environments which are sufficiently complex to be constantly learnable (world models)?
+(see [Genie](https://deepmind.google/discover/blog/genie-3-a-new-frontier-for-world-models/) for the most advanced version of this) 2) Create algorithms which can explore this vast search space in a meaningful way?
+
+If you are interested in this, I would highly recommend reading some [Jeff Clune](https://scholar.google.com/citations?user=5TZ7f5wAAAAJ&hl=en)
+or [UCL Dark's](https://ucldark.com/) work on this.
+
+#### Common Themes in Open-Endedness and Auto-Curriculums Research:
 1. **Open-Endedness requires the generation of novel and learnable artefacts**:
    * Open-ended is defined in [Open-Endedness is Key to ASI](open_endedness_and_auto_curriculums/OpenEndednessIsKeyToASI.md): a system is open-ended if it **continually creates 
    novel and learnable artefacts**. This is dependent on the observer, the memory and the time horizon.
@@ -130,7 +142,6 @@ The following section includes:
    > **Time-horizon example**: AlphaZero is open-ended in chess, but given enough time it will eventually plateau in performance.
    > 
    > **Memory example**: Wikipedia might appear open-ended to a human, who could constantly read it and learn new things they had forgotten the last time they read it. An LLM however might be able to memorise the entire thing, given enough weights.
-
 2. **Learnability metrics**:
    * Auto-curriculums need a way to be able to rank the novelness and learnability of levels. The main themes I have come across are:
    1. Learning errors: if the network can't make good predictions about this state, it is likely learnable
