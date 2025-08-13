@@ -160,7 +160,7 @@ or [UCL Dark's](https://ucldark.com/) work on this.
    * FMs can act as **'intelligent search operators'** to create new learning opportunities based on what they have learned that the agent would find
    difficult (e.g. [EUREKAVERSE](open_endedness_and_auto_curriculums/Eurekaverse.md)) or humans would find interesting (e.g. [OMNI-EPIC](open_endedness_and_auto_curriculums/OpenEndednessUsingLLMS.md)).
    <p align="center">
-          <img src="https://omni-epic.vercel.app/images/architecture.svg" alt="OMNI-EPIC diagram" width="300"/>
+          <img src="https://omni-epic.vercel.app/images/architecture.svg" alt="OMNI-EPIC diagram" width="500"/>
    </p>
    <p align="center">
       <em>Figure 2: OMNI-EPIC Architecture it uses to utilise Foundation Models to create **interesting** novel scenarios through code [source](https://omni-epic.vercel.app/)</em>
