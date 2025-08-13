@@ -88,9 +88,9 @@ The following section includes:
 6. **GPU‑Accelerated Environments provide monumental speeds up**\
    * Frameworks like [Kinetix](distribution_and_gpu_acceleration/KInetixGeneralRL.md) and [JaxMARL](marl/JaxMARL.md) allow you to run tens of thousands of environments in parallel,
    as well as minimise CPU-GPU overhead.
-   * This could allow for some LLM-like RL 'pre-training' on vast amounts of data on generic scenarios before fine-tuning to the ones of interest.
-   * [Kinetix](distribution_and_gpu_acceleration/KInetixGeneralRL.md) shows this capability but showing the reasonable zero-shot capability on 2D control tasks.
-   I highly recommend visiting their website an having a play around on their online demo: [https://kinetix-env.github.io/](https://kinetix-env.github.io/)
+   * This could allow for some LLM-like RL 'pre-training' on vast amounts of data from diverse scenarios before fine-tuning to the ones of interest.
+   * [Kinetix](distribution_and_gpu_acceleration/KInetixGeneralRL.md) demonstrates reasonable zero-shot capability on 2D control tasks by training on randomly generated (then filtered) scenarios.
+   * I highly recommend visiting their website an having a play around on their online demo: [https://kinetix-env.github.io/](https://kinetix-env.github.io/)
    <p align="center">
           <img src="https://raw.githubusercontent.com/FlairOX/Kinetix/main/images/general_2.gif" alt="Architecture diagram" width="300"/>
    </p>
@@ -159,6 +159,12 @@ or [UCL Dark's](https://ucldark.com/) work on this.
 6. **Curriculum generation can be more intelligent using Foundation Models**
    * FMs can act as **'intelligent search operators'** to create new learning opportunities based on what they have learned that the agent would find
    difficult (e.g. [EUREKAVERSE](open_endedness_and_auto_curriculums/Eurekaverse.md)) or humans would find interesting (e.g. [OMNI-EPIC](open_endedness_and_auto_curriculums/OpenEndednessUsingLLMS.md)).
+   <p align="center">
+          <img src="https://omni-epic.vercel.app/images/architecture.svg" alt="OMNI-EPIC diagram" width="300"/>
+   </p>
+   <p align="center">
+      <em>Figure 2: OMNI-EPIC Architecture it uses to utilise Foundation Models to create **interesting** novel scenarios through code [source](https://omni-epic.vercel.app/)</em>
+   </p>
    * This is suggested as a ['key method on the road to ASI'](open_endedness_and_auto_curriculums/OpenEndednessIsKeyToASI.md). and is explored for level generation in [OMNI-EPIC](open_endedness_and_auto_curriculums/OpenEndednessUsingLLMS.md)
    and for policy generation is [Foundation Model Self-Play](open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md). LLMs are also used to iteratively improve prompts in [GEPA](LLMs/GEPAPromptEngineering.md).
 7. **Performance annealed exploration reward**:
@@ -466,5 +472,3 @@ The t-SNE for comparison:
 
 
 ---
-
-*Last updated: 24th July 2025*
