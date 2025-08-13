@@ -163,7 +163,7 @@ or [UCL Dark's](https://ucldark.com/) work on this.
           <img src="https://omni-epic.vercel.app/images/architecture.svg" alt="OMNI-EPIC diagram" width="500"/>
    </p>
    <p align="center">
-      <em>Figure 2: OMNI-EPIC Architecture it uses to utilise Foundation Models to create **interesting** novel scenarios through code [source](https://omni-epic.vercel.app/)</em>
+      <em>Figure 2: OMNI-EPIC Architecture it uses to utilise Foundation Models to create <b>interesting</b> novel scenarios through code [source](https://omni-epic.vercel.app/)</em>
    </p>
    * This is suggested as a ['key method on the road to ASI'](open_endedness_and_auto_curriculums/OpenEndednessIsKeyToASI.md). and is explored for level generation in [OMNI-EPIC](open_endedness_and_auto_curriculums/OpenEndednessUsingLLMS.md)
    and for policy generation is [Foundation Model Self-Play](open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md). LLMs are also used to iteratively improve prompts in [GEPA](LLMs/GEPAPromptEngineering.md).
