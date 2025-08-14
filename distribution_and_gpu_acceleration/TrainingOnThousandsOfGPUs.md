@@ -11,7 +11,7 @@ Date: 4th July 2025
   * We need to be able to distribute to help increase batch size or memory will run out.
 * Discusses methods to reduce GPU memory usage: gradient accumulation of smaller batches, not storing activations of forward pass but instead
 recalculating them and CPU offloading.
-* **Types of parallelism:
+* **Types of parallelism**:
   1. **Data parallelism**: each GPU has a copy of the model and a different batch of data. They then share gradients to do joint updates.
   2. **Model parallelism**: for large models. Model layers are split over many GPUs.
 * **Communication methods**: 
