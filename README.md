@@ -432,8 +432,9 @@ Click the links to see the summaries and get links to the original paper.
 * 7th: [A Gentle Introduction to Graph Neural Networks](architectures/IntroToGraphNNs.md)
 * 8th: [Graph Based Deep Reinforcement Learning Aided by Transformers for Multi-Agent Cooperation](non_LLM_reinforcement_learning/GraphTransformersForControllingSwarms.md)
 * 9th: [Open‑Ended Learning Leads to Generally Capable Agents](open_endedness_and_auto_curriculums/OpenEndedLearningLeadstoGenerallyCapableAgents.md)
-* 10th: WRITE UP PENDING
+* 10th: [Sable: a Performant, Efficient and Scalable Sequence Model for MARL](marl/SabelMATButWithRetention.md)
 * 11th: [SMX: Sequential Monte Carlo Planning for Expert Iteration](non_LLM_reinforcement_learning/model_based_methods/SMX_ParticleFilterPolicyImprovement.md)
+* 13th: [ProRL V2 - Prolonged Training Validates RL Scaling Laws](LLM_reinforcement_learning/ProRL2.md)
 
 &#x20;&#x20;
 

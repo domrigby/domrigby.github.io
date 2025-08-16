@@ -12,9 +12,6 @@ Return your results as a JSON array of objects with “title”, "date_read" and
 The titles of the papers are in the square brackets below. More info about these papers can be found in this github repository https://github.com/domrigby/domrigby.github.io
 
 ### August 2025
-* 4th: [Hierarchical Reasoning Model](general_training/HierarchicalReasoningModel.md)
-* 5th: [GOAL: A Generalist Combinatorial Optimization Agent Learner](non_LLM_reinforcement_learning/GOAL_general_transformer_for_CO.md)
-* 6th: [A Survey of Graph Transformers: Architectures, Theories and Applications](architectures/SurveyOfGraphTransformers.md)
-* 7th: [A Gentle Introduction to Graph Neural Networks](architectures/IntroToGraphNNs.md)
-* 8th: [Graph Based Deep Reinforcement Learning Aided by Transformers for Multi-Agent Cooperation](non_LLM_reinforcement_learning/GraphTransformersForControllingSwarms.md)
-* 9th: [Open‑Ended Learning Leads to Generally Capable Agents](open_endedness_and_auto_curriculums/OpenEndedLearningLeadstoGenerallyCapableAgents.md)
+* 10th: [Sable: a Performant, Efficient and Scalable Sequence Model for MARL](marl/SabelMATButWithRetention.md)
+* 11th: [SMX: Sequential Monte Carlo Planning for Expert Iteration](non_LLM_reinforcement_learning/model_based_methods/SMX_ParticleFilterPolicyImprovement.md)
+* 13th: [ProRL V2 - Prolonged Training Validates RL Scaling Laws](LLM_reinforcement_learning/ProRL2.md)
