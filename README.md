@@ -435,6 +435,7 @@ Click the links to see the summaries and get links to the original paper.
 * 10th: [Sable: a Performant, Efficient and Scalable Sequence Model for MARL](marl/SabelMATButWithRetention.md)
 * 11th: [SMX: Sequential Monte Carlo Planning for Expert Iteration](non_LLM_reinforcement_learning/model_based_methods/SMX_ParticleFilterPolicyImprovement.md)
 * 13th: [ProRL V2 - Prolonged Training Validates RL Scaling Laws](LLM_reinforcement_learning/ProRL2.md)
+* 18th: [The 37 Implementation Details of Proximal Policy Optimization](non_LLM_reinforcement_learning/37PPOImplementationDetails.md)
 * 14th - 23rd: been busy but still been reading. Updates pending.
 
 &#x20;&#x20;
