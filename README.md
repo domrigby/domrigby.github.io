@@ -435,8 +435,9 @@ Click the links to see the summaries and get links to the original paper.
 * 10th: [Sable: a Performant, Efficient and Scalable Sequence Model for MARL](marl/SabelMATButWithRetention.md)
 * 11th: [SMX: Sequential Monte Carlo Planning for Expert Iteration](non_LLM_reinforcement_learning/model_based_methods/SMX_ParticleFilterPolicyImprovement.md)
 * 13th: [ProRL V2 - Prolonged Training Validates RL Scaling Laws](LLM_reinforcement_learning/ProRL2.md)
-* 14th: [SPO: Sequential Monte Carlo Policy Optimisation](non_LLM_reinforcement_learning/model_based_methods/sequntial_policy_optimisation.md)
+* 14th - 23rd: been busy but still been reading. Updates pending.
 * 16th: [Isaac Gym: High Performance GPU-Based Physics Simulation For Robot Learning](distribution_and_gpu_acceleration/IsaacGym.md)
+* 18th: [The 37 Implementation Details of Proximal Policy Optimization](non_LLM_reinforcement_learning/37PPOImplementationDetails.md)
 
 &#x20;&#x20;
 
