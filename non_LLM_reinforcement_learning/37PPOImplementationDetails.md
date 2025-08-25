@@ -17,7 +17,7 @@ A lot of the implementation details are stating what the repository does for cla
    * Why? Allows you to collect for data per second and therefore explore more of the search space. Wider search should equal more optimal solutions found.
 
 2. **Use GAE**:
-  * Bootstrap the values if you the environment is not terminated or truncated
+  * Bootstrap the values if the environment is not terminated or truncated
   * Truncated environments are often given done flags and therefore PPO does not estimate their future value, this is not correct. Truncated states should have their future value estimated unless the timing is part of the observation.
   * Use TD(lambda) to estimate returns (lambda = 0 is pure bootstrap and lambda = 1 is pure Monte Carlo)
 

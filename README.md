@@ -91,12 +91,16 @@ The following section includes:
    * This could allow for some LLM-like RL 'pre-training' on vast amounts of data from diverse scenarios before fine-tuning to the ones of interest.
    * [Kinetix](distribution_and_gpu_acceleration/KInetixGeneralRL.md) demonstrates reasonable zero-shot capability on 2D control tasks by training on randomly generated (then filtered) scenarios.
    * I highly recommend visiting their website an having a play around on their online demo: [https://kinetix-env.github.io/](https://kinetix-env.github.io/)
+   
    <p align="center">
           <img src="https://raw.githubusercontent.com/FlairOX/Kinetix/main/images/general_2.gif" alt="Architecture diagram" width="300"/>
    </p>
    <p align="center">
       <em>Figure 1: Example of Kinetix general agent zero-shotting unseen handmade scenario [source](https://github.com/FlairOx/Kinetix/)</em>
    </p>
+   
+   * [Learning to walk in minutes](distribution_and_gpu_acceleration/LearningToWalkInMinutes.md) trains locomotive robotic policies in under ten minutes using GPU environments and provides
+   advice on how to tune the PPO hyperparameters to take advantage of the huge parallelism (e.g. massive mini-batches, short rollouts etc).
 7. **Foundation models have a large role to play in future RL**:
    * Foundation models have intuition about what humans find interesting. They are therefore capable of designing curriculums for RL or being involved in the policy improvement steps. 
    See more in the [open-endedness section of this blog](#4-openendedness--autocurricula). Summary of a few interesting methods:
@@ -234,7 +238,7 @@ or [UCL Dark's](https://ucldark.com/) work on this.
 4. **Pre-Training is possible in robotics**
    * [V-JEPA](general_training/V-JEPA2.md) and [Pi0.5](robotics/Pi0.5VLA.md) both used huge amounts of internet video data to train world models to predict actions and effects.
 
-### 5. Distribution
+### 5. Distribution 
 
 1. This [blog post by Jeremy Jordan](distribution_and_gpu_acceleration/TrainingOnThousandsOfGPUs.md) covers the basics of how to train a network on thousands of GPUS. Some of the key methods spoke about were:
    * **Types of parallelism**:
@@ -253,7 +257,10 @@ or [UCL Dark's](https://ucldark.com/) work on this.
  which broadcasts weights update. This is mimicked in PyTorch in [TorchBeast](distribution_and_gpu_acceleration/TorchBeastDistributedPyTorch.md).
    * **V-trace** is an important part of this setup. It utilises importance sampling to account for the data being
    collected being more and more off-policy every moment.
-4. [Docker](distribution_and_gpu_acceleration/DockerInRL.md) can be used like a lightweight virtual machine for distributing actors or learners across large clusters.
+4. **Decentralised PPO can scale better**
+   * [DD-PPO](distribution_and_gpu_acceleration/DD-PPO.md) scales PPO almost linearly up to 128 parallel agents using decentralised, synchronous training.
+   * It crucially relies on a **preemptive threshold** to end rollouts and start training once a high number of environments are finished and only stragglers remain.
+5.  [Docker](distribution_and_gpu_acceleration/DockerInRL.md) can be used like a lightweight virtual machine for distributing actors or learners across large clusters.
 
 ### 6. Multi‑Agent Reinforcement Learning (MARL)
 
@@ -435,9 +442,11 @@ Click the links to see the summaries and get links to the original paper.
 * 10th: [Sable: a Performant, Efficient and Scalable Sequence Model for MARL](marl/SabelMATButWithRetention.md)
 * 11th: [SMX: Sequential Monte Carlo Planning for Expert Iteration](non_LLM_reinforcement_learning/model_based_methods/SMX_ParticleFilterPolicyImprovement.md)
 * 13th: [ProRL V2 - Prolonged Training Validates RL Scaling Laws](LLM_reinforcement_learning/ProRL2.md)
-* 14th - 23rd: been busy but still been reading. Updates pending.
 * 16th: [Isaac Gym: High Performance GPU-Based Physics Simulation For Robot Learning](distribution_and_gpu_acceleration/IsaacGym.md)
 * 18th: [The 37 Implementation Details of Proximal Policy Optimization](non_LLM_reinforcement_learning/37PPOImplementationDetails.md)
+* 21st: [Learning to Walk in Minutes Using Massively Parallel Deep Reinforcement Learning](distribution_and_gpu_acceleration/LearningToWalkInMinutes.md)
+* 22nd: [Hybrid Actor-Critic Reinforcement Learning in Parameterized Action Space](non_LLM_reinforcement_learning/HybridACRLWithParameterisedActionSpace.md)
+* 23rd: [DD-PPO: LEARNING NEAR-PERFECT POINTGOAL NAVIGATORS FROM 2.5 BILLION FRAMES0](distribution_and_gpu_acceleration/DD-PPO.md)
 
 &#x20;&#x20;
 
