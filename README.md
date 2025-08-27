@@ -447,6 +447,7 @@ Click the links to see the summaries and get links to the original paper.
 * 21st: [Learning to Walk in Minutes Using Massively Parallel Deep Reinforcement Learning](distribution_and_gpu_acceleration/LearningToWalkInMinutes.md)
 * 22nd: [Hybrid Actor-Critic Reinforcement Learning in Parameterized Action Space](non_LLM_reinforcement_learning/HybridACRLWithParameterisedActionSpace.md)
 * 23rd: [DD-PPO: LEARNING NEAR-PERFECT POINTGOAL NAVIGATORS FROM 2.5 BILLION FRAMES0](distribution_and_gpu_acceleration/DD-PPO.md)
+* 26th: [The Bitter Lesson](non_LLM_reinforcement_learning/BitterLesson.md)
 
 &#x20;&#x20;
 
