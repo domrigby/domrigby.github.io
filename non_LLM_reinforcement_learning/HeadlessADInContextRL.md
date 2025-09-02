@@ -12,4 +12,4 @@ guess the next optimal action.
 * Action embedding is **randomly and orthonormally initialised** for each sequence to prevent the model utilising inbuilt knowledge of the game 
 and forcing it to learn in context.
 * Contrastive loss is used to train the model to predict the embeddings.
-* They finetune TinyLlama LLM
+* They finetune TinyLlama LLM (utilise **transformer architecture**)
