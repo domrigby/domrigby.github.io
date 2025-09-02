@@ -449,6 +449,9 @@ Click the links to see the summaries and get links to the original paper.
 * 23rd: [DD-PPO: LEARNING NEAR-PERFECT POINTGOAL NAVIGATORS FROM 2.5 BILLION FRAMES0](distribution_and_gpu_acceleration/DD-PPO.md)
 * 26th: [The Bitter Lesson](non_LLM_reinforcement_learning/BitterLesson.md)
 
+### September 2025
+* 1st: [In-Context Reinforcement Learning for Variable Action Spaces](non_LLM_reinforcement_learning/HeadlessADInContextRL.md)
+
 &#x20;&#x20;
 
 ---
