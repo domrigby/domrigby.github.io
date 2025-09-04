@@ -451,6 +451,7 @@ Click the links to see the summaries and get links to the original paper.
 
 ### September 2025
 * 1st: [In-Context Reinforcement Learning for Variable Action Spaces](non_LLM_reinforcement_learning/HeadlessADInContextRL.md)
+* 3rd: [Jumanji: a Diverse Suite of Scalable Reinforcement Learning Environments in JAX](distribution_and_gpu_acceleration/JumanjiCombOpJaxEnvs.md)
 
 &#x20;&#x20;
 
