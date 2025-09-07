@@ -15,3 +15,5 @@ number of agents**. How?
 	* Agent Importance is the difference in reward between when the agent did take the action and when it didn't
 	* It is calculated by creating N copies of the environment and adding a NOOP action to each agent, such that we can calculate the reward if they didn't take the action.
 	* It is calculated per step rather than per episode.
+* They also found that algorithms with more evenly distributed agent importance tend to perform better than ones which focus importance
+on one or two agents (makes sense).
