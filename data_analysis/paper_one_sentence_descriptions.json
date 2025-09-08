@@ -430,5 +430,60 @@
     "date_read": "2025-08-13",
     "link": "LLM_reinforcement_learning/ProRL2.md",
     "summary": "The study investigates whether reinforcement learning benefits from extended training beyond common horizons. Using larger models trained for longer durations, it systematically evaluates performance scaling. Findings confirm consistent improvement with scale, supporting the existence of reinforcement learning scaling laws similar to those in language models."
+  },
+  {
+    "title": "Isaac Gym: High Performance GPU-Based Physics Simulation For Robot Learning",
+    "date_read": "2025-08-16",
+    "link": "distribution_and_gpu_acceleration/IsaacGym.md",
+    "summary": "This paper tackles the challenge of slow physics simulation in robot learning. It introduces a GPU-based simulator that enables batched environments with direct memory access from training frameworks. The method drastically reduces data transfer overhead, enabling orders-of-magnitude faster training for reinforcement learning agents."
+  },
+  {
+    "title": "The 37 Implementation Details of Proximal Policy Optimization",
+    "date_read": "2025-08-18",
+    "link": "non_LLM_reinforcement_learning/37PPOImplementationDetails.md",
+    "summary": "The paper addresses performance inconsistencies in Proximal Policy Optimization implementations. It systematically identifies and tests 37 implementation details across environments. Findings show that minor code-level choices, such as normalization and clipping, significantly impact stability and learning speed, emphasizing the importance of careful engineering."
+  },
+  {
+    "title": "Learning to Walk in Minutes Using Massively Parallel Deep Reinforcement Learning",
+    "date_read": "2025-08-21",
+    "link": "distribution_and_gpu_acceleration/LearningToWalkInMinutes.md",
+    "summary": "This work addresses the long training time of locomotion agents. It uses hundreds of GPUs to train agents in parallel across thousands of environments. The method achieves humanoid walking in under 10 minutes, showing that large-scale parallelism can replace algorithmic tricks for fast learning."
+  },
+  {
+    "title": "Hybrid Actor-Critic Reinforcement Learning in Parameterized Action Space",
+    "date_read": "2025-08-22",
+    "link": "non_LLM_reinforcement_learning/HybridACRLWithParameterisedActionSpace.md",
+    "summary": "This paper deals with decision-making tasks involving both discrete choices and continuous parameters. It proposes a hybrid actor-critic framework that jointly learns policies over both spaces. The approach outperforms baselines on control tasks, showing better handling of structured action representations."
+  },
+  {
+    "title": "DD-PPO: LEARNING NEAR-PERFECT POINTGOAL NAVIGATORS FROM 2.5 BILLION FRAMES",
+    "date_read": "2025-08-23",
+    "link": "distribution_and_gpu_acceleration/DD-PPO.md",
+    "summary": "This paper tackles scalable embodied navigation. It introduces a distributed reinforcement learning system that combines synchronous data collection and policy updates across multiple machines. The approach trains agents to near-perfect navigation ability using billions of frames, demonstrating strong generalization in real-world-like 3D environments."
+  },
+  {
+    "title": "The Bitter Lesson",
+    "date_read": "2025-08-26",
+    "link": "non_LLM_reinforcement_learning/BitterLesson.md",
+    "summary": "This essay reflects on the history of AI research, arguing that human-designed solutions are consistently outperformed by those that scale with computation and data. It advocates for general-purpose methods that leverage compute rather than handcrafted models, highlighting a recurring lesson across decades."
+  },
+  {
+    "title": "In-Context Reinforcement Learning for Variable Action Spaces",
+    "date_read": "2025-09-01",
+    "link": "non_LLM_reinforcement_learning/HeadlessADInContextRL.md",
+    "summary": "The paper addresses decision-making with changing action sets. It proposes a transformer-based architecture that conditions on past experiences to adapt to variable action spaces. The method enables few-shot adaptation across tasks and shows promising generalization without retraining in multi-agent and combinatorial settings."
+  },
+  {
+    "title": "Jumanji: a Diverse Suite of Scalable Reinforcement Learning Environments in JAX",
+    "date_read": "2025-09-03",
+    "link": "distribution_and_gpu_acceleration/JumanjiCombOpJaxEnvs.md",
+    "summary": "This paper presents a new benchmark suite of combinatorial and continuous control environments built in JAX. It emphasizes compatibility with vectorized training and gradient-based methods. The environments enable scalable and reproducible research across structured problems like routing, packing, and inventory control."
+  },
+  {
+    "title": "Efficiently Quantifying Individual Agent Importance in Cooperative MARL",
+    "date_read": "2025-09-05",
+    "link": "marl/AgentImportance.md",
+    "summary": "The paper focuses on understanding agent contributions in cooperative multi-agent settings. It introduces an efficient method to estimate each agent’s importance by measuring counterfactual value changes. This approach allows scalable credit assignment and improves learning by identifying which agents most influence outcomes."
   }
 ]
+

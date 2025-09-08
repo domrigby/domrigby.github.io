@@ -16,7 +16,7 @@ from sklearn.cluster import KMeans
 from scipy.spatial import ConvexHull
 
 # ─── 0. Configuration ─────────────────────────────────────────────────────────
-JSON_PATH   = 'data_analysis/paper_one_sentence_descriptions.json'
+JSON_PATH   = 'paper_one_sentence_descriptions.json'
 PCA_DIMS    = 30
 TSNE_PARAMS = dict(n_components=2, random_state=42, perplexity=15)
 UMAP_PARAMS = dict(n_components=2, random_state=42, metric='cosine')
@@ -24,7 +24,7 @@ N_CLUSTERS  = 6
 COLOR_SEQ   = px.colors.qualitative.Plotly
 
 # ─── 1. OpenAI Setup for Manual Summaries ─────────────────────────────────────
-with open('data_analysis/open_ai_key.txt', 'r') as f:
+with open('open_ai_key.txt', 'r') as f:
     openai.api_key = f.read().strip()
 
 def summarize_all_clusters(cluster_dict):

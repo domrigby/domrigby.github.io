@@ -4,7 +4,7 @@ import plotly.graph_objects as go
 import json
 
 # 1. load your data (expects 'title', 'summary', 'date_read')
-with open('data_analysis/paper_one_sentence_descriptions.json', 'r') as f:
+with open('paper_one_sentence_descriptions.json', 'r') as f:
     data = json.load(f)
 
 df = pd.DataFrame(data)
