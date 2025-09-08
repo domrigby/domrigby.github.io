@@ -323,7 +323,33 @@ or [UCL Dark's](https://ucldark.com/) work on this.
    It also introduces key ideas like how to present the network the edges, how to batch varying sized graphs and message passing. 
    * [Graph Transformers](architectures/SurveyOfGraphTransformers.md) provide a highly capable model for evaluating graphs. Their self-attention models connections
    between all nodes and/or edges. As is the case with transformers, this does come at high compute and memory cost. A GT was applied in RL context in this [paper](non_LLM_reinforcement_learning/GraphTransformersForControllingSwarms.md).
-      
+     
+
+#### 9. Quantisation
+1. [Maarten Grootendorst's blog post](general_training/VisualGuideToQuantization.md) on quantisation for LLMs give a nice intro to the topic with some intuitive explainations. A brief overview:
+   * Quantisation:
+     * Reducing the precision of a model's numerical representation tp reduce its memory overhead.
+     * This essentially means storing high precision datatypes such as float32 as smaller datatypes such as uint8
+   * Why quantise?
+     * LLMs required billions of parameters and therefore massive amounts of memory... smaller datatypes = less memory footprint
+     * Using **smaller datatypes runs faster** (faster memory access, more parallelism, integer accelerated operations)
+   * Techniques:
+     * Linear mapping:
+       * Symmetric: scales all values by s and then used a signed integer (range is -max to +max)
+       * Asymmetric: scales and then applies bias such that range is min to max (more efficient and precise)
+     * Clipping and calibration:
+       * Including outliers can massively reduce precision, as they increase range.
+       * Methods often set a reasonable range (e.g. +-5std) and then clip the rest of the values
+     * Activation quantisation: you don't know the activation range during training and therefore must come up with a strategy
+     to quantise them when they appear:
+       1. Dynamically quantised: calculate scale and zero-point during inference
+       2. Staticly quantised: a quantisation rate is set before inference on a pre-defined dataset.
+   * Types:
+     * Post Training Quantisation:
+       * Weights are quantised **after** training
+     * Quantisation Aware Training
+       * Quantises and dequantises during training such that the model can locate the best minima which accounts for its effects.
+       * Often lowers FP32 accuracy (no quant) but increases accuracy in low precision models (e.g. int4)
 ----
 
 ## 🛠️ Method
@@ -453,6 +479,7 @@ Click the links to see the summaries and get links to the original paper.
 * 1st: [In-Context Reinforcement Learning for Variable Action Spaces](non_LLM_reinforcement_learning/HeadlessADInContextRL.md)
 * 3rd: [Jumanji: a Diverse Suite of Scalable Reinforcement Learning Environments in JAX](distribution_and_gpu_acceleration/JumanjiCombOpJaxEnvs.md)
 * 5th: [Efficiently Quantifying Individual Agent Importance in Cooperative MARL](marl/AgentImportance.md)
+* 7th : [Maarten Grootendorst's blog post on A Visual Guide to Quantization](general_training/VisualGuideToQuantization.md) 
 &#x20;&#x20;
 
 ---
