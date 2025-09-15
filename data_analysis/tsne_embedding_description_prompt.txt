@@ -11,15 +11,8 @@ Return your results as a JSON array of objects with “title”, "date_read" and
 
 The titles of the papers are in the square brackets below. More info about these papers can be found in this github repository https://github.com/domrigby/domrigby.github.io
 
-### August 2025
-* 16th: [Isaac Gym: High Performance GPU-Based Physics Simulation For Robot Learning](distribution_and_gpu_acceleration/IsaacGym.md)
-* 18th: [The 37 Implementation Details of Proximal Policy Optimization](non_LLM_reinforcement_learning/37PPOImplementationDetails.md)
-* 21st: [Learning to Walk in Minutes Using Massively Parallel Deep Reinforcement Learning](distribution_and_gpu_acceleration/LearningToWalkInMinutes.md)
-* 22nd: [Hybrid Actor-Critic Reinforcement Learning in Parameterized Action Space](non_LLM_reinforcement_learning/HybridACRLWithParameterisedActionSpace.md)
-* 23rd: [DD-PPO: LEARNING NEAR-PERFECT POINTGOAL NAVIGATORS FROM 2.5 BILLION FRAMES](distribution_and_gpu_acceleration/DD-PPO.md)
-* 26th: [The Bitter Lesson](non_LLM_reinforcement_learning/BitterLesson.md)
-
-### September 2025
-* 1st: [In-Context Reinforcement Learning for Variable Action Spaces](non_LLM_reinforcement_learning/HeadlessADInContextRL.md)
-* 3rd: [Jumanji: a Diverse Suite of Scalable Reinforcement Learning Environments in JAX](distribution_and_gpu_acceleration/JumanjiCombOpJaxEnvs.md)
-* 5th: [Efficiently Quantifying Individual Agent Importance in Cooperative MARL](marl/AgentImportance.md)
+September
+* 7th : [Maarten Grootendorst's blog post on A Visual Guide to Quantization](general_training/VisualGuideToQuantization.md)
+* 13th : [Following Jax MNIST tutorials](distribution_and_gpu_acceleration/LearningJaxNotes.md)
+* 14th: [Compiling machine learning programs via high-level tracing](distribution_and_gpu_acceleration/JaxSummary.md)
+* 15th: [How to think about GPUs by Google DeepMind](distribution_and_gpu_acceleration/HowToThinkAboutGPUs.md)

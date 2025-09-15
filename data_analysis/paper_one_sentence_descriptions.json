@@ -484,6 +484,30 @@
     "date_read": "2025-09-05",
     "link": "marl/AgentImportance.md",
     "summary": "The paper focuses on understanding agent contributions in cooperative multi-agent settings. It introduces an efficient method to estimate each agent’s importance by measuring counterfactual value changes. This approach allows scalable credit assignment and improves learning by identifying which agents most influence outcomes."
+  },
+    {
+    "title": "Maarten Grootendorst's blog post on A Visual Guide to Quantization",
+    "date_read": "2025-09-07",
+    "link": "general_training/VisualGuideToQuantization.md",
+    "summary": "This blog explains the challenge of reducing model size and speed without harming accuracy. It presents quantization methods that map continuous weights to fewer discrete values. The main finding is that careful quantization significantly reduces memory and computation while retaining strong performance."
+  },
+  {
+    "title": "Following Jax MNIST tutorials",
+    "date_read": "2025-09-13",
+    "link": "distribution_and_gpu_acceleration/LearningJaxNotes.md",
+    "summary": "This work addresses the need to learn practical machine learning in JAX. The method involves implementing and training models on the MNIST dataset using JAX primitives. The main finding is that JAX enables concise, efficient code with strong performance and clear insight into numerical computation."
+  },
+  {
+    "title": "Compiling machine learning programs via high-level tracing",
+    "date_read": "2025-09-14",
+    "link": "distribution_and_gpu_acceleration/JaxSummary.md",
+    "summary": "This paper tackles the problem of efficiently running high-level machine learning code on hardware accelerators. It introduces a system that traces Python functions to build optimizable intermediate representations. The main finding is that tracing-based compilation achieves both user-friendly programming and hardware-level execution speed."
+  },
+  {
+    "title": "How to think about GPUs by Google DeepMind",
+    "date_read": "2025-09-15",
+    "link": "distribution_and_gpu_acceleration/HowToThinkAboutGPUs.md",
+    "summary": "This blog addresses the difficulty of understanding GPU architecture for machine learning. It explains how cores, memory, and scheduling interact to enable parallelism. The main finding is that viewing GPUs as throughput-oriented, highly parallel systems clarifies how to design and optimize algorithms for them."
   }
 ]
 

@@ -7,7 +7,7 @@ Date: 22nd June 2025. Read on the coach back from London.
 Blog post rather than a paper today! Thought this would give some wider insight and I wasnt disappointed.
 
 ## Key Points
-- Superintelligence: an algorithm or model which out performs humans at all tasks.
+- Superintelligence: an algorithm or model which outperforms humans at all tasks.
 - Assumes this will be a **text-trained** transformer. Why text? Text, due to be compressed by the human mind, is far more information rich than other sources and tends to outline a human thought process.
 - Proposed question: will this be achieved via supervised learning, reinforcement learning, or a mix of both?
     - Supervised: more efficient, but has issues with vast data needs and modelling average human response. Disincentivises model to assign low probabilities. Not sure how long scaling will deliver performance improvements.

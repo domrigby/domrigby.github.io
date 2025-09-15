@@ -391,39 +391,58 @@ Click the links to see the summaries and get links to the original paper.
 
 ### May 2025
 
-* 23rd: [Absolute Zero Reasoner](LLM_reinforcement_learning/AbsoluteZeroReasoner.md)
-* 24th: [π_{0.5}: a Vision-Language-Action Model with Open-World Generalization](robotics/Pi0.5VLA.md)
-* 25th: [TD-MPC2: Scalable, Robust World Models for Continuous Control](non_LLM_reinforcement_learning/TDMPC2.md)
-* 26th: [JointPPO: Diving Deeper into the Effectiveness of PPO in Multi-Age Reinforcement Learning ](marl/JointPPO.md)
-* 29th: [Synthetic Experience Replay](non_LLM_reinforcement_learning/SyntheticExperienceReplay.md)
-* 30th: [Reinforcing Multi-Turn Reasoning in LLM Agents via Turn-Level Credit Assignment](LLM_reinforcement_learning/MultiTurnCreditAssignmentLLMRL.md)
+* 23rd: [Absolute Zero Reasoner](LLM_reinforcement_learning/AbsoluteZeroReasoner.md):creates self-play learning paradigm 
+in which the LLM learns to both propose and answer reasoning problems grounded by a coding engine.
+* 24th: [π_{0.5}: a Vision-Language-Action Model with Open-World Generalization](robotics/Pi0.5VLA.md): VLA pre-trained 
+on heterogeneous data which deploys hierarchical planning to complete natural language tasks.
+* 25th: [TD-MPC2: Scalable, Robust World Models for Continuous Control](non_LLM_reinforcement_learning/TDMPC2.md): 
+algorithm to learn a latent space world model for mod predictive control.
+* 26th: [JointPPO: Diving Deeper into the Effectiveness of PPO in Multi-Age Reinforcement Learning ](marl/JointPPO.md): a transformer
+outputs a sequence of actions, conditioned on the output of previous actions for MARL. The order is decided by an importance network.
+* 29th: [Synthetic Experience Replay](non_LLM_reinforcement_learning/SyntheticExperienceReplay.md): a diffusion model is trained to create new data examples in a replay buffer.
+* 30th: [Reinforcing Multi-Turn Reasoning in LLM Agents via Turn-Level Credit Assignment](LLM_reinforcement_learning/MultiTurnCreditAssignmentLLMRL.md): addresses credit assignment problem by
+adding a weighted turn and trajectory based reward.
 
 ### June 2025
-* 1st: [Ultimate Guide to Supervised Fine-Tuning](general_training/UltimateGuideToSFT.md)
-* 2nd: [Learning Complex Dexterous Manipulation with Deep Reinforcement Learning and Demonstrations (Demo Augmented RL)](non_LLM_reinforcement_learning/DemoAugmentedRL.md)
-* 3rd: [Spurious Rewards: Rethinking Training Signals in RLVR](LLM_reinforcement_learning/SpuriousRewardsRL.md)
-* 4th: [ProRL: Prolonged Reinforcement Learning Expands Reasoning Boundaries in Large Language Models](LLM_reinforcement_learning/ProlongedRL.md)
-* 5th: [JaxMARL: Multi-Agent RL Environments and Algorithms in JAX](marl/JaxMARL.md)
-* 8th: [Illusion of Thinking: Understanding Strengths and Limitations of Large Reasoning Models (LRMs)](LLM_reinforcement_learning/IllusionOfThinking.md)
-* 9th: [CHIRPs: Change-Induced Regret Proxy Metrics for Lifelong Reinforcement Learning](non_LLM_reinforcement_learning/CHIRPLifeLongRL.md)
-* 9th: [Enhanced POET: Open-Ended Reinforcement Learning through Unbounded Invention of Learning Challenges and their Solutions](open_endedness_and_auto_curriculums/EnhancedPOETOpenEndedLearning.md)
-* 10th: [Reinforcement Pre-Training](LLM_reinforcement_learning/RLPretraining.md)
-* 11th: [Reinforcement Learning Teachers of Test Time Scaling](LLM_reinforcement_learning/CreatingRLTeachers.md)
-* 11th: [Beyond the 80/20 Rule: High-Entropy Minority Tokens Drive Effective Reinforcement Learning for LLM Reasoning](LLM_reinforcement_learning/TokenEntropyRLVR.md)
-* 12th: [Writing-Zero: Bridge the Gap Between Non-verifiable Tasks and Verifiable Rewards](LLM_reinforcement_learning/WritingZeroNonVerifiableRewards.md)
-* 16th: [Play to Generalize: Learning to Reason Through Game Play](LLM_reinforcement_learning/ReasoningThroughGames.md)
+* 1st: [Ultimate Guide to Supervised Fine-Tuning](general_training/UltimateGuideToSFT.md): a long guide covering all the different methods for fine-tuning LLMs.
+* 2nd: [Learning Complex Dexterous Manipulation with Deep Reinforcement Learning and Demonstrations (Demo Augmented RL)](non_LLM_reinforcement_learning/DemoAugmentedRL.md):
+method to mix generated experiences in with expert examples during RL.
+* 3rd: [Spurious Rewards: Rethinking Training Signals in RLVR](LLM_reinforcement_learning/SpuriousRewardsRL.md): shows that giving Qwen random rewards can improve its 
+score on RL benchmarks.
+* 4th: [ProRL: Prolonged Reinforcement Learning Expands Reasoning Boundaries in Large Language Models](LLM_reinforcement_learning/ProlongedRL.md): a method for 
+for RL to have continuing improvement for a large number of episodes.
+* 5th: [JaxMARL: Multi-Agent RL Environments and Algorithms in JAX](marl/JaxMARL.md): a set of Jax GPU environments for training multi-agent RL.
+* 8th: [Illusion of Thinking: Understanding Strengths and Limitations of Large Reasoning Models (LRMs)](LLM_reinforcement_learning/IllusionOfThinking.md): creates doubt on whether 
+reasoning models are really doing any 'thinking'
+* 9th: [CHIRPs: Change-Induced Regret Proxy Metrics for Lifelong Reinforcement Learning](non_LLM_reinforcement_learning/CHIRPLifeLongRL.md): similarity metric for two MDPs.
+* 9th: [Enhanced POET: Open-Ended Reinforcement Learning through Unbounded Invention of Learning Challenges and their Solutions](open_endedness_and_auto_curriculums/EnhancedPOETOpenEndedLearning.md): 
+POET creates an open-ended framework for training diverse and ever improving RL agents.
+* 10th: [Reinforcement Pre-Training](LLM_reinforcement_learning/RLPretraining.md): allows model to perform CoT RL on each token during post-training.
+* 11th: [Reinforcement Learning Teachers of Test Time Scaling](LLM_reinforcement_learning/CreatingRLTeachers.md): trains an LLM to explain problems such that another LLM can learn from that explanation
+* 11th: [Beyond the 80/20 Rule: High-Entropy Minority Tokens Drive Effective Reinforcement Learning for LLM Reasoning](LLM_reinforcement_learning/TokenEntropyRLVR.md): only trains on high entropy tokens during RL reasoning.
+* 12th: [Writing-Zero: Bridge the Gap Between Non-verifiable Tasks and Verifiable Rewards](LLM_reinforcement_learning/WritingZeroNonVerifiableRewards.md): trains a preference model for the non-verifiable reward task of creative writing.
+* 16th: [Play to Generalize: Learning to Reason Through Game Play](LLM_reinforcement_learning/ReasoningThroughGames.md): trains reason on games, i.e. what is the best and worst move, to improve performance on benchmarks such as maths
 * 17th: [mimic-one: a Scalable Model Recipe for General Purpose Robot Dexterity](non_LLM_reinforcement_learning/DemoAugmentedRL.md)
-* 18th: [Prioritised Level Replay](open_endedness_and_auto_curriculums/PrioritisedLevelReplay.md)
-* 19th: [Self-Adapting Language Models](LLM_reinforcement_learning/SelfAdaptingLanguageModels.md)
-* 20th: [Agents of Change: Self-Evolving LLM Agents for Strategic Planning](LLM_reinforcement_learning/LLMsForStrategicPlanning.md)
-* 21st: [KINETIX: INVESTIGATING THE TRAINING OF GENERAL AGENTS THROUGH OPEN-ENDED PHYSICS-BASED CONTROL TASKS](distribution_and_gpu_acceleration/KInetixGeneralRL.md)
-* 22nd: [Superintelligence From First Principles (blog post)](open_endedness_and_auto_curriculums/SuperintelligenceFromFirstPrinciples.md)
-* 23rd: [Automatic Curriculum Learning for Driving Scenarios: Towards Robust and Efficient Reinforcement Learning](open_endedness_and_auto_curriculums/AutoCurriculumAutonomousDriving.md)
-* 24th: [How Visual Representations Map to Language Feature Space in Multimodal LLMs](general_training/SharedRepresentationsInVLMs.md)
-* 25th: [Multi-Agent Training for Pommerman: Curriculum Learning and Population-based Self-Play Approach](open_endedness_and_auto_curriculums/MultiAgentCurriculumSelfPlay.md)
-* 26th: [Automatic Curriculum Design for Zero-Shot Human AI Coordination](open_endedness_and_auto_curriculums/AutoCurriculumForHumanAICoordination.md)
-* 28th: [OMNI-EPIC: Open-Endedness Via Models of Human Notions of Interestingness With Environments Programmed In Code](open_endedness_and_auto_curriculums/OpenEndednessUsingLLMS.md)
-* 30th: [Self-Supervised Video Models Enable Understanding, Prediction and Planning (V-JEPA)](general_training/V-JEPA2.md)
+* 18th: [Prioritised Level Replay](open_endedness_and_auto_curriculums/PrioritisedLevelReplay.md): replays levels with the highest temporal difference error, assuming those are the most learnable. 
+* 19th: [Self-Adapting Language Models](LLM_reinforcement_learning/SelfAdaptingLanguageModels.md): aims to encourage continual learning and increase learning efficiency by editing its own training data.
+* 20th: [Agents of Change: Self-Evolving LLM Agents for Strategic Planning](LLM_reinforcement_learning/LLMsForStrategicPlanning.md): 
+* 21st: [KINETIX: INVESTIGATING THE TRAINING OF GENERAL AGENTS THROUGH OPEN-ENDED PHYSICS-BASED CONTROL TASKS](distribution_and_gpu_acceleration/KInetixGeneralRL.md): trains a generalisable 2D kinematics solver
+using vast quantities of training data generated on the GPU.
+* 22nd: [Superintelligence From First Principles (blog post)](open_endedness_and_auto_curriculums/SuperintelligenceFromFirstPrinciples.md):
+discusses possible pathways for reaching an AI which can outperform humans at all tasks.
+* 23rd: [Automatic Curriculum Learning for Driving Scenarios: Towards Robust and Efficient Reinforcement Learning](open_endedness_and_auto_curriculums/AutoCurriculumAutonomousDriving.md):
+creates an auto-curriculum for driving scenarios to prevent overfitting but without sample inefficiency of domain randomisation.
+* 24th: [How Visual Representations Map to Language Feature Space in Multimodal LLMs](general_training/SharedRepresentationsInVLMs.md): 
+investigates where visual and text representations unify in a VLM.
+* 25th: [Multi-Agent Training for Pommerman: Curriculum Learning and Population-based Self-Play Approach](open_endedness_and_auto_curriculums/MultiAgentCurriculumSelfPlay.md): auto-curriculum for Pommerman
+using performance annealed exploration rewards.
+* 26th: [Automatic Curriculum Design for Zero-Shot Human AI Coordination](open_endedness_and_auto_curriculums/AutoCurriculumForHumanAICoordination.md):
+creates a curriculum for human and AIs to compliment one another. This is achieved by encouraging a diverse enough population such that a human like 
+agent hopefully be represented.
+* 28th: [OMNI-EPIC: Open-Endedness Via Models of Human Notions of Interestingness With Environments Programmed In Code](open_endedness_and_auto_curriculums/OpenEndednessUsingLLMS.md):
+utilises foundation models to generate code for RL environments which a human would find interesting.
+* 30th: [Self-Supervised Video Models Enable Understanding, Prediction and Planning (V-JEPA)](general_training/V-JEPA2.md): creates a latent space
+world model using video data
 
 ### July 2025
 * 1st: [Open-Endedness is Essential for Artificial Superhuman Intelligence](open_endedness_and_auto_curriculums/OpenEndednessIsKeyToASI.md)
@@ -479,8 +498,10 @@ Click the links to see the summaries and get links to the original paper.
 * 1st: [In-Context Reinforcement Learning for Variable Action Spaces](non_LLM_reinforcement_learning/HeadlessADInContextRL.md)
 * 3rd: [Jumanji: a Diverse Suite of Scalable Reinforcement Learning Environments in JAX](distribution_and_gpu_acceleration/JumanjiCombOpJaxEnvs.md)
 * 5th: [Efficiently Quantifying Individual Agent Importance in Cooperative MARL](marl/AgentImportance.md)
-* 7th: [Maarten Grootendorst's blog post on A Visual Guide to Quantization](general_training/VisualGuideToQuantization.md) 
+* 7th : [Maarten Grootendorst's blog post on A Visual Guide to Quantization](general_training/VisualGuideToQuantization.md)
+* 13th : [Following Jax MNIST tutorials](distribution_and_gpu_acceleration/LearningJaxNotes.md)
 * 14th: [Compiling machine learning programs via high-level tracing](distribution_and_gpu_acceleration/JaxSummary.md)
+* 14th - 15th: [How to think about GPUs by Google DeepMind](distribution_and_gpu_acceleration/HowToThinkAboutGPUs.md)
 
 &#x20;&#x20;
 

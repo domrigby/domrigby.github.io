@@ -2,8 +2,10 @@
 **Date:** 30/05/2025
 [arXiv Link](https://arxiv.org/abs/2505.11821)
 **Key Points:**  
-- Addresses the problem of sparse/delayed rewards in multi‐turn (multi‐agent or multi‐step) settings by introducing two separate advantage functions: one for the immediate “turn” and one for the cumulative “trajectory.”  
-- Shows that combining both advantage estimates (via a weighted mean) results in more stable policy gradient updates and faster credit assignment across long horizons.  
+- Addresses the problem of sparse/delayed rewards in multi‐turn (multi‐agent or multi‐step) settings by introducing two separate 
+advantage functions: one for the immediate “turn” and one for the cumulative “trajectory.”  
+- Shows that combining both advantage estimates (via a weighted mean) results in more stable policy gradient updates
+and faster credit assignment across long horizons.  
 - Demonstrates empirical improvements on conversational AI benchmarks and multi‐agent cooperative games.  
 
 **Key Methods:**  

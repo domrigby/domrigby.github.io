@@ -5,7 +5,7 @@ Date: 8th June 2025
 [arXiv link](https://arxiv.org/abs/2506.06941)
 
 ## Key Points
-- Uses puzzles with tunable complexify rather than maths problems (these suffer from data contamination).
+- Uses puzzles with tunable complexity rather than maths problems (these suffer from data contamination).
 - Observations at different complexities:
     1. Low: non-reasoning > reasoning (more direct circuits).
     2. Medium: non-reasoning < reasoning
