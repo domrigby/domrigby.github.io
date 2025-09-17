@@ -225,6 +225,9 @@ or [UCL Dark's](https://ucldark.com/) work on this.
      combinatorial optimisation problems. Whilst it did perform slightly worse than tailor made solutions, it showed that features of these problems are 
      shared and meant specialist solvers could be fine-tuned quickly. This was however trained on problems solved by dynamic programming. It would be interesting to see how this could be combined with DRL,
      perhaps using GPU environments to generate the vast amounts of data needed.
+10 **RL leads to less catastrophic forgetting than SFT**:
+    * As explained in [RL's Razor](LLM_reinforcement_learning/WhyOnlineRLRemembersBetter.md), RL will choose a new policy **closest to the original policy** by gradually updating the non-zero probabilities. 
+    SFT does not do this, and rather drags the whole policy to a random point in the new task optimal policy space.
 
 ### 4. Robotics & Control
 
@@ -502,7 +505,8 @@ world model using video data
 * 13th : [Following Jax MNIST tutorials](distribution_and_gpu_acceleration/LearningJaxNotes.md)
 * 14th: [Compiling machine learning programs via high-level tracing](distribution_and_gpu_acceleration/JaxSummary.md)
 * 14th - 15th: [How to think about GPUs by Google DeepMind](distribution_and_gpu_acceleration/HowToThinkAboutGPUs.md)
-
+* 16th: [RL’S RAZOR: WHY ONLINE REINFORCEMENT LEARNING FORGETS LESS](LLM_reinforcement_learning/WhyOnlineRLRemembersBetter.md)
+* 
 &#x20;&#x20;
 
 ---
