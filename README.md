@@ -506,7 +506,9 @@ world model using video data
 * 14th: [Compiling machine learning programs via high-level tracing](distribution_and_gpu_acceleration/JaxSummary.md)
 * 14th - 15th: [How to think about GPUs by Google DeepMind](distribution_and_gpu_acceleration/HowToThinkAboutGPUs.md)
 * 16th: [RL’S RAZOR: WHY ONLINE REINFORCEMENT LEARNING FORGETS LESS](LLM_reinforcement_learning/WhyOnlineRLRemembersBetter.md)
-* 
+* 21st: [PyTorch Internals by Edward Wang](distribution_and_gpu_acceleration/PyTorchInternals.md)
+
+
 &#x20;&#x20;
 
 ---
