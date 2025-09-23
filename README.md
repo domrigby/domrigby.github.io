@@ -507,7 +507,9 @@ world model using video data
 * 14th - 15th: [How to think about GPUs by Google DeepMind](distribution_and_gpu_acceleration/HowToThinkAboutGPUs.md)
 * 16th: [RL’S RAZOR: WHY ONLINE REINFORCEMENT LEARNING FORGETS LESS](LLM_reinforcement_learning/WhyOnlineRLRemembersBetter.md)
 * 21st: [PyTorch Internals by Edward Wang](distribution_and_gpu_acceleration/PyTorchInternals.md)
-* 22nd: [What is Torch Compile?](general_training/TorchCompileExplained.md)
+* 22nd: [What is Torch Compile?](distribution_and_gpu_acceleration/TorchCompileExplained.md)
+* 23rd [JIT Compilation in JAX](distribution_and_gpu_acceleration/JaxJITCompile.md)
+* 23rd: [CUDA Study Log 4: Optimizing Constrained Decoding with Triton Kernel]
 
 
 &#x20;&#x20;
