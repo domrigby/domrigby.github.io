@@ -510,6 +510,7 @@ world model using video data
 * 22nd: [What is Torch Compile?](distribution_and_gpu_acceleration/TorchCompileExplained.md)
 * 23rd [JIT Compilation in JAX](distribution_and_gpu_acceleration/JaxJITCompile.md)
 * 23rd: [CUDA Study Log 4: Optimizing Constrained Decoding with Triton Kernel](distribution_and_gpu_acceleration/LevelsOfOptimisationForConstrainedDecoding.md)
+* 24th: [Accelerating PyTorch with CUDA Graphs](non_LLM_reinforcement_learning/CUDAGraphsInPyTorch.md) 
 * 26th: [PyTorch Performance Tuning Guide](distribution_and_gpu_acceleration/PyTorchPerformanceAdvice.md)
 
 &#x20;&#x20;
