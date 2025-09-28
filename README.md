@@ -512,6 +512,7 @@ world model using video data
 * 23rd: [CUDA Study Log 4: Optimizing Constrained Decoding with Triton Kernel](distribution_and_gpu_acceleration/LevelsOfOptimisationForConstrainedDecoding.md)
 * 24th: [Accelerating PyTorch with CUDA Graphs](non_LLM_reinforcement_learning/CUDAGraphsInPyTorch.md) 
 * 26th: [PyTorch Performance Tuning Guide](distribution_and_gpu_acceleration/PyTorchPerformanceAdvice.md)
+*	27th: [Nvidia Docs: GPU Performance Fundamentals](distribution_and_gpu_acceleration/NvidiaDocsGPUFundamentals.md)
 
 &#x20;&#x20;
 
