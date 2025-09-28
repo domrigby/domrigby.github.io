@@ -514,6 +514,7 @@ world model using video data
 * 26th: [PyTorch Performance Tuning Guide](distribution_and_gpu_acceleration/PyTorchPerformanceAdvice.md)
 *	27th: [Nvidia Docs: GPU Performance Fundamentals](distribution_and_gpu_acceleration/NvidiaDocsGPUFundamentals.md)
 * 27th: [Nvidia Docs: Optimising Memory Limited Layers](distribution_and_gpu_acceleration/NvidiaDocsMemLimitedLayers.md)
+* 28th: [Nvidia Docs: Matrix Multiplication and Quantisation Background](distribution_and_gpu_acceleration/NvidiaMatMulAndQuantisation.md)
 
 &#x20;&#x20;
 
