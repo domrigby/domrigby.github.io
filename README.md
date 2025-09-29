@@ -353,6 +353,52 @@ or [UCL Dark's](https://ucldark.com/) work on this.
      * Quantisation Aware Training
        * Quantises and dequantises during training such that the model can locate the best minima which accounts for its effects.
        * Often lowers FP32 accuracy (no quant) but increases accuracy in low precision models (e.g. int4)
+
+
+#### 10. GPU Architecture and PyTorch
+* **Architecture**:
+  * GPUs have two layers of parallelisation.
+      1. **WARP level**: warps are groups of 32 threads which are executed at the same time. They have the same operation performed on them. If they require different operation, multiple operations are performed and masked 
+      in a process known as **warp divergence**.
+      2. **Streaming Multi-Processors (SM)**: there are many SMs on a GPU (second level of parallelisation). These each have shared L1 memory and their own warp schedulers.
+  * Sources: [Nvidia GPU fundamentals](), []
+    
+  * Memory:
+    * **L2-cache**: small but very fast access memory
+    * **High Bandwidth Memory** or DRAM (RAM of the GPU):
+      * Stores data and instructions before they are loaded into L2-cache for execution
+      
+  * **Warp schedulers**: hide latency (instruction dependence, memory reading etc.) by overlapping warps. This is what allows linear time increases beyond the number of cores.
+  * **CUDA cores**:
+    * General purpose core inside each GPU which can do many operations (e.g. add, element wise add etc.)
+    * Perform one FMA per cycle
+  * **Tensor cores**:
+    * Specialised units inside each SMs for **Fused Multiply Accumulate** (FMA)
+    * Perform FMA of **entire tile per cycle** rather than one FMA per cycle.
+    * Performance heavily relies on the matrix breaking down nicely for tiles for the TC, otherwise [performance drops](distribution_and_gpu_acceleration/NvidiaMatMulAndQuantisation.md).
+
+* **Performance**:
+  1. Compute light operations (activations, norms etc) will often be [**memory limited**](distribution_and_gpu_acceleration/NvidiaDocsMemLimitedLayers.md) meaning the speed at which the data can be loaded is the bottleneck.
+     * There's not loads you can do about this, other than to try and limit the number of read and writes and check for an optimised implementation.
+     * Check [arithmetic intensity](distribution_and_gpu_acceleration/NvidiaDocsMemLimitedLayers.md) to predict whether an operation is memory limited
+  2. [Quantisation](distribution_and_gpu_acceleration/NvidiaMatMulAndQuantisation.md):
+     * **Tile quantisation**: wasted compute as a result of matrices not dividing perfectly into tiles.
+       * GPUs perform matrix multiplications in tiles. Whether there is just one column filled, or the entire tile, the GPU performs the same amount of computation.
+       * Therefore if the matrix is not made up of an integer number of tiles, there will be a tail at the end in which a whole tile is computed for an incomplete tile. 
+       * E.g. if the tile size is 128, increase the rows from 256 to 257 will increase compute by 50%
+     * **Wave quantisation**: wasted compute as a result of the number of tiles not dividing perfectly into the number of streaming multi-processors.
+       * Similar process to above, but with SMs.
+       * If the number of tiles does not divide nicely into the number of SMs, there will be a tail in which compute is not fully utilised.
+  3. Tensor cores:
+     * Check your GPUs datasheet and make sure the dimensions of your batch divide nicely for the tensor cores. This normally means making sure they all divide by 8.
+     * Having tails will result in under utilisation of tensor cores or them not being used at all in some older GPUs.
+  4. [Custom kernels in Triton](distribution_and_gpu_acceleration/LevelsOfOptimisationForConstrainedDecoding.md) can often help if we have specialist use case in which the default kernels don't perform well.
+
+* [**PyTorch details**](distribution_and_gpu_acceleration/PyTorchPerformanceAdvice.md) (and [some details on the internals](distribution_and_gpu_acceleration/PyTorchInternals.md)))
+  * Eager execution results in overhead when the CPU launches kernels on the GPU. Use **torch compile or cuda graphs to fuse kernels** and lower the overhead of executing these commands (this is however less
+  significant at higher batch sizes).
+  * Maintain static input sizes to stop torch having to re-allocate memory
+
 ----
 
 ## 🛠️ Method
@@ -512,7 +558,7 @@ world model using video data
 * 23rd: [CUDA Study Log 4: Optimizing Constrained Decoding with Triton Kernel](distribution_and_gpu_acceleration/LevelsOfOptimisationForConstrainedDecoding.md)
 * 24th: [Accelerating PyTorch with CUDA Graphs](non_LLM_reinforcement_learning/CUDAGraphsInPyTorch.md) 
 * 26th: [PyTorch Performance Tuning Guide](distribution_and_gpu_acceleration/PyTorchPerformanceAdvice.md)
-*	27th: [Nvidia Docs: GPU Performance Fundamentals](distribution_and_gpu_acceleration/NvidiaDocsGPUFundamentals.md)
+* 27th: [Nvidia Docs: GPU Performance Fundamentals](distribution_and_gpu_acceleration/NvidiaDocsGPUFundamentals.md)
 * 27th: [Nvidia Docs: Optimising Memory Limited Layers](distribution_and_gpu_acceleration/NvidiaDocsMemLimitedLayers.md)
 * 28th: [Nvidia Docs: Matrix Multiplication and Quantisation Background](distribution_and_gpu_acceleration/NvidiaMatMulAndQuantisation.md)
 

@@ -14,5 +14,5 @@ which can't be chosen is a waste of compute (same in GPU RL envs which are done 
     * Reduces memory and computations. 
     * Limit: inflexible when batch. Each item in batch has different mask preventing efficient slicing and reducing parallelism.
   3. Kernel optimisations: uses **triton** to optimise the kernels. Methods used:
-     * Block level: before performing block mat mul, the mask is checked to see if this block has any active values. If not, the block is skipped.
-     * Thread level: checks s are not masked out when they are being loaded. This can negatively impact performance due to causing warp divergence, and disrupting contiguous memory access.
+   * Block level: before performing block mat mul, the mask is checked to see if this block has any active values. If not, the block is skipped.
+   * Thread level: checks s are not masked out when they are being loaded. This can negatively impact performance due to causing warp divergence, and disrupting contiguous memory access.
