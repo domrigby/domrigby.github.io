@@ -2,7 +2,7 @@
 
 Date read: 30th September 2025
 
-[ArXiv Link}(https://arxiv.org/pdf/2505.17508)
+[ArXiv Link](https://arxiv.org/pdf/2505.17508)
 
 ## Key Points
 * Derives policy gradients for KL-regularised policies.
