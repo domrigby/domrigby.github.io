@@ -28,3 +28,5 @@ Date read: 30th September 2025
 	* Can be incorporated into reward as a punishment for high KL 
 
 * Many types of estimator: k1, k2, k3 etc
+
+* Proposed weight importance sampling weight for off-policy data when sampling KL divergence
