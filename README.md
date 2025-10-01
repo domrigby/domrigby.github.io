@@ -561,7 +561,7 @@ world model using video data
 * 27th: [Nvidia Docs: GPU Performance Fundamentals](distribution_and_gpu_acceleration/NvidiaDocsGPUFundamentals.md)
 * 27th: [Nvidia Docs: Optimising Memory Limited Layers](distribution_and_gpu_acceleration/NvidiaDocsMemLimitedLayers.md)
 * 28th: [Nvidia Docs: Matrix Multiplication and Quantisation Background](distribution_and_gpu_acceleration/NvidiaMatMulAndQuantisation.md)
-* 30th: [On the Design of KL-Regularised Policy Gradient Algorithms for LLM Reasoning]()
+* 30th: [On the Design of KL-Regularised Policy Gradient Algorithms for LLM Reasoning](general_training/KLDivergenceRegularisation.md)
 
 &#x20;&#x20;
 
