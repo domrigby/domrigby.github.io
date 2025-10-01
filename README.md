@@ -565,7 +565,8 @@ world model using video data
 
 
 ### October
-1st: [Current Best Practices for Training LLMs from Scratch]()
+1st: [Current Best Practices for Training LLMs from Scratch](general_training/wandbTrainingTFFromScratch.md)
+
 &#x20;&#x20;
 
 ---
