@@ -563,6 +563,9 @@ world model using video data
 * 28th: [Nvidia Docs: Matrix Multiplication and Quantisation Background](distribution_and_gpu_acceleration/NvidiaMatMulAndQuantisation.md)
 * 30th: [On the Design of KL-Regularised Policy Gradient Algorithms for LLM Reasoning](general_training/KLDivergenceRegularisation.md)
 
+
+### October
+1st: [Current Best Practices for Training LLMs from Scratch]()
 &#x20;&#x20;
 
 ---
