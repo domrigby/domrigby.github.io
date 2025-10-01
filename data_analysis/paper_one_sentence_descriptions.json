@@ -508,6 +508,78 @@
     "date_read": "2025-09-15",
     "link": "distribution_and_gpu_acceleration/HowToThinkAboutGPUs.md",
     "summary": "This blog addresses the difficulty of understanding GPU architecture for machine learning. It explains how cores, memory, and scheduling interact to enable parallelism. The main finding is that viewing GPUs as throughput-oriented, highly parallel systems clarifies how to design and optimize algorithms for them."
+  },
+  {
+    "title": "RL’S RAZOR: WHY ONLINE REINFORCEMENT LEARNING FORGETS LESS",
+    "date_read": "2025-09-16",
+    "link": "LLM_reinforcement_learning/WhyOnlineRLRemembersBetter.md",
+    "summary": "The paper examines why reinforcement learning systems trained online retain knowledge better than offline ones. It analyses how continuous updates reduce catastrophic forgetting. The main finding is that online training naturally rebalances exposure, leading to more stable memory preservation compared to fixed offline datasets."
+  },
+  {
+    "title": "PyTorch Internals by Edward Wang",
+    "date_read": "2025-09-21",
+    "link": "distribution_and_gpu_acceleration/PyTorchInternals.md",
+    "summary": "This post investigates the internal mechanics of PyTorch, focusing on execution flow and memory handling. It explains how dynamic graphs, autograd, and backend kernels are structured. The key insight is that PyTorch balances flexibility and efficiency through layered abstractions that manage computation and hardware operations effectively."
+  },
+  {
+    "title": "What is Torch Compile?",
+    "date_read": "2025-09-22",
+    "link": "distribution_and_gpu_acceleration/TorchCompileExplained.md",
+    "summary": "The article describes the challenges of speeding up PyTorch models while maintaining flexibility. It introduces Torch Compile, which captures computation graphs and applies optimisations like operator fusion. The main finding is that this approach delivers significant runtime acceleration without requiring developers to alter model definitions."
+  },
+  {
+    "title": "JIT Compilation in JAX",
+    "date_read": "2025-09-23",
+    "link": "distribution_and_gpu_acceleration/JaxJITCompile.md",
+    "summary": "This piece explores how just-in-time compilation improves execution in JAX. It explains graph tracing, operator fusion, and limitations with dynamic control flow. The core finding is that JAX achieves large performance gains by compiling static segments while requiring careful structuring of code to fit compilation constraints."
+  },
+  {
+    "title": "CUDA Study Log 4: Optimizing Constrained Decoding with Triton Kernel",
+    "date_read": "2025-09-23",
+    "link": "distribution_and_gpu_acceleration/LevelsOfOptimisationForConstrainedDecoding.md",
+    "summary": "The blog investigates constrained sequence decoding on GPUs. It implements a custom Triton kernel to reduce overhead from branching and memory inefficiencies. The main outcome is that tailored kernels substantially speed up decoding tasks by exploiting fine-grained GPU control, outperforming generic high-level implementations."
+  },
+  {
+    "title": "Accelerating PyTorch with CUDA Graphs",
+    "date_read": "2025-09-24",
+    "link": "non_LLM_reinforcement_learning/CUDAGraphsInPyTorch.md",
+    "summary": "The article addresses GPU overhead from repeated kernel launches in PyTorch workloads. It applies CUDA Graphs to capture and replay execution patterns efficiently. The key result is that using CUDA Graphs eliminates launch bottlenecks, producing large speedups in stable workloads where graph structures remain consistent."
+  },
+  {
+    "title": "PyTorch Performance Tuning Guide",
+    "date_read": "2025-09-26",
+    "link": "distribution_and_gpu_acceleration/PyTorchPerformanceAdvice.md",
+    "summary": "The guide outlines common performance bottlenecks when training PyTorch models. It recommends practices such as preallocating tensors, optimising data pipelines, and leveraging mixed precision. The main message is that systematic profiling and small adjustments collectively yield major improvements in throughput and memory efficiency."
+  },
+  {
+    "title": "Nvidia Docs: GPU Performance Fundamentals",
+    "date_read": "2025-09-27",
+    "link": "distribution_and_gpu_acceleration/NvidiaDocsGPUFundamentals.md",
+    "summary": "This documentation explains how GPU hardware executes parallel workloads. It describes warps, streaming multiprocessors, and memory hierarchies. The core insight is that effective GPU usage requires minimising divergence and memory latency, enabling schedulers to overlap operations and achieve near-linear scaling with more threads."
+  },
+  {
+    "title": "Nvidia Docs: Optimising Memory Limited Layers",
+    "date_read": "2025-09-27",
+    "link": "distribution_and_gpu_acceleration/NvidiaDocsMemLimitedLayers.md",
+    "summary": "The document addresses neural network layers constrained by memory bandwidth rather than compute. It analyses common cases like embedding lookups and normalisation. The key recommendation is to restructure memory access patterns and reduce data movement, which can significantly increase throughput without altering model accuracy."
+  },
+  {
+    "title": "Nvidia Docs: Matrix Multiplication and Quantisation Background",
+    "date_read": "2025-09-28",
+    "link": "distribution_and_gpu_acceleration/NvidiaMatMulAndQuantisation.md",
+    "summary": "This resource explains the mathematics and implementation of matrix multiplication and quantisation on GPUs. It highlights how data layout, precision reduction, and tensor cores influence performance. The finding is that careful use of lower precision arithmetic yields large efficiency gains while maintaining sufficient accuracy for training."
+  },
+  {
+    "title": "On the Design of KL-Regularised Policy Gradient Algorithms for LLM Reasoning",
+    "date_read": "2025-09-30",
+    "link": "general_training/KLDivergenceRegularisation.md",
+    "summary": "The paper studies how to stabilise reinforcement learning for reasoning tasks in large models. It designs policy gradient methods with KL regularisation to balance exploration and constraint. The main conclusion is that KL control provides more reliable optimisation, reducing collapse while guiding models toward useful behaviours."
+  },
+  {
+    "title": "Current Best Practices for Training LLMs from Scratch",
+    "date_read": "2025-10-01",
+    "link": "general_training/wandbTrainingTFFromScratch.md",
+    "summary": "The article compiles guidelines for training large language models efficiently. It covers data quality, scaling laws, hyperparameter tuning, and monitoring practices. The main finding is that disciplined attention to pipeline design and resource allocation enables stable large-scale training, reducing failures and wasted compute during development."
   }
 ]
 
