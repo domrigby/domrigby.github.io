@@ -9,9 +9,8 @@
 ## 📌 Introduction
 
 Welcome to my Paper Diary! Due to the seemingly never ending supply of interesting reinforcement learning papers which have come out in the last few years, I began
-to try and read at least one per day. I was however having the issue that after a month of two I could not remember for the life of me where I had read that interesting fact,
-method or algorithm. I therefore began keeping a diary of the papers/blog posts I was reading. I recently decided to start compressing the key points papers into short,
-bite-size summaries. I hope you find out something useful!
+to try and read at least one per day. This blog is an attempt to distill these paper into a set of most interesting techniques and key points.  I hope you learn something useful!
+
 
 > **Notes:**
 >   * Layout and formatting are continuously improved when time permits.
@@ -32,7 +31,7 @@ A list of papers read and links to their summaries is in the **[full diary secti
 
 I am fascinated by emergent behaviour, especially when this behaviour is diverse and unexpected. I therefore focus tend to
 focus on **reinforcement learning, auto-curriculums and open-endedness**, but also enjoy reading how this is made possible through 
-clever engineer and distribution.
+clever hardware and distribution.
 
 Inspired by [figure 2 of OMNI-EPIC](https://arxiv.org/pdf/2405.15568) and policy diversity method in [Foundation Model Self Play](open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md), I clustered 
 my papers read using the following method:
@@ -101,6 +100,7 @@ The following section includes:
    
    * [Learning to walk in minutes](distribution_and_gpu_acceleration/LearningToWalkInMinutes.md) trains locomotive robotic policies in under ten minutes using GPU environments and provides
    advice on how to tune the PPO hyperparameters to take advantage of the huge parallelism (e.g. massive mini-batches, short rollouts etc).
+   * This high parallelisation allows for [hyperparameter searches](distribution_and_gpu_acceleration/PopulationHyperParameterSearch.md) to be completed low wall clock time.
 7. **Foundation models have a large role to play in future RL**:
    * Foundation models have intuition about what humans find interesting. They are therefore capable of designing curriculums for RL or being involved in the policy improvement steps. 
    See more in the [open-endedness section of this blog](#4-openendedness--autocurricula). Summary of a few interesting methods:
@@ -124,6 +124,9 @@ The following section includes:
    * [Hierarchical Reasoning Model](general_training/HierarchicalReasoningModel.md) uses a DQN to decide whether the model should continue reasoning (or could be
    planning if using MCTS or other model based method) or finish. This allows the network to switch between [**system 1 and system 2 thinking**](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow&ved=2ahUKEwiY3eGH4_GOAxXudUEAHXugKX8QFnoECHEQAQ&usg=AOvVaw0LE50nrE-ivx9x1_Qq-J_0)
    (thinking longer about harder tasks).
+11. **Encourage diverse behaviour by optimising across sets of trajectories**
+    * [Set Reinforcement Learning](non_LLM_reinforcement_learning/DiversePoliciesThroughSetRL.md) modifies PPO to be performed across sets of trajectories. This means the objective can include how diverse the trajectories are and 
+    therefore explicitly encourage the model to learn **diverse solutions**.
 
 ### 2. Open‑Endedness & Auto‑Curricula
 
@@ -225,7 +228,7 @@ or [UCL Dark's](https://ucldark.com/) work on this.
      combinatorial optimisation problems. Whilst it did perform slightly worse than tailor made solutions, it showed that features of these problems are 
      shared and meant specialist solvers could be fine-tuned quickly. This was however trained on problems solved by dynamic programming. It would be interesting to see how this could be combined with DRL,
      perhaps using GPU environments to generate the vast amounts of data needed.
-10 **RL leads to less catastrophic forgetting than SFT**:
+10. **RL leads to less catastrophic forgetting than SFT**:
     * As explained in [RL's Razor](LLM_reinforcement_learning/WhyOnlineRLRemembersBetter.md), RL will choose a new policy **closest to the original policy** by gradually updating the non-zero probabilities. 
     SFT does not do this, and rather drags the whole policy to a random point in the new task optimal policy space.
 
@@ -357,11 +360,15 @@ or [UCL Dark's](https://ucldark.com/) work on this.
 
 #### 10. GPU Architecture and PyTorch
 * **Architecture**:
+
+The following section contains some notes on the GPU architecture. These mainly come from: [Nvidia Docs GPU Fundamentals](distribution_and_gpu_acceleration/NvidiaDocsGPUFundamentals.md),
+ [How To Think About GPUs by DeepMind](distribution_and_gpu_acceleration/HowToThinkAboutGPUs.md), [Nvidia Docs Matrix Multiplication Background](distribution_and_gpu_acceleration/NvidiaMatMulAndQuantisation.md)
+ and [PyTorch Performance Advice](distribution_and_gpu_acceleration/PyTorchPerformanceAdvice.md).
+
   * GPUs have two layers of parallelisation.
       1. **WARP level**: warps are groups of 32 threads which are executed at the same time. They have the same operation performed on them. If they require different operation, multiple operations are performed and masked 
       in a process known as **warp divergence**.
       2. **Streaming Multi-Processors (SM)**: there are many SMs on a GPU (second level of parallelisation). These each have shared L1 memory and their own warp schedulers.
-  * Sources: [Nvidia GPU fundamentals](), []
     
   * Memory:
     * **L2-cache**: small but very fast access memory
@@ -381,7 +388,7 @@ or [UCL Dark's](https://ucldark.com/) work on this.
   1. Compute light operations (activations, norms etc) will often be [**memory limited**](distribution_and_gpu_acceleration/NvidiaDocsMemLimitedLayers.md) meaning the speed at which the data can be loaded is the bottleneck.
      * There's not loads you can do about this, other than to try and limit the number of read and writes and check for an optimised implementation.
      * Check [arithmetic intensity](distribution_and_gpu_acceleration/NvidiaDocsMemLimitedLayers.md) to predict whether an operation is memory limited
-  2. [Quantisation](distribution_and_gpu_acceleration/NvidiaMatMulAndQuantisation.md):
+  2. Performance quantisation as discussed in the [Nvidia Docs](distribution_and_gpu_acceleration/NvidiaMatMulAndQuantisation.md)
      * **Tile quantisation**: wasted compute as a result of matrices not dividing perfectly into tiles.
        * GPUs perform matrix multiplications in tiles. Whether there is just one column filled, or the entire tile, the GPU performs the same amount of computation.
        * Therefore if the matrix is not made up of an integer number of tiles, there will be a tail at the end in which a whole tile is computed for an incomplete tile. 
@@ -397,7 +404,9 @@ or [UCL Dark's](https://ucldark.com/) work on this.
 * [**PyTorch details**](distribution_and_gpu_acceleration/PyTorchPerformanceAdvice.md) (and [some details on the internals](distribution_and_gpu_acceleration/PyTorchInternals.md)))
   * Eager execution results in overhead when the CPU launches kernels on the GPU. Use **torch compile or cuda graphs to fuse kernels** and lower the overhead of executing these commands (this is however less
   significant at higher batch sizes).
-  * Maintain static input sizes to stop torch having to re-allocate memory
+  * Maintain static input sizes to stop torch having to re-allocate memory.
+  * Minimise copy between CPU and GPU as this is expensive. This is a core principle behind the design of [IsaacGym](distribution_and_gpu_acceleration/IsaacGym.md), 
+  [Jumanji](distribution_and_gpu_acceleration/JumanjiCombOpJaxEnvs.md) and other GPU based environments
 
 ----
 
@@ -563,9 +572,9 @@ world model using video data
 * 28th: [Nvidia Docs: Matrix Multiplication and Quantisation Background](distribution_and_gpu_acceleration/NvidiaMatMulAndQuantisation.md)
 * 30th: [On the Design of KL-Regularised Policy Gradient Algorithms for LLM Reasoning](general_training/KLDivergenceRegularisation.md)
 
-
 ### October
 1st: [Current Best Practices for Training LLMs from Scratch](general_training/wandbTrainingTFFromScratch.md)
+2nd: [Polychromic Objectives for Reinforcement Learning](non_LLM_reinforcement_learning/DiversePoliciesThroughSetRL.md)
 
 &#x20;&#x20;
 
