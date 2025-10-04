@@ -127,9 +127,11 @@ The following section includes:
 11. **Encourage diverse behaviour by optimising across sets of trajectories**
     * [Set Reinforcement Learning](non_LLM_reinforcement_learning/DiversePoliciesThroughSetRL.md) modifies PPO to be performed across sets of trajectories. This means the objective can include how diverse the trajectories are and 
     therefore explicitly encourage the model to learn **diverse solutions**.
-12. **Solve unsolvable tasks?** \
-		* [Grokking RL](non_LLM_reinforcement_learning/RlForUnsolvableTasks.md) proposes use a two-phase exploration process for pass@k = 0 tasks. Phase 1: dense intermediate rewards (e.g. unit tests for code) which aim at getting the pass rate above 0. Phase 2: once pass rate is above 0, reward switches to a binary completed / not completed.
-
+12. **Solve unsolvable tasks? ** \
+	* [Grokking RL](non_LLM_reinforcement_learning/RlForUnsolvableTasks.md) proposes use a two-phase exploration process for pass@k = 0 tasks. Phase 1: dense intermediate rewards (e.g. unit tests for code) which aim at getting the pass rate above 0. Phase 2: once pass rate is above 0, reward switches to a binary completed / not completed.
+13. **Debugging**:
+	* I would recommend reading [Debugging RL](general_training/DebugginRLWithoutThePain.md) for a strong set of methods to refine what is going wrong in your algorithm, as well as principles to follow to avoid these bugs in teh first place.
+	* He provides a series of simple **"probe environments"** which help localise exactly what is causing the problem.
 
 ### 2. Open‑Endedness & Auto‑Curricula
 
@@ -579,6 +581,7 @@ world model using video data
 * 1st: [Current Best Practices for Training LLMs from Scratch](general_training/wandbTrainingTFFromScratch.md)
 * 2nd: [Polychromic Objectives for Reinforcement Learning](non_LLM_reinforcement_learning/DiversePoliciesThroughSetRL.md)
 * 3rd: [RL Grokking Recipe- How Can We Enable LLMs to Solve Previously Unsolvable Tasks](non_LLM_reinforcement_learning/RlForUnsolvableTasks.md)
+* 4th: [Debugging RL, Without the Agonizing Pain](general_training/DebugginRLWithoutThePain.md)
 
 &#x20;&#x20;
 
