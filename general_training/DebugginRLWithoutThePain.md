@@ -25,7 +25,7 @@ Date read: 4th October 2025
 	* **Vectorised environments**: record the reset step number... should be evenly distributed. If not then it may mean environments are correlated.
 	* **Assume you have a bug before you change hyperparameters**: i.e. have a high threshold for accepting the code is correct.
 
-* ** Probe environments**: 
+* **Probe environments**: 
 	* Blog includes a really good a series of simple and very fast environments which running in sequence will help isolate bugs.
 
 * **Probe agents**:
