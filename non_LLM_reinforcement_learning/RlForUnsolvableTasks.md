@@ -17,3 +17,7 @@ Date read: 3rd October
 	* Binary: pass or fail reward
 	* Dense: coding agent gets rewarded for passing unit tests. This causes the agent to over focus on easy unit tests, but the key insight it that is that in doing the total pass rate for the whole problem tends to go **just above 0**... reward signal!
 	* Once the model begins to pass the pass the test more than 0% of the time it switches to binary reward
+
+* Issue: 
+	* Have to be able to come up with a dense reward which will get pass rate above 0.
+	* Dense reward -> human bias
