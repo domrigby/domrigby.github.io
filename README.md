@@ -127,7 +127,7 @@ The following section includes:
 11. **Encourage diverse behaviour by optimising across sets of trajectories**
     * [Set Reinforcement Learning](non_LLM_reinforcement_learning/DiversePoliciesThroughSetRL.md) modifies PPO to be performed across sets of trajectories. This means the objective can include how diverse the trajectories are and 
     therefore explicitly encourage the model to learn **diverse solutions**.
-12. **Solve unsolvable tasks?**
+12. **Solve unsolvable tasks?** \
 		* [Grokking RL](non_LLM_reinforcement_learning/RlForUnsolvableTasks.md) proposes use a two-phase exploration process for pass@k = 0 tasks. Phase 1: dense intermediate rewards (e.g. unit tests for code) which aim at getting the pass rate above 0. Phase 2: once pass rate is above 0, reward switches to a binary completed / not completed.
 
 
