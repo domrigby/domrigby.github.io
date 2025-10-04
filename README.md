@@ -576,9 +576,9 @@ world model using video data
 * 30th: [On the Design of KL-Regularised Policy Gradient Algorithms for LLM Reasoning](general_training/KLDivergenceRegularisation.md)
 
 ### October
-1st: [Current Best Practices for Training LLMs from Scratch](general_training/wandbTrainingTFFromScratch.md)
-2nd: [Polychromic Objectives for Reinforcement Learning](non_LLM_reinforcement_learning/DiversePoliciesThroughSetRL.md)
-3rd: [RL Grokking Recipe- How Can We Enable LLMs to Solve Previously Unsolvable Tasks](non_LLM_reinforcement_learning/RlForUnsolvableTasks.md)
+* 1st: [Current Best Practices for Training LLMs from Scratch](general_training/wandbTrainingTFFromScratch.md)
+* 2nd: [Polychromic Objectives for Reinforcement Learning](non_LLM_reinforcement_learning/DiversePoliciesThroughSetRL.md)
+* 3rd: [RL Grokking Recipe- How Can We Enable LLMs to Solve Previously Unsolvable Tasks](non_LLM_reinforcement_learning/RlForUnsolvableTasks.md)
 
 &#x20;&#x20;
 
