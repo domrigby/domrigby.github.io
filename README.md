@@ -582,6 +582,7 @@ world model using video data
 * 2nd: [Polychromic Objectives for Reinforcement Learning](non_LLM_reinforcement_learning/DiversePoliciesThroughSetRL.md)
 * 3rd: [RL Grokking Recipe- How Can We Enable LLMs to Solve Previously Unsolvable Tasks](non_LLM_reinforcement_learning/RlForUnsolvableTasks.md)
 * 4th: [Debugging RL, Without the Agonizing Pain](general_training/DebugginRLWithoutThePain.md)
+* 6th: [Flash Attention Blog Post](distribution_and_gpu_acceleration/FlashAttention.md)
 
 &#x20;&#x20;
 
