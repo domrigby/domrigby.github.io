@@ -32,6 +32,12 @@ Date read: 6th October 2025
 
 * Check blog for further implementation details.
 
+* Issue:
+	* Only supported on certain GPUs
+	* Requires writing of custom CUDA kernels (e.g. triton)
+
+
+
 
 
 
