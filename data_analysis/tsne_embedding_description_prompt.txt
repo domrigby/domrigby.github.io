@@ -11,19 +11,8 @@ Return your results as a JSON array of objects with “title”, "date_read" and
 
 The titles of the papers are in the square brackets below. More info about these papers can be found in this github repository https://github.com/domrigby/domrigby.github.io
 
-September
-* 16th: [RL’S RAZOR: WHY ONLINE REINFORCEMENT LEARNING FORGETS LESS](LLM_reinforcement_learning/WhyOnlineRLRemembersBetter.md)
-* 21st: [PyTorch Internals by Edward Wang](distribution_and_gpu_acceleration/PyTorchInternals.md)
-* 22nd: [What is Torch Compile?](distribution_and_gpu_acceleration/TorchCompileExplained.md)
-* 23rd [JIT Compilation in JAX](distribution_and_gpu_acceleration/JaxJITCompile.md)
-* 23rd: [CUDA Study Log 4: Optimizing Constrained Decoding with Triton Kernel](distribution_and_gpu_acceleration/LevelsOfOptimisationForConstrainedDecoding.md)
-* 24th: [Accelerating PyTorch with CUDA Graphs](non_LLM_reinforcement_learning/CUDAGraphsInPyTorch.md)
-* 26th: [PyTorch Performance Tuning Guide](distribution_and_gpu_acceleration/PyTorchPerformanceAdvice.md)
-* 27th: [Nvidia Docs: GPU Performance Fundamentals](distribution_and_gpu_acceleration/NvidiaDocsGPUFundamentals.md)
-* 27th: [Nvidia Docs: Optimising Memory Limited Layers](distribution_and_gpu_acceleration/NvidiaDocsMemLimitedLayers.md)
-* 28th: [Nvidia Docs: Matrix Multiplication and Quantisation Background](distribution_and_gpu_acceleration/NvidiaMatMulAndQuantisation.md)
-* 30th: [On the Design of KL-Regularised Policy Gradient Algorithms for LLM Reasoning](general_training/KLDivergenceRegularisation.md)
-
-
-### October
-1st: [Current Best Practices for Training LLMs from Scratch](general_training/wandbTrainingTFFromScratch.md)
+October
+* 2nd: [Polychromic Objectives for Reinforcement Learning](non_LLM_reinforcement_learning/DiversePoliciesThroughSetRL.md)
+* 3rd: [RL Grokking Recipe- How Can We Enable LLMs to Solve Previously Unsolvable Tasks](non_LLM_reinforcement_learning/RlForUnsolvableTasks.md)
+* 4th: [Debugging RL, Without the Agonizing Pain](general_training/DebugginRLWithoutThePain.md)
+* 6th: [Flash Attention Blog Post](distribution_and_gpu_acceleration/FlashAttention.md)

@@ -580,6 +580,30 @@
     "date_read": "2025-10-01",
     "link": "general_training/wandbTrainingTFFromScratch.md",
     "summary": "The article compiles guidelines for training large language models efficiently. It covers data quality, scaling laws, hyperparameter tuning, and monitoring practices. The main finding is that disciplined attention to pipeline design and resource allocation enables stable large-scale training, reducing failures and wasted compute during development."
+  },
+    {
+    "title": "Polychromic Objectives for Reinforcement Learning",
+    "date_read": "2025-10-02",
+    "link": "non_LLM_reinforcement_learning/DiversePoliciesThroughSetRL.md",
+    "summary": "The paper tackles the challenge of learning diverse policies within reinforcement learning. It introduces polychromic objectives that treat policy optimization as a set-valued problem. The main finding is that this approach encourages diversity and robustness by explicitly optimising multiple complementary behaviours rather than a single optimal policy."
+  },
+  {
+    "title": "RL Grokking Recipe- How Can We Enable LLMs to Solve Previously Unsolvable Tasks",
+    "date_read": "2025-10-03",
+    "link": "non_LLM_reinforcement_learning/RlForUnsolvableTasks.md",
+    "summary": "The article investigates why large models fail on complex reasoning tasks despite scale. It proposes reinforcement learning fine-tuning recipes that reward intermediate reasoning steps. The key result is that targeted reward shaping and curriculum design can unlock problem-solving capabilities previously unreachable through standard supervised or unsupervised training."
+  },
+  {
+    "title": "Debugging RL, Without the Agonizing Pain",
+    "date_read": "2025-10-04",
+    "link": "general_training/DebugginRLWithoutThePain.md",
+    "summary": "This blog post addresses the difficulty of diagnosing reinforcement learning failures. It outlines systematic debugging methods using controlled experiments, metric tracking, and ablation studies. The main conclusion is that structured diagnostic practices dramatically reduce wasted training time by identifying environment, reward, or policy instability early in development."
+  },
+  {
+    "title": "Flash Attention Blog Post",
+    "date_read": "2025-10-06",
+    "link": "distribution_and_gpu_acceleration/FlashAttention.md",
+    "summary": "The post explains the performance issues of standard attention mechanisms caused by memory-bound operations. It introduces FlashAttention, an algorithm that computes attention in tiled, IO-efficient segments. The main finding is that this method greatly improves throughput and memory efficiency while producing mathematically equivalent results to conventional attention."
   }
 ]
 
