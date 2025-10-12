@@ -584,6 +584,7 @@ world model using video data
 * 4th: [Debugging RL, Without the Agonizing Pain](general_training/DebugginRLWithoutThePain.md)
 * 6th: [Flash Attention Blog Post](distribution_and_gpu_acceleration/FlashAttention.md)
 * 8th: [Training Agents Inside of Scalable World Models](non_LLM_reinforcement_learning/Dreamer4OfflineWorldModel.md)
+* 11th: [Attention, Learn to Solve Routing Problems](non_LLM_reinforcement_learning/TransformerApproachToRouting.md)
 
 &#x20;&#x20;
 
