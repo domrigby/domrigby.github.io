@@ -24,3 +24,21 @@ Date read: 12th October 2025
 		* Disjunctive arcs: undirected edges which connect operations requiring the same machine. There is mutual exclusion, only one can be processed at a time. Eventually receive order 
 	* Finding a solution = fixing disjunction directions
 	* Resulting graph is a Directed Acyclic Graph (cycles would mean circular dependenies)
+	* **Critical path**: longest path for a machine from start to end (defines our reward)
+	* **Critical block**: string of operations on one machine on a critical path.
+	* **Neighbourhood block**: identify critical blocks... the neighbourhood is potential changes we could make by swapping operations
+
+
+* Traditional methods use a heuristic to selecta change withinn the neighbourhood (e.g. greedy) 
+
+* Algorithm:
+	* Learns via REINFORCE
+	* State is current solution
+	* Action is which operation to swap to improve the solution.
+		* Selects Operation from OxO size matrix
+	* Reward: time improvement per step
+	* Architecture: Graph Attention 
+
+* Representation. Separate graphs for:
+	1. Precedence constraints (which operations must be processed before what)
+	2. Current processing order
