@@ -2,7 +2,7 @@
 
 Date read: 13th October 2025
 
-[Blog link]()
+[Blog link](https://kumo.ai/research/speeding-up-graph-learning-models-with-pyg-and-torch-compile/?utm_source=chatgpt.com)
 
 ## Key Points
 * Aim of post: explain how to overcome typical problems that arrive when using torch compile to speed up GNN related activitie, specifically graph transformers.
