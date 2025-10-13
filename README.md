@@ -586,6 +586,7 @@ world model using video data
 * 8th: [Training Agents Inside of Scalable World Models](non_LLM_reinforcement_learning/Dreamer4OfflineWorldModel.md)
 * 10th: [Long-Horizon Perception Requires Re-Thinking Recurrence](general_training/AttentionIsNOTAllYouNeed.md)
 * 11th: [Attention, Learn to Solve Routing Problems](non_LLM_reinforcement_learning/TransformerApproachToRouting.md)
+* 12th: [Deep Reinforcement Learning Guided Improvement Heuristic For Job Shop Scheduling](non_LLM_reinforcement_learning/ImprovementRLForJSSP.md)
 
 &#x20;&#x20;
 
