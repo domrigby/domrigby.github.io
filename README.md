@@ -587,6 +587,8 @@ world model using video data
 * 10th: [Long-Horizon Perception Requires Re-Thinking Recurrence](general_training/AttentionIsNOTAllYouNeed.md)
 * 11th: [Attention, Learn to Solve Routing Problems](non_LLM_reinforcement_learning/TransformerApproachToRouting.md)
 * 12th: [Deep Reinforcement Learning Guided Improvement Heuristic For Job Shop Scheduling](non_LLM_reinforcement_learning/ImprovementRLForJSSP.md)
+* 13th: [Speeding Up Graph Learning Models with PyG and torch.compile](distribution_and_gpu_acceleration/AcceleratingGNNsUsingTorchCompile.md)
+
 
 &#x20;&#x20;
 
