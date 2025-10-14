@@ -2,7 +2,7 @@
 
 Date read: 14th October 2025
 
-[Blog link]()
+[Blog link](https://m2po.notion.site/rl-stale-m2po)
 
 ## Key Points
 * Aims:
