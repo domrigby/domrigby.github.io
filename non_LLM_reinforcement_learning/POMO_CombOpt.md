@@ -2,7 +2,7 @@
 
 Date read: 16th October 2025
 
-[Paper link]()
+[Paper link](https://arxiv.org/abs/2010.16011)
 
 ## Key Points
 * Aim:
