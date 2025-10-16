@@ -589,7 +589,7 @@ world model using video data
 * 12th: [Deep Reinforcement Learning Guided Improvement Heuristic For Job Shop Scheduling](non_LLM_reinforcement_learning/ImprovementRLForJSSP.md)
 * 13th: [Speeding Up Graph Learning Models with PyG and torch.compile](distribution_and_gpu_acceleration/AcceleratingGNNsUsingTorchCompile.md)
 * 14th: [How Far Can Off-Policy RL Reach with Stale Data on LLMs?](non_LLM_reinforcement_learning/OffPolicyRLForLLMs.md)
-
+* 16th: [POMO: Policy Optimization with Multiple Optima for Reinforcement Learning](non_LLM_reinforcement_learning/POMO_CombOpt.md)
 
 &#x20;&#x20;
 
