@@ -2,7 +2,7 @@
 
 Date read: 18th October 2025
 
-[Blog post]()
+[Blog post](https://nrehiew.github.io/blog/long_context/)
 
 ## Key Points
 * Reasoning performance tends to decrease with context lenght, long before max context length is reached. This is especialy important when doing CoT as this generates a bunch more tokens.
