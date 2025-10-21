@@ -591,6 +591,7 @@ world model using video data
 * 14th: [How Far Can Off-Policy RL Reach with Stale Data on LLMs?](non_LLM_reinforcement_learning/OffPolicyRLForLLMs.md)
 * 16th: [POMO: Policy Optimization with Multiple Optima for Reinforcement Learning](non_LLM_reinforcement_learning/POMO_CombOpt.md)
 * 18th: [Evaluating Long Context (Reasoning) Ability](LLMs/LongContextWindows.md)
+* 20th: [The Bitter Lesson's Bitter Lesson](non_LLM_reinforcement_learning/BitterLessonsBitterLessons.md)
 
 &#x20;&#x20;
 
