@@ -592,7 +592,7 @@ world model using video data
 * 16th: [POMO: Policy Optimization with Multiple Optima for Reinforcement Learning](non_LLM_reinforcement_learning/POMO_CombOpt.md)
 * 18th: [Evaluating Long Context (Reasoning) Ability](LLMs/LongContextWindows.md)
 * 20th: [The Bitter Lesson's Bitter Lesson](non_LLM_reinforcement_learning/BitterLessonsBitterLessons.md)
-
+* 21st: [9 Tips for Managing & Leading an Engineering Team](self_improvement/HowToGrowAsAnEngineeringManager.md)
 &#x20;&#x20;
 
 ---
