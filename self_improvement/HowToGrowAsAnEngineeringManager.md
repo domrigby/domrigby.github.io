@@ -2,7 +2,7 @@
 
 Date read: 21st October 2025
 
-[Article link]()
+[Article link](https://engineering.rice.edu/academics/graduate-programs/online-meml/blog/engineering-manager-tips?utm_source=chatgpt.com)
 
 ## Key Points
 * Includes 9 key bits of advice on how to be a good engineering manager. You are the interface between the business and the engineers.
