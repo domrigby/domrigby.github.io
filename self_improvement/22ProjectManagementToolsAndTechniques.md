@@ -2,7 +2,7 @@
 
 Date read: 22nd October 2025
 
-[Article link]()
+[Article link](https://www.projectmanager.com/blog/project-management-techniques-for-every-pm)
 
 ## Key Point
 * PM Tools:
