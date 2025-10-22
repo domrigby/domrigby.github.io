@@ -1,4 +1,4 @@
-# Engineering Management Challenges: How You'll Change and Grow as a Manager
+# 9 Tips for Managing & Leading an Engineering Team
 
 Date read: 21st October 2025
 
