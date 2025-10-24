@@ -604,6 +604,72 @@
     "date_read": "2025-10-06",
     "link": "distribution_and_gpu_acceleration/FlashAttention.md",
     "summary": "The post explains the performance issues of standard attention mechanisms caused by memory-bound operations. It introduces FlashAttention, an algorithm that computes attention in tiled, IO-efficient segments. The main finding is that this method greatly improves throughput and memory efficiency while producing mathematically equivalent results to conventional attention."
+  },
+  {
+    "title": "Training Agents Inside of Scalable World Models",
+    "date_read": "2025-10-08",
+    "link": "non_LLM_reinforcement_learning/Dreamer4OfflineWorldModel.md",
+    "summary": "The paper addresses the challenge of training agents efficiently without direct environment interaction. It proposes learning a scalable predictive world model and training policies entirely within this latent space. The main finding is that world model training significantly reduces sample requirements and enables competitive performance using offline data."
+  },
+  {
+    "title": "Long-Horizon Perception Requires Re-Thinking Recurrence",
+    "date_read": "2025-10-10",
+    "link": "general_training/AttentionIsNOTAllYouNeed.md",
+    "summary": "The work examines the failure of standard attention mechanisms in tasks requiring sustained temporal memory. It introduces alternative recurrent structures that retain long-term dependencies more effectively. The key result is that recurrence-based architectures outperform attention-only models in settings requiring persistent temporal reasoning."
+  },
+  {
+    "title": "Attention, Learn to Solve Routing Problems",
+    "date_read": "2025-10-11",
+    "link": "non_LLM_reinforcement_learning/TransformerApproachToRouting.md",
+    "summary": "The paper investigates solving routing problems using machine learning rather than handcrafted heuristics. It employs transformer architectures to learn solution strategies directly from problem instances. The primary finding is that attention-based models can generate high-quality routing solutions that generalise across unseen scenarios."
+  },
+  {
+    "title": "Deep Reinforcement Learning Guided Improvement Heuristic For Job Shop Scheduling",
+    "date_read": "2025-10-12",
+    "link": "non_LLM_reinforcement_learning/ImprovementRLForJSSP.md",
+    "summary": "The study aims to improve performance in job shop scheduling tasks. It combines reinforcement learning with classical improvement heuristics to iteratively refine job assignments. The main finding is that RL-guided heuristics outperform fixed strategies by dynamically learning effective local improvement moves."
+  },
+  {
+    "title": "Speeding Up Graph Learning Models with PyG and torch.compile",
+    "date_read": "2025-10-13",
+    "link": "distribution_and_gpu_acceleration/AcceleratingGNNsUsingTorchCompile.md",
+    "summary": "This post addresses slow execution times in graph neural networks. It applies torch.compile with PyG to reduce kernel overhead and fuse operations. The key outcome is substantial speed improvements during training without modifying existing model architectures or graph processing logic."
+  },
+  {
+    "title": "How Far Can Off-Policy RL Reach with Stale Data on LLMs?",
+    "date_read": "2025-10-14",
+    "link": "non_LLM_reinforcement_learning/OffPolicyRLForLLMs.md",
+    "summary": "The paper explores whether reinforcement learning can improve language models using outdated experience data. It evaluates off-policy training strategies on stale interaction logs. The main result is that off-policy RL remains effective within certain staleness bounds, enabling reuse of historical training traces."
+  },
+  {
+    "title": "POMO: Policy Optimization with Multiple Optima for Reinforcement Learning",
+    "date_read": "2025-10-16",
+    "link": "non_LLM_reinforcement_learning/POMO_CombOpt.md",
+    "summary": "The work tackles the issue of suboptimal convergence in combinatorial optimisation using RL. It introduces a policy structure that samples multiple optima to diversify exploration. The key finding is that leveraging multiple solution modes yields better performance and robustness compared to single-policy optimisation."
+  },
+  {
+    "title": "Evaluating Long Context (Reasoning) Ability",
+    "date_read": "2025-10-18",
+    "link": "LLMs/LongContextWindows.md",
+    "summary": "The article investigates how well models handle long input sequences for reasoning tasks. It proposes structured benchmarks that assess logical consistency across extended contexts. The main conclusion is that many models degrade sharply beyond certain context lengths, revealing gaps in true long-range reasoning capability."
+  },
+  {
+    "title": "The Bitter Lesson's Bitter Lesson",
+    "date_read": "2025-10-20",
+    "link": "non_LLM_reinforcement_learning/BitterLessonsBitterLessons.md",
+    "summary": "The essay revisits the idea that general methods outperform handcrafted approaches over time. It critiques over-reliance on abstraction and emphasises scalable search and compute. The main insight is that future breakthroughs will likely stem from embracing systemic generality rather than problem-specific optimisation."
+  },
+  {
+    "title": "9 Tips for Managing & Leading an Engineering Team",
+    "date_read": "2025-10-21",
+    "link": "self_improvement/HowToGrowAsAnEngineeringManager.md",
+    "summary": "The article addresses common challenges faced by engineering managers. It outlines practical strategies such as clear goal-setting, fostering autonomy, and feedback-driven leadership. The main takeaway is that effective team management relies on balancing technical oversight with empathetic, trust-based communication."
+  },
+  {
+    "title": "22 Project Management Tools & Techniques for Project Managers",
+    "date_read": "2025-10-22",
+    "link": "self_improvement/22ProjectManagementToolsAndTechniques.md",
+    "summary": "The post identifies problems in coordinating complex projects across teams. It reviews a range of planning, tracking, and risk management tools and frameworks. The key conclusion is that selecting appropriate methodologies improves visibility, reduces bottlenecks, and increases the likelihood of timely project delivery."
   }
 ]
 

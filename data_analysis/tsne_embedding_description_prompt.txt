@@ -12,7 +12,14 @@ Return your results as a JSON array of objects with “title”, "date_read" and
 The titles of the papers are in the square brackets below. More info about these papers can be found in this github repository https://github.com/domrigby/domrigby.github.io
 
 October
-* 2nd: [Polychromic Objectives for Reinforcement Learning](non_LLM_reinforcement_learning/DiversePoliciesThroughSetRL.md)
-* 3rd: [RL Grokking Recipe- How Can We Enable LLMs to Solve Previously Unsolvable Tasks](non_LLM_reinforcement_learning/RlForUnsolvableTasks.md)
-* 4th: [Debugging RL, Without the Agonizing Pain](general_training/DebugginRLWithoutThePain.md)
-* 6th: [Flash Attention Blog Post](distribution_and_gpu_acceleration/FlashAttention.md)
+* 8th: [Training Agents Inside of Scalable World Models](non_LLM_reinforcement_learning/Dreamer4OfflineWorldModel.md)
+* 10th: [Long-Horizon Perception Requires Re-Thinking Recurrence](general_training/AttentionIsNOTAllYouNeed.md)
+* 11th: [Attention, Learn to Solve Routing Problems](non_LLM_reinforcement_learning/TransformerApproachToRouting.md)
+* 12th: [Deep Reinforcement Learning Guided Improvement Heuristic For Job Shop Scheduling](non_LLM_reinforcement_learning/ImprovementRLForJSSP.md)
+* 13th: [Speeding Up Graph Learning Models with PyG and torch.compile](distribution_and_gpu_acceleration/AcceleratingGNNsUsingTorchCompile.md)
+* 14th: [How Far Can Off-Policy RL Reach with Stale Data on LLMs?](non_LLM_reinforcement_learning/OffPolicyRLForLLMs.md)
+* 16th: [POMO: Policy Optimization with Multiple Optima for Reinforcement Learning](non_LLM_reinforcement_learning/POMO_CombOpt.md)
+* 18th: [Evaluating Long Context (Reasoning) Ability](LLMs/LongContextWindows.md)
+* 20th: [The Bitter Lesson's Bitter Lesson](non_LLM_reinforcement_learning/BitterLessonsBitterLessons.md)
+* 21st: [9 Tips for Managing & Leading an Engineering Team](self_improvement/HowToGrowAsAnEngineeringManager.md)
+* 22nd: [22 Project Management Tools & Techniques for Project Managers](self_improvement/22ProjectManagementToolsAndTechniques.md)
