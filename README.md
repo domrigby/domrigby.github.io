@@ -595,6 +595,7 @@ world model using video data
 * 21st: [9 Tips for Managing & Leading an Engineering Team](self_improvement/HowToGrowAsAnEngineeringManager.md)
 * 22nd: [22 Project Management Tools & Techniques for Project Managers](self_improvement/22ProjectManagementToolsAndTechniques.md)
 * 24th: [Demystifying the Mechanisms Behind Emergent Exploration in Goal-conditioned RL](non_LLM_reinforcement_learning/ExplorationInUnsupervisedRL.md)
+* 25th: [Managing AI projects: 6 Concepts to Help Lead an AI Team](self_improvement/6TipsForManagingAIProjects.md)
 
 &#x20;&#x20;
 
