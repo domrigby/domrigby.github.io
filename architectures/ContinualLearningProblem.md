@@ -19,3 +19,31 @@ Date read: 28th October 2025
 		* Models must know what to get rid of as well as be able to add new info.
 		* We want to find and only change the weights responsible for making a decision.
 
+* Perfect continual learning problem: targeted weights updates, high capacity for new knowledge and adaptive integration.
+
+* Current methods:
+	* Non-parametric:
+		* In-Context Learning: limited length
+		* RAG: retrieval is difficult
+	* Parametric:
+		* Full fine-tuning: many stages, comp heavy
+		* LoRA: low capacity
+		* MoEs add new experts: doesn't update old info
+
+* **Memory Layers**:
+	* Layers are part of normal network
+	* Millions of mini experts: retrieved by query-key lookup
+	* Only small subset is activated.
+	* Allows you to finetune small subset of active weights... only the ones that contain the knowledge required
+	* Model has to learn to organise knowledge.
+
+
+
+
+
+
+
+
+
+
+
