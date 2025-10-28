@@ -596,6 +596,7 @@ world model using video data
 * 22nd: [22 Project Management Tools & Techniques for Project Managers](self_improvement/22ProjectManagementToolsAndTechniques.md)
 * 24th: [Demystifying the Mechanisms Behind Emergent Exploration in Goal-conditioned RL](non_LLM_reinforcement_learning/ExplorationInUnsupervisedRL.md)
 * 25th: [Managing AI projects: 6 Concepts to Help Lead an AI Team](self_improvement/6TipsForManagingAIProjects.md)
+* 26th: [The Continual Learning Problem](architectures/ContinualLearningProblem.md)
 
 &#x20;&#x20;
 
