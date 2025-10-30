@@ -6,15 +6,19 @@ Date read: 29th October 2025
 
 ## Key Points
 * Key difficulties:
-	* It is difficult to predict which experiments will be successful and therefore pourin money into.
-	* Heavily depends on quality of data a company supplies you with and how high quality it is.
+	* **Uncertainty can go up over time**:
+		* It is difficult to predict which experiments will be successful and therefore pourin money into.
+		* Heavily depends on quality of data a company supplies you with and how high quality it is.
+	* Results heavily depend on whats possible rather than predefined goals
+	* Experiment results are not working solutions.
+	* Work is hyoerspecialised and perfornance alone.
 
 * Tips:
 	* Make sure you understand what makes RL work difficult and plan how to deal with this.
 	* **Assess viability early and often**
 	* **Use AI specific measures of success and definitions of done**
 	* **Ensure all steps ADD BUSINESS VALUE rather than purely technical value**
-	* **Tech and business side must work together**
+	* **Tech and business side must work together**. Make sure experiments are actuall delivering business value
 
 * Their high level workflow:
 	* Traditional project management for broad phases
@@ -43,6 +47,8 @@ Date read: 29th October 2025
 		* Management: Agile / scrum
 
 	5. Maintain product for customer
+
+
 
 
 
