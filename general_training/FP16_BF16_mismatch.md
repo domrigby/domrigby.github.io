@@ -2,7 +2,7 @@
 
 Date read: 1st November 2025
 
-[Paper link]()
+[Paper link](https://arxiv.org/abs/2510.26788)
 
 ## Key Points
 * In RL, the training (optimised for calculating gradients) and the inference are often separate.
