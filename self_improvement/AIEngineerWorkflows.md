@@ -2,7 +2,7 @@
 
 Date read: 30th October 2025
 
-[Blog link]()
+[Blog link](https://every.to/source-code/inside-the-ai-workflows-of-every-s-six-engineers)
 
 ## Key Points
 * Interviewed the company Every's six engineer to see how these use AI
