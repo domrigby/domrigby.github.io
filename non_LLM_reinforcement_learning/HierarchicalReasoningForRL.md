@@ -2,7 +2,7 @@
 
 Date read: 2nd November 2025
 
-[Paper link]()
+[Paper link](https://www.arxiv.org/pdf/2510.22832)
 
 ## Key Points
 * Creates Hierarchical Reasoning Model for RL: HRM-Agent
