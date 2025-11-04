@@ -2,7 +2,7 @@
 
 Date read: 3rd November 2025
 
-[Article link]()
+[Article link](https://www.interconnects.ai/p/burning-out)
 
 ## Key Points
 * The window for entering the AI race is closing as frontier performance races forward.
