@@ -598,6 +598,8 @@ world model using video data
 * 25th: [Managing AI projects: 6 Concepts to Help Lead an AI Team](self_improvement/6TipsForManagingAIProjects.md)
 * 26th: [The Continual Learning Problem](architectures/ContinualLearningProblem.md)
 * 29th: [Managing Article Intelligence Projects: Key Insights from an AI Consulting Firm](self_improvement/DifficultiesOfManagingAIProject.md)
+* 30th: [Inside the AI Workflow of Every's Six Engineers](self_improvement/AIEngineerWorkflows.md)
+
 
 &#x20;&#x20;
 
