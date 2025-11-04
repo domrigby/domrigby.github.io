@@ -600,6 +600,9 @@ world model using video data
 * 29th: [Managing Article Intelligence Projects: Key Insights from an AI Consulting Firm](self_improvement/DifficultiesOfManagingAIProject.md)
 * 30th: [Inside the AI Workflow of Every's Six Engineers](self_improvement/AIEngineerWorkflows.md)
 
+### November
+* 1st: [Defeating the Training-Inference Mismatch via FP16](general_training/FP16_BF16_mismatch.md)
+
 
 &#x20;&#x20;
 
