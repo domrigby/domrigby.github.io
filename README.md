@@ -605,6 +605,7 @@ world model using video data
 * 2nd: [HRM-Agent: Training a recurrent reasoning model in dynamic environments using reinforcement learning](non_LLM_reinforcement_learning/HierarchicalReasoningForRL.md)
 * 3rd: [Burning Out - Nathan Lambert](self_improvement/EssayOnWorkingInAI.md)
 * 4th: [How Many Random Seeds? Statistical Power Analysis in Deep Reinforcement Learning Experiments](general_training/StatisticallyEvaluatingRL.md)
+* 6th: [Introducing Nested Learning: a new paradigm for continual learning](architectures/NestedLearning.md)
 
 &#x20;&#x20;
 
