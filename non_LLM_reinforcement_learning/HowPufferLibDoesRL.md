@@ -1,6 +1,6 @@
 # Puffing Up Reinforcement Learning
 
-Date read: 10th November 2025
+Date read: 9th November 2025
 
 [Blog link](https://puffer.ai/blog.html#post-11)
 
