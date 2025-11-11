@@ -607,6 +607,7 @@ world model using video data
 * 4th: [How Many Random Seeds? Statistical Power Analysis in Deep Reinforcement Learning Experiments](general_training/StatisticallyEvaluatingRL.md)
 * 6th: [Introducing Nested Learning: a new paradigm for continual learning](architectures/NestedLearning.md)
 * 9th: [How PufferLib does RL](non_LLM_reinforcement_learning/HowPufferLibDoesRL.md)
+* 11th: [EnvPool: A Highly Parallel Reinforcement Learning Environment Execution Engine](distribution_and_gpu_acceleration/EnvPool.md)
 
 &#x20;&#x20;
 
