@@ -2,7 +2,7 @@
 
 Date read: 10th November 2025
 
-[Paper link]()
+[Paper link](https://arxiv.org/pdf/2206.10558)
 
 ## Key Points
 * Aims to speed up environment execution. Training and inference benefit from speeds up from supervised learning and computer vision, environmnets are RL only.
