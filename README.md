@@ -609,6 +609,7 @@ world model using video data
 * 9th: [How PufferLib does RL](non_LLM_reinforcement_learning/HowPufferLibDoesRL.md)
 * 11th: [EnvPool: A Highly Parallel Reinforcement Learning Environment Execution Engine](distribution_and_gpu_acceleration/EnvPool.md)
 * 12th: [Innovation Revolution: Powered by AI](general_training/InnovationRevolution.md)
+* 13th: [AlphaProof Paper - Julian Schrittwieser](LLM_reinforcement_learning/AlphaProof.md)
 
 &#x20;&#x20;
 
