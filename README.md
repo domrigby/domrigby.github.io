@@ -594,6 +594,22 @@ world model using video data
 * 20th: [The Bitter Lesson's Bitter Lesson](non_LLM_reinforcement_learning/BitterLessonsBitterLessons.md)
 * 21st: [9 Tips for Managing & Leading an Engineering Team](self_improvement/HowToGrowAsAnEngineeringManager.md)
 * 22nd: [22 Project Management Tools & Techniques for Project Managers](self_improvement/22ProjectManagementToolsAndTechniques.md)
+* 24th: [Demystifying the Mechanisms Behind Emergent Exploration in Goal-conditioned RL](non_LLM_reinforcement_learning/ExplorationInUnsupervisedRL.md)
+* 25th: [Managing AI projects: 6 Concepts to Help Lead an AI Team](self_improvement/6TipsForManagingAIProjects.md)
+* 26th: [The Continual Learning Problem](architectures/ContinualLearningProblem.md)
+* 29th: [Managing Article Intelligence Projects: Key Insights from an AI Consulting Firm](self_improvement/DifficultiesOfManagingAIProject.md)
+* 30th: [Inside the AI Workflow of Every's Six Engineers](self_improvement/AIEngineerWorkflows.md)
+
+### November
+* 1st: [Defeating the Training-Inference Mismatch via FP16](general_training/FP16_BF16_mismatch.md)
+* 2nd: [HRM-Agent: Training a recurrent reasoning model in dynamic environments using reinforcement learning](non_LLM_reinforcement_learning/HierarchicalReasoningForRL.md)
+* 3rd: [Burning Out - Nathan Lambert](self_improvement/EssayOnWorkingInAI.md)
+* 4th: [How Many Random Seeds? Statistical Power Analysis in Deep Reinforcement Learning Experiments](general_training/StatisticallyEvaluatingRL.md)
+* 6th: [Introducing Nested Learning: a new paradigm for continual learning](architectures/NestedLearning.md)
+* 9th: [How PufferLib does RL](non_LLM_reinforcement_learning/HowPufferLibDoesRL.md)
+* 11th: [EnvPool: A Highly Parallel Reinforcement Learning Environment Execution Engine](distribution_and_gpu_acceleration/EnvPool.md)
+* 12th: [Innovation Revolution: Powered by AI](general_training/InnovationRevolution.md)
+* 13th: [AlphaProof Paper - Julian Schrittwieser](LLM_reinforcement_learning/AlphaProof.md)
 
 &#x20;&#x20;
 

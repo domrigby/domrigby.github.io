@@ -7,8 +7,8 @@ Date read: 6th October 2025
 ## Key Points
 * Flash attention benefits:
 	1. Fast
-	2. Memory efficient (O(N^2) rather O(N))
-	3. **Inputs are exact**: same as vanilla attention
+	2. Memory efficient (O(N^2) -> O(N))
+	3. **Outputs are exact**: same as vanilla attention
 	4. **I/O aware**: 
 		* Optimised for the GPU architecture
 		* E.g. lowers memory read and writes rather than focusing on FLOPs which are cheaper on GPUs

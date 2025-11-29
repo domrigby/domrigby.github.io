@@ -20,7 +20,7 @@ Date read: 8th October 2025
 * Architecture:
 	* **Diffusion model with shortcuts**: decides size of step at inference time (can speed up inference)
 	* **Utilises diffusion forcing**: applies a different noise signal to each time step, allowing for the model to adapt 
-	to varying detail levels of histroy 
+	to varying detail levels of history 
 	* **Causal tokeniser**: compresses video timeseries into embeddings
 	* Efficient transformer:
 		* Separate time and space attention (scale down N^2)
@@ -32,7 +32,7 @@ Date read: 8th October 2025
 	1. Pre-train tokeniser (masked auto-encoder) on videos to get good embeddings
 	2. Agent finetuning: finetune world model with task inputs for policy and reward heads
 		* Utilises behavioural cloning
-	3. RL in imagation to optimise policy and value heads
+	3. RL in imagination to optimise policy and value heads
 		* Imagines rollouts
 		* Freezes dynamics model, only train policy and value net
 		* Uses **PMPO**: only uses **sign of advantage, not magnitude: focus on all tasks independent of their scale of reward**
