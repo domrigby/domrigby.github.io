@@ -5,7 +5,7 @@ Date read: 13th October 2025
 [Blog link](https://kumo.ai/research/speeding-up-graph-learning-models-with-pyg-and-torch-compile/?utm_source=chatgpt.com)
 
 ## Key Points
-* Aim of post: explain how to overcome typical problems that arrive when using torch compile to speed up GNN related activitie, specifically graph transformers.
+* Aim of post: explain how to overcome typical problems that arrive when using torch compile to speed up GNN related activities, specifically graph transformers.
 * Blog focuses on doing this in PyTorch with the following tools:
 	* PyTorch Frame: embeds multi-model data (e.g. text, images, video) into shared embedding space
 	* PyG: handles message passing 
@@ -13,12 +13,12 @@ Date read: 13th October 2025
 * Torch compile: 
 	* Takes standard PyTorch code and performs kernel fusion to create kernels which minimise memory reads amd writes, delivering large speed ups.
 	* It does however have its limitations, e.g.:
-		* Recompilatio
+		* Recompilation
 		* Host-device syncs
 		* Learning rate treated as constant
 
 * Recompilation:
-	* When the assumptionsmade at compile time break, the code has to be recompiled.
+	* When the assumptions made at compile time break, the code has to be recompiled.
 	* Common assumptions: data type, data shape, constants.
 	* **Dynamic shapes are very common when using GNNs** due to differing number of nodes.
 	* Tips:

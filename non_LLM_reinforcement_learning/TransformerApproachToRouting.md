@@ -12,7 +12,7 @@ Date read: 11th October 2025
 * Examples of previous attempt:
 	* Pointer networks to pick next actions
 	* Many encoder-decoder methods
-	* Difference in previous work tends to focus on how to form action spac. E.g:
+	* Difference in previous work tends to focus on how to form action space. E.g:
 		* Pick turns
 		* Order nodes
 		* Output adjacency matrix.

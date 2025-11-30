@@ -262,7 +262,13 @@ or [UCL Dark's](https://ucldark.com/) work on this.
       * Utilise QV and batch normalisation
       * Utilise regularisation (L1 and L2)
       * Swap optimiser during training if needed
-    
+13. **Off-policy data can be as informative?**
+    * Off-policy learning is super important for training RL asynchronously on large data centres. The issue is that the distribution shift in RL often makes it unstable.
+    * [This paper](non_LLM_reinforcement_learning/OffPolicyRLForLLMs.md) performed an experiment in which they got rid of the trust-region in GRPO and then trained on stale and non-stale data.
+    * The off-policy stale data kept up with the non-stale data until it collapsed, thanks to the high variance. They called this effect 'prosperity before collapse'. They reasoned that this showed that stale data is as informative, but too unstable.
+    In normal GRPO, all these tokens would be clipped due to their off-policy-ness.
+    * To take advantage of this information whilst remaining stable, they suggest **Second Moment Policy Optimsation (M2PO)**. This algorithm measure distribution mismatch across whole batch rather than per token. If only a few are high variance, none will be masked out.
+    Whole batch dist shift is measured using the second moment of the log-probabilities (hence the name!). 
 
 ### 4. Robotics & Control
 
@@ -455,6 +461,26 @@ The following section contains some notes on the GPU architecture. These mainly 
   * These sub-routines can be compiled.
   * When writing JAX, you don't use conditional (ifs or whiles) but rather use JAX conds.
   * TIP: wrap as much code as possible in JAX
+
+#### 11. Combinatorial Optimisation
+* Types of approach:
+  * Construction heuristics: recursively update partial solutions by adding actions.
+  * Search based heuristics: store a tree of possible solutions, back tracking when needed. 
+* Examples:
+  * [This paper](non_LLM_reinforcement_learning/TransformerApproachToRouting.md) solves routing problems by using a transformer to order nodes on which they should visit next.
+    * Input: start node, end node and remaining nodes
+    * Backbone: graph attention network
+    * Output: probability distribution over remaining nodes
+    * Algorithm: REINFORCE with the baseline being the reward from solving the rest of the problem in a greedy manner.
+  * [This paper](non_LLM_reinforcement_learning/ImprovementRLForJSSP.md) solves job scheduling problem by using Graph Attention Networks for constructing a solution.
+    * Input: current solution 
+    * Backbone: graph attention network
+    * Output: selects two jobs to be swapped
+    * Algorithm: REINFORCE.
+  * [POMO](non_LLM_reinforcement_learning/POMO_CombOpt.md) is a reinforcement learning approach to combinatorial optimisation. It tackles an issue with using RL: it often learns a criteria for picking
+    the first node and then overfits to this subset. POMO addresses this by giving the agent a set of N different start nodes and then it has to find solutions for all of them.
+    * Algorithm: REINFORCE
+    * Baseline: average reward across all the trajectories.
 
 ----
 

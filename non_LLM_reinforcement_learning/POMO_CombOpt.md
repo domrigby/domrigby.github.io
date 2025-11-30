@@ -31,7 +31,7 @@ Date read: 16th October 2025
 	* Architecture agnostic
 
 * Augmentation:
-	* Issue with this method: can only generate limited set of trajectories according tot he number of start nodes
+	* Issue with this method: can only generate limited set of trajectories according to the number of start nodes
 	* This is overcome by creating new start nodes with augmented version of the problem, e.g. flipped, rotated, mirrored, exploiting symmetries in the problem.
 
 

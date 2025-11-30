@@ -31,7 +31,7 @@ Date read: 14th October 2025
 	* There is a **trade-off between effectiveness and stability**
 
 * How to fix:
-	* They suggest **Second Moment Policy Optimisatio (M2PO)**
+	* They suggest **Second Moment Policy Optimisation (M2PO)**
 	* **Measures distribution mismatch across whole batch, rather than per token**
 	* If only a few tokens display high variance, none will be masked out
 	* Measures this by taking the second moment of log probabilities across the whole batch, and then only masking once this passes a threshold
