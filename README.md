@@ -101,6 +101,10 @@ The following section includes:
    * [Learning to walk in minutes](distribution_and_gpu_acceleration/LearningToWalkInMinutes.md) trains locomotive robotic policies in under ten minutes using GPU environments and provides
    advice on how to tune the PPO hyperparameters to take advantage of the huge parallelism (e.g. massive mini-batches, short rollouts etc).
    * This high parallelisation allows for [hyperparameter searches](distribution_and_gpu_acceleration/PopulationHyperParameterSearch.md) to be completed low wall clock time.
+   * [Jumanji](distribution_and_gpu_acceleration/JumanjiCombOpJaxEnvs.md) summarises the main aims of good GPU environments nicely:
+     1. Fast: hardware acceleration allows for **rapid iteration** of RL algorithms
+     2. Flexible: easy customisation to mimic real world situations. This is through custom initialisations and reward functions.
+     3. Scalable: set arbitrary difficulty to allow 'faithful representationn of real world challenges'
 7. **Foundation models have a large role to play in future RL**:
    * Foundation models have intuition about what humans find interesting. They are therefore capable of designing curriculums for RL or being involved in the policy improvement steps. 
    See more in the [open-endedness section of this blog](#4-openendedness--autocurricula). Summary of a few interesting methods:
@@ -127,7 +131,7 @@ The following section includes:
 11. **Encourage diverse behaviour by optimising across sets of trajectories**
     * [Set Reinforcement Learning](non_LLM_reinforcement_learning/DiversePoliciesThroughSetRL.md) modifies PPO to be performed across sets of trajectories. This means the objective can include how diverse the trajectories are and 
     therefore explicitly encourage the model to learn **diverse solutions**.
-12. **Solve unsolvable tasks? ** \
+12. **Solve unsolvable tasks?**
 	* [Grokking RL](non_LLM_reinforcement_learning/RlForUnsolvableTasks.md) proposes use a two-phase exploration process for pass@k = 0 tasks. Phase 1: dense intermediate rewards (e.g. unit tests for code) which aim at getting the pass rate above 0. Phase 2: once pass rate is above 0, reward switches to a binary completed / not completed.
 13. **Debugging**:
 	* I would recommend reading [Debugging RL](general_training/DebugginRLWithoutThePain.md) for a strong set of methods to refine what is going wrong in your algorithm, as well as principles to follow to avoid these bugs in teh first place.
@@ -135,8 +139,8 @@ The following section includes:
 
 ### 2. Open‑Endedness & Auto‑Curricula
 
-Open-endedness and auto-curriculums are crucial for building truly intelligent agents. In the same way that humans didn't go to the moon by starting
-working on a rocket, agents can't achieve superintelligence by just training on a set of pre-defined tasks. Human technology and intelligence has advanced
+Open-endedness and auto-curriculums are crucial for building truly intelligent agents. In the same way that humans didn't go to the moon by only ever working on
+rockets, agents can't achieve superintelligence by just training on a set of pre-defined tasks. Human technology and intelligence has advanced
 by constantly solving iteratively harder tasks, but the knowledge from the old tasks helps us solve them. We can do this because the world around us is open-ended,
 and we can constantly try new experiments and create new artefacts in which us humans can learn new things from. Research in open-endedness tends to focus around
 how we could do this for reinforcement learning agents. Could we: 1) Create environments which are sufficiently complex to be constantly learnable (world models)?
@@ -155,8 +159,8 @@ or [UCL Dark's](https://ucldark.com/) work on this.
    > 
    > **Memory example**: Wikipedia might appear open-ended to a human, who could constantly read it and learn new things they had forgotten the last time they read it. An LLM however might be able to memorise the entire thing, given enough weights.
 2. **Learnability metrics**:
-   * Auto-curriculums need a way to be able to rank the novelness and learnability of levels. The main themes I have come across are:
-   1. Learning errors: if the network can't make good predictions about this state, it is likely learnable
+   * Auto-curriculums need a way to be able to rank the novelty and learnability of levels. The main themes I have come across are:
+   1. Learning errors: if the network can't make good predictions about this state, it is likely learnable.
    2. Performance: if the network always wins or always looses, there is nothing to be learned. This means AC prefer levels with a medium win-rate, e.g. 0.5.
 3. **Procedural Level Generation** is used to create novel environments to learn in
    * Procedural generation allows you to algorithmically create new levels, often parameterised by the curriculum.
@@ -185,7 +189,7 @@ or [UCL Dark's](https://ucldark.com/) work on this.
 8. **Euclidean distance in the embedding space as a novelty metric**:
    * Many papers use Euclidean distance in the embedding space or feature space as a novelty metric: [Foundation Model Self-Play](open_endedness_and_auto_curriculums/FoundationModelSelfPlay.md),
    [Enhanced POET](open_endedness_and_auto_curriculums/EnhancedPOETOpenEndedLearning.md), [OMNI-EPIC](open_endedness_and_auto_curriculums/OpenEndednessUsingLLMS.md). The basic premise is: the closer a new datapoint is to the others, the less novel it is.
-9. **We can learn to learn to generate curriculums**
+9. **We can learn-to-learn to generate curriculums**
    * [MM-ACL](open_endedness_and_auto_curriculums/MetaCurriculumLearning.md) introduces a method to learn a model which predicts the improvement an agent will gain on a new level, from a history of its
    past performances. It is then used to generate new levels which have the highest possible performance improvement.
 10. **[DISCOVER](open_endedness_and_auto_curriculums/DiscoverAutoCurriculaForSparseRewards.md) uses value and uncertainty of an ensemble of critics to form an auto-curriculum for sparse-rewards**
@@ -233,9 +237,32 @@ or [UCL Dark's](https://ucldark.com/) work on this.
      combinatorial optimisation problems. Whilst it did perform slightly worse than tailor made solutions, it showed that features of these problems are 
      shared and meant specialist solvers could be fine-tuned quickly. This was however trained on problems solved by dynamic programming. It would be interesting to see how this could be combined with DRL,
      perhaps using GPU environments to generate the vast amounts of data needed.
+    * These generalised models form a strong starting point training high performance, specialised models with less compute.
 10. **RL leads to less catastrophic forgetting than SFT**:
     * As explained in [RL's Razor](LLM_reinforcement_learning/WhyOnlineRLRemembersBetter.md), RL will choose a new policy **closest to the original policy** by gradually updating the non-zero probabilities. 
     SFT does not do this, and rather drags the whole policy to a random point in the new task optimal policy space.
+11. **[Choosing your KL-divergence](general_training/KLDivergenceRegularisation.md)**
+    * Forward KL (log(p(x)/q(x)): real dist on top, model dist below) is **mode covering**. This means the model will have to cover all non-zero areas of the real dist of KL will explode.
+    * Backward KL (log(q(x)/p(x)): model dist on top, real dist below) is **mode seeking**. Can collapse to a single mode if required. Only cares about areas in which q(x) has mass.
+12. [Tips for training LLMs from scratch]() gives advice on how to train LLMs. This includes advice on how to scale compute, what data to use, tokenisation etc. A summary of the process it recommends following:
+    * Advice for training:
+      1. **Start small**: Start with **smaller model and scale up slowly**
+      2. **Start with something known**: Start with popular architecture (you know this works) and add bits as needed
+      3. **Experiment**: Perform experiments to find best architecture:
+         * Good experiments: weight init, positional embeddings, optimiser, activation, learning rate, etc.
+      4. **Tune parameters**: Auto-search LR, batch size, dropout rate. Start with ones from the literature which have worked and tune from there.
+      5. **Monitor progress**: HP to change during training: LR and batch size (start small and increase)
+    * Tackling instability:
+      * Save checkpoints: reload and lower learning rate if training fails.
+      * Use largest batch possible: this will denoise the gradients
+      * Decrease LR throughout training
+      * Use a pre-trained hot start
+      * Augment data
+      * If you see a spike, skip this data
+      * Utilise QV and batch normalisation
+      * Utilise regularisation (L1 and L2)
+      * Swap optimiser during training if needed
+    
 
 ### 4. Robotics & Control
 
@@ -261,7 +288,7 @@ or [UCL Dark's](https://ucldark.com/) work on this.
      3. **Reduce**: combine all data on one GPU.
 2. This [blog post on distributed PPO](distribution_and_gpu_acceleration/DistributedPPO.md) outlines some extra factors to think about:
    1. **Synchronous**: waits for all agents to calculate their respective gradients before doing a weights update.
-   2. **Asynchronous**: doesn't wait.
+   2. **Asynchronous**: doesn't wait. E.g. algorithms like [IMPALA](distribution_and_gpu_acceleration/IMPALA_DistributedRL.md) will collect rollouts on some workers and calculate gradients on another without waiting for each other. 
    3. **Centralised**: single server does all gradient accumulation and weights updates.
    4. **Decentralised**: all share gradients (all-reduce) but have their own model.
 3. [IMPALA](distribution_and_gpu_acceleration/IMPALA_DistributedRL.md) outlines a now common, distributed reinforcement learning method with multiple actors and a single centralised learner 
@@ -270,7 +297,7 @@ or [UCL Dark's](https://ucldark.com/) work on this.
    collected being more and more off-policy every moment.
 4. **Decentralised PPO can scale better**
    * [DD-PPO](distribution_and_gpu_acceleration/DD-PPO.md) scales PPO almost linearly up to 128 parallel agents using decentralised, synchronous training.
-   * It crucially relies on a **preemptive threshold** to end rollouts and start training once a high number of environments are finished and only stragglers remain.
+   * It crucially relies on a **pre-emptive threshold** to end rollouts and start training once a high number of environments are finished and only stragglers remain.
 5.  [Docker](distribution_and_gpu_acceleration/DockerInRL.md) can be used like a lightweight virtual machine for distributing actors or learners across large clusters.
 
 ### 6. Multi‑Agent Reinforcement Learning (MARL)
@@ -283,13 +310,17 @@ or [UCL Dark's](https://ucldark.com/) work on this.
 3. **Population‑based methods prevent overfitting and foster diverse behaviors and can help tackle non-transivity**
     * Technique is used in [TiZero](marl/TiZero.md), [OpenAI Five](https://en.wikipedia.org/wiki/OpenAI_Five),
    [AlphaStar](https://storage.googleapis.com/deepmind-media/research/alphastar/AlphaStar_unformatted.pdf) and more
-4. **Focus on playing the agents which you struggle against**. (similar to curriculums)
+4. **Focus on playing the agents which you struggle against** (similar to curriculums)
    * Agent selection via ELO‑weighted sampling encourages robustness and competitive balance. This is used in [Multi-Agent Pommerman](open_endedness_and_auto_curriculums/MultiAgentCurriculumSelfPlay.md), [AlphaStar](https://storage.googleapis.com/deepmind-media/research/alphastar/AlphaStar_unformatted.pdf) and more.
    * More simple heuristics can be used (e.g. [TiZero](marl/TiZero.md) used $(1-p)^2$ (p: probability of victory against opponent)
    to define a probability distribution which encourages you to focus on agents you cant beat
 5. **[TiZero](marl/TiZero.md) Football: Strong implementation example of many-on-many competitive and collaborative game**
    * Their paper provides a strong example of a system designed to play many-on-many games and gives a detailed account of the 
    architecture choices, curriculum and self-play methodology.
+6. Tackling the MARL assignment problem (which agents actions made the difference) is important in MARL for training, explainability and robustness.
+   * Shapley values calculate how much the agents actions contributed to the coalition reward, but computation scales exponentially with the number of agents.
+   * [Agent Importance](marl/AgentImportance.md) is a method for calculating each agents **per step** contribution which scales linearly with number of agents. It does this by storing N identical environments for N agents and then observing the result if each agent had chosen NOOP.
+   * The above paper also observed that algorithm which have **more evenly distributed agent importance tend to perform better** as they are more robust.
 
 ### 7. Self‑Improvement Strategies
 
@@ -339,7 +370,7 @@ or [UCL Dark's](https://ucldark.com/) work on this.
 #### 9. Quantisation
 1. [Maarten Grootendorst's blog post](general_training/VisualGuideToQuantization.md) on quantisation for LLMs give a nice intro to the topic with some intuitive explainations. A brief overview:
    * Quantisation:
-     * Reducing the precision of a model's numerical representation tp reduce its memory overhead.
+     * Reducing the precision of a model's numerical representation to reduce its memory overhead.
      * This essentially means storing high precision datatypes such as float32 as smaller datatypes such as uint8
    * Why quantise?
      * LLMs required billions of parameters and therefore massive amounts of memory... smaller datatypes = less memory footprint
@@ -354,7 +385,7 @@ or [UCL Dark's](https://ucldark.com/) work on this.
      * Activation quantisation: you don't know the activation range during training and therefore must come up with a strategy
      to quantise them when they appear:
        1. Dynamically quantised: calculate scale and zero-point during inference
-       2. Staticly quantised: a quantisation rate is set before inference on a pre-defined dataset.
+       2. Statically quantised: a quantisation rate is set before inference on a pre-defined dataset.
    * Types:
      * Post Training Quantisation:
        * Weights are quantised **after** training
@@ -363,7 +394,7 @@ or [UCL Dark's](https://ucldark.com/) work on this.
        * Often lowers FP32 accuracy (no quant) but increases accuracy in low precision models (e.g. int4)
 
 
-#### 10. GPU Architecture and PyTorch
+#### 10. GPU Architecture, PyTorch and JAX.
 * **Architecture**:
 
 The following section contains some notes on the GPU architecture. These mainly come from: [Nvidia Docs GPU Fundamentals](distribution_and_gpu_acceleration/NvidiaDocsGPUFundamentals.md),
@@ -372,8 +403,10 @@ The following section contains some notes on the GPU architecture. These mainly 
 
   * GPUs have two layers of parallelisation.
       1. **WARP level**: warps are groups of 32 threads which are executed at the same time. They have the same operation performed on them. If they require different operation, multiple operations are performed and masked 
-      in a process known as **warp divergence**.
+      in a process known as **warp divergence**. This is an example of **Single Instruction, Multiple Threads (SIMT)** (multiple threads are grouped into a WARP which then has a single instruction operated on it).
+         * Consequence: when creating GPU environments with branchy logic, this can create warp-divergence as the different operations can apply to different parts of the warp.
       2. **Streaming Multi-Processors (SM)**: there are many SMs on a GPU (second level of parallelisation). These each have shared L1 memory and their own warp schedulers.
+         * Consequence: effects how you should choose your batch size
     
   * Memory:
     * **L2-cache**: small but very fast access memory
@@ -392,6 +425,7 @@ The following section contains some notes on the GPU architecture. These mainly 
 * **Performance**:
   1. Compute light operations (activations, norms etc) will often be [**memory limited**](distribution_and_gpu_acceleration/NvidiaDocsMemLimitedLayers.md) meaning the speed at which the data can be loaded is the bottleneck.
      * There's not loads you can do about this, other than to try and limit the number of read and writes and check for an optimised implementation.
+     * You can write your own kernel which limits reads and writes. E.g. self-attention can be made faster with [FlashAttention](distribution_and_gpu_acceleration/FlashAttention.md)
      * Check [arithmetic intensity](distribution_and_gpu_acceleration/NvidiaDocsMemLimitedLayers.md) to predict whether an operation is memory limited
   2. Performance quantisation as discussed in the [Nvidia Docs](distribution_and_gpu_acceleration/NvidiaMatMulAndQuantisation.md)
      * **Tile quantisation**: wasted compute as a result of matrices not dividing perfectly into tiles.
@@ -412,6 +446,15 @@ The following section contains some notes on the GPU architecture. These mainly 
   * Maintain static input sizes to stop torch having to re-allocate memory.
   * Minimise copy between CPU and GPU as this is expensive. This is a core principle behind the design of [IsaacGym](distribution_and_gpu_acceleration/IsaacGym.md), 
   [Jumanji](distribution_and_gpu_acceleration/JumanjiCombOpJaxEnvs.md) and other GPU based environments
+
+* JAX details (from [JAX Summary](distribution_and_gpu_acceleration/JaxSummary.md), [JAX jit compile](distribution_and_gpu_acceleration/JaxJITCompile.md))
+  * JAX assumes that ML workflows can be broken down into sets of **pure and statically-composed** sub-routines which are activated by dynamic logic. This means:
+    * Pure: running the routine only effects the outputs, it **does not have side effects**.
+	* Statically-composed: route can be represented as a graph of unchanging primitive functions
+	* Primitive functions: kernel level function which in Numpy include matrix operations which are compilable.
+  * These sub-routines can be compiled.
+  * When writing JAX, you don't use conditional (ifs or whiles) but rather use JAX conds.
+  * TIP: wrap as much code as possible in JAX
 
 ----
 
@@ -561,8 +604,8 @@ world model using video data
 * 1st: [In-Context Reinforcement Learning for Variable Action Spaces](non_LLM_reinforcement_learning/HeadlessADInContextRL.md)
 * 3rd: [Jumanji: a Diverse Suite of Scalable Reinforcement Learning Environments in JAX](distribution_and_gpu_acceleration/JumanjiCombOpJaxEnvs.md)
 * 5th: [Efficiently Quantifying Individual Agent Importance in Cooperative MARL](marl/AgentImportance.md)
-* 7th : [Maarten Grootendorst's blog post on A Visual Guide to Quantization](general_training/VisualGuideToQuantization.md)
-* 13th : [Following Jax MNIST tutorials](distribution_and_gpu_acceleration/LearningJaxNotes.md)
+* 7th: [Maarten Grootendorst's blog post on A Visual Guide to Quantization](general_training/VisualGuideToQuantization.md)
+* 13th: [Following Jax MNIST tutorials](distribution_and_gpu_acceleration/LearningJaxNotes.md)
 * 14th: [Compiling machine learning programs via high-level tracing](distribution_and_gpu_acceleration/JaxSummary.md)
 * 14th - 15th: [How to think about GPUs by Google DeepMind](distribution_and_gpu_acceleration/HowToThinkAboutGPUs.md)
 * 16th: [RL’S RAZOR: WHY ONLINE REINFORCEMENT LEARNING FORGETS LESS](LLM_reinforcement_learning/WhyOnlineRLRemembersBetter.md)
@@ -571,7 +614,7 @@ world model using video data
 * 23rd [JIT Compilation in JAX](distribution_and_gpu_acceleration/JaxJITCompile.md)
 * 23rd: [CUDA Study Log 4: Optimizing Constrained Decoding with Triton Kernel](distribution_and_gpu_acceleration/LevelsOfOptimisationForConstrainedDecoding.md)
 * 24th: [Accelerating PyTorch with CUDA Graphs](non_LLM_reinforcement_learning/CUDAGraphsInPyTorch.md) 
-* 26th: [PyTorch Performance Tuning Guide](distribution_and_gpu_acceleration/PyTorchPerformanceAdvice.md)
+* 26th: [PyTorch Performance Tuning Guide](distribution_and_gpu_acceleration/PyTorchPerformanceAdvice.md) ^
 * 27th: [Nvidia Docs: GPU Performance Fundamentals](distribution_and_gpu_acceleration/NvidiaDocsGPUFundamentals.md)
 * 27th: [Nvidia Docs: Optimising Memory Limited Layers](distribution_and_gpu_acceleration/NvidiaDocsMemLimitedLayers.md)
 * 28th: [Nvidia Docs: Matrix Multiplication and Quantisation Background](distribution_and_gpu_acceleration/NvidiaMatMulAndQuantisation.md)
@@ -581,7 +624,7 @@ world model using video data
 * 1st: [Current Best Practices for Training LLMs from Scratch](general_training/wandbTrainingTFFromScratch.md)
 * 2nd: [Polychromic Objectives for Reinforcement Learning](non_LLM_reinforcement_learning/DiversePoliciesThroughSetRL.md)
 * 3rd: [RL Grokking Recipe- How Can We Enable LLMs to Solve Previously Unsolvable Tasks](non_LLM_reinforcement_learning/RlForUnsolvableTasks.md)
-* 4th: [Debugging RL, Without the Agonizing Pain](general_training/DebugginRLWithoutThePain.md)
+* 4th: [Debugging RL, Without the Agonizing Pain](general_training/DebugginRLWithoutThePain.md) ^
 * 6th: [Flash Attention Blog Post](distribution_and_gpu_acceleration/FlashAttention.md)
 * 8th: [Training Agents Inside of Scalable World Models](non_LLM_reinforcement_learning/Dreamer4OfflineWorldModel.md)
 * 10th: [Long-Horizon Perception Requires Re-Thinking Recurrence](general_training/AttentionIsNOTAllYouNeed.md)

@@ -55,7 +55,7 @@ Date read: 1st October 2025
 	* Use batch normalisation
 	* Pre-trained start
 	* Augment data
-	* Skip data which caused spik
+	* Skip data which caused spike
 	* QV normalisation
 	* Regularisation (L1 and L2)
 	* Swap optimiser during training if needed

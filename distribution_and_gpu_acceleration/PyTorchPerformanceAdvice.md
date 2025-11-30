@@ -7,7 +7,7 @@ Date read: 26th September 2025
 ## Key Points
 * Classic advice:
 	* Data loading:
-		* Take advantage of asynchronous data loading bu setting num_workers > 0
+		* Take advantage of asynchronous data loading by setting num_workers > 0
 `		* **Set pin_memory to True if loading to GPU**
 	* Use no_grad() for inference
 	* Disable biases before BatchNorm layers
