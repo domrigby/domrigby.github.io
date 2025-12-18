@@ -680,6 +680,8 @@ world model using video data
 * 12th: [Innovation Revolution: Powered by AI](general_training/InnovationRevolution.md)
 * 13th: [AlphaProof Paper - Julian Schrittwieser](LLM_reinforcement_learning/AlphaProof.md)
 
+This projext is temporarily on hold whilst I get started at a new job and move to new city. Hope to be back soon!
+
 &#x20;&#x20;
 
 ---
