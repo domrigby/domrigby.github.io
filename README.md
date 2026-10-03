@@ -218,7 +218,7 @@ or [UCL Dark's](https://ucldark.com/) work on this.
    * The upper clip bound being higher increases the probability of unlikely choices and increases exploration (as in [ProRL](LLM_reinforcement_learning/ProlongedRL.md) and [Play to Generalise](LLM_reinforcement_learning/ReasoningThroughGames.md)) improve exploration and stability.
 4. **Dual‑Outcome Reasoning: knowing what's bad is also useful!**\
    * Generating both best and worst moves in game scenarios deepens model understanding of decision boundaries ([Play to Generalise](LLM_reinforcement_learning/ReasoningThroughGames.md)).
-   * [XLand](open_endedness_and_auto_curriculums/ OpenEndedLearningLeadstoGenerallyCapableAgents.md) did something analagous with their self reward-play, in which agents had to learn to achieve a goal but then also learn how to undo it, increasing their generalisability. 
+   * [XLand](open_endedness_and_auto_curriculums/OpenEndedLearningLeadstoGenerallyCapableAgents.md) did something analagous with their self reward-play, in which agents had to learn to achieve a goal but then also learn how to undo it, increasing their generalisability. 
 5. **Beware When Using Qwen for RL**\
    * [RL with Spurious Rewards](LLM_reinforcement_learning/SpuriousRewardsRL.md) shows that random reward signals can still improve performance on Qwen-2.5-maths. The authors explain that this is likely caused
    by RL encouraging the model to produce more code.
@@ -506,12 +506,17 @@ The following section contains some notes on the GPU architecture. These mainly 
 
 ```text
 ├── LLM_reinforcement_learning/    # Papers on RL with language models
+├── LLMs/                          # LLM papers outside of RL
+├── architectures/                 # Model architectures (GNNs, JEPA, etc.)
+├── general_training/              # Pretraining, fine-tuning and general training tips
+├── finance_applications/          # ML applied to finance
 ├── marl/                          # Multi‑agent RL resources
 ├── non_LLM_reinforcement_learning/ # RL methods outside LLM context
 ├── robotics/                      # Robotic learning and control papers
 ├── self_improvement/              # Self‑play and self‑dialog approaches
 ├── distribution_and_gpu_acceleration/ # GPU‑accelerated training methods
 ├── open_endedness_and_auto_curriculums/ # Curriculum learning and open‑endedness
+├── data_analysis/                 # Paper embedding plots and scripts
 └── README.md                      # This overview and highlights
 ```
 
@@ -619,6 +624,7 @@ world model using video data
 * 10th: [Sable: a Performant, Efficient and Scalable Sequence Model for MARL](marl/SabelMATButWithRetention.md)
 * 11th: [SMX: Sequential Monte Carlo Planning for Expert Iteration](non_LLM_reinforcement_learning/model_based_methods/SMX_ParticleFilterPolicyImprovement.md)
 * 13th: [ProRL V2 - Prolonged Training Validates RL Scaling Laws](LLM_reinforcement_learning/ProRL2.md)
+* 14th: [SPO: Sequential Monte Carlo Policy Optimisation](non_LLM_reinforcement_learning/model_based_methods/sequntial_policy_optimisation.md)
 * 16th: [Isaac Gym: High Performance GPU-Based Physics Simulation For Robot Learning](distribution_and_gpu_acceleration/IsaacGym.md)
 * 18th: [The 37 Implementation Details of Proximal Policy Optimization](non_LLM_reinforcement_learning/37PPOImplementationDetails.md)
 * 21st: [Learning to Walk in Minutes Using Massively Parallel Deep Reinforcement Learning](distribution_and_gpu_acceleration/LearningToWalkInMinutes.md)
