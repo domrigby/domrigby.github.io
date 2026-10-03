@@ -136,6 +136,8 @@ The following section includes:
 13. **Debugging**:
 	* I would recommend reading [Debugging RL](general_training/DebugginRLWithoutThePain.md) for a strong set of methods to refine what is going wrong in your algorithm, as well as principles to follow to avoid these bugs in teh first place.
 	* He provides a series of simple **"probe environments"** which help localise exactly what is causing the problem.
+14. **Environments can be scaled... in multiple directions**
+   * [Environment Scaling](LLM_reinforcement_learning/EnvironmentScalingAgenticExperienceSurvey.md) provides a methodology and 9 axes along which we can scale our RL environments to make them lead to the highest quality trajectories for learning.
 
 ### 2. Open‑Endedness & Auto‑Curricula
 
@@ -692,6 +694,7 @@ This projext is temporarily on hold whilst I get started at a new job and move t
 * 26th: [Scaling Up RL: Unlocking Diverse Reasoning in LLMs via Prolonged Training](LLM_reinforcement_learning/ScalingUpRLProlongedTraining.md)
 * 28th: [RL Token: Bootstrapping Online RL with Vision-Language-Action Models](robotics/RLTokenVLAOnlineRL.md)
 * 29th: [World Model for Robot Learning: A Comprehensive Survey](robotics/WorldModelsForRobotLearningSurvey.md)
+* 30th: [Environment Scaling for Interactive Agentic Experience Collection: A Survey](LLM_reinforcement_learning/EnvironmentScalingAgenticExperienceSurvey.md)
 
 &#x20;&#x20;
 
