@@ -696,6 +696,9 @@ This projext is temporarily on hold whilst I get started at a new job and move t
 * 29th: [World Model for Robot Learning: A Comprehensive Survey](robotics/WorldModelsForRobotLearningSurvey.md)
 * 30th: [Environment Scaling for Interactive Agentic Experience Collection: A Survey](LLM_reinforcement_learning/EnvironmentScalingAgenticExperienceSurvey.md)
 
+### October 2026
+* 2nd: [Efficient Memory Management for Large Language Model Serving with PagedAttention](distribution_and_gpu_acceleration/VLLMPagedAttention.md)
+
 &#x20;&#x20;
 
 ---
