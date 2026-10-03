@@ -691,6 +691,7 @@ This projext is temporarily on hold whilst I get started at a new job and move t
 ### September 2026
 * 26th: [Scaling Up RL: Unlocking Diverse Reasoning in LLMs via Prolonged Training](LLM_reinforcement_learning/ScalingUpRLProlongedTraining.md)
 * 28th: [RL Token: Bootstrapping Online RL with Vision-Language-Action Models](robotics/RLTokenVLAOnlineRL.md)
+* 29th: [World Model for Robot Learning: A Comprehensive Survey](robotics/WorldModelsForRobotLearningSurvey.md)
 
 &#x20;&#x20;
 
