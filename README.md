@@ -688,6 +688,9 @@ world model using video data
 
 This projext is temporarily on hold whilst I get started at a new job and move to new city. Hope to be back soon!
 
+### September 2026
+* 26th: [Scaling Up RL: Unlocking Diverse Reasoning in LLMs via Prolonged Training](LLM_reinforcement_learning/ScalingUpRLProlongedTraining.md)
+
 &#x20;&#x20;
 
 ---
