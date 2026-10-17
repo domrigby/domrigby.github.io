@@ -138,6 +138,10 @@ The following section includes:
 	* He provides a series of simple **"probe environments"** which help localise exactly what is causing the problem.
 14. **Environments can be scaled... in multiple directions**
    * [Environment Scaling](LLM_reinforcement_learning/EnvironmentScalingAgenticExperienceSurvey.md) provides a methodology and 9 axes along which we can scale our RL environments to make them lead to the highest quality trajectories for learning.
+15. **A full, modern LLM RL pipeline**
+   * [Limite 1B - Violetto](LLMs/Limite1BViolettoTechReport.md) is a great end-to-end reference for what a modern LLM post-training pipeline looks like: distillation → DPO → multiple RL stages interleaved with SFT and model souping → a final critic-assisted RL stage.
+   * It also brings together a lot of the recent RL tricks in one place: favouring ~50% pass rate problems with DAPO style filtering, DPPO style clipping, Dr. GRPO normalisation and many off-policy updates for sample efficiency.
+   * **Interleaving SFT stabilises the new capabilities introduced by RL**, allowing training to continue once RL becomes unstable.
 
 ### 2. Open‑Endedness & Auto‑Curricula
 
@@ -698,6 +702,7 @@ This projext is temporarily on hold whilst I get started at a new job and move t
 
 ### October 2026
 * 2nd: [Efficient Memory Management for Large Language Model Serving with PagedAttention](distribution_and_gpu_acceleration/VLLMPagedAttention.md)
+* 10th - 17th: [Limite 1B - Violetto: Technical Report](LLMs/Limite1BViolettoTechReport.md)
 
 &#x20;&#x20;
 
