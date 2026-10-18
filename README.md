@@ -379,7 +379,7 @@ or [UCL Dark's](https://ucldark.com/) work on this.
    between all nodes and/or edges. As is the case with transformers, this does come at high compute and memory cost. A GT was applied in RL context in this [paper](non_LLM_reinforcement_learning/GraphTransformersForControllingSwarms.md).
      
 
-#### 9. Quantisation
+### 9. Quantisation
 1. [Maarten Grootendorst's blog post](general_training/VisualGuideToQuantization.md) on quantisation for LLMs give a nice intro to the topic with some intuitive explainations. A brief overview:
    * Quantisation:
      * Reducing the precision of a model's numerical representation to reduce its memory overhead.
@@ -406,7 +406,7 @@ or [UCL Dark's](https://ucldark.com/) work on this.
        * Often lowers FP32 accuracy (no quant) but increases accuracy in low precision models (e.g. int4)
 
 
-#### 10. GPU Architecture, PyTorch and JAX.
+### 10. GPU Architecture, PyTorch and JAX.
 * **Architecture**:
 
 The following section contains some notes on the GPU architecture. These mainly come from: [Nvidia Docs GPU Fundamentals](distribution_and_gpu_acceleration/NvidiaDocsGPUFundamentals.md),
