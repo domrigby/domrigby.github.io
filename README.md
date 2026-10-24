@@ -144,6 +144,7 @@ The following section includes:
    * **Interleaving SFT stabilises the new capabilities introduced by RL**, allowing training to continue once RL becomes unstable.
 16. **Highly learnable reset states are crucial for scaling RL**
    * [AlphaNist](robotics/AlphaNISTBinaryRewardAssembly.md) utilises massively parallelised environments to learn multi-task, contact rich assembly. They make the most out of this compute by selecting frontier difficulty reset states.
+   * The above utilises learnability and sampling regime from [Success Guided Sampling](robotics/BalancedDataDietSuccessGuidedSampling.md). Learnability is based on p * (1 - p) where p = success rate on task and then beta sampling is used to select a reset state.
 
 ### 2. Open‑Endedness & Auto‑Curricula
 
@@ -707,6 +708,7 @@ This projext is temporarily on hold whilst I get started at a new job and move t
 * 10th - 17th: [Limite 1B - Violetto: Technical Report](LLMs/Limite1BViolettoTechReport.md)
 * 18th: [LoGRA: Scaling LLM Reinforcement Learning with Low-Rank Gradient Sketches](LLM_reinforcement_learning/LoGRALowRankGradientSketches.md)
 * 19th: [AlphaNIST: Emergent Assembly Skills from Binary Task Rewards](robotics/AlphaNISTBinaryRewardAssembly.md)
+* 20th: [A Balanced Data Diet: Addressing the Exploration Bottleneck in Mega-Scale RL for Robot Control](robotics/BalancedDataDietSuccessGuidedSampling.md)
 
 &#x20;&#x20;
 
