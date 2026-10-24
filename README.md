@@ -703,6 +703,7 @@ This projext is temporarily on hold whilst I get started at a new job and move t
 ### October 2026
 * 2nd: [Efficient Memory Management for Large Language Model Serving with PagedAttention](distribution_and_gpu_acceleration/VLLMPagedAttention.md)
 * 10th - 17th: [Limite 1B - Violetto: Technical Report](LLMs/Limite1BViolettoTechReport.md)
+* 18th: [LoGRA: Scaling LLM Reinforcement Learning with Low-Rank Gradient Sketches](LLM_reinforcement_learning/LoGRALowRankGradientSketches.md)
 
 &#x20;&#x20;
 
