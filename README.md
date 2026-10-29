@@ -709,6 +709,7 @@ This projext is temporarily on hold whilst I get started at a new job and move t
 * 18th: [LoGRA: Scaling LLM Reinforcement Learning with Low-Rank Gradient Sketches](LLM_reinforcement_learning/LoGRALowRankGradientSketches.md)
 * 19th: [AlphaNIST: Emergent Assembly Skills from Binary Task Rewards](robotics/AlphaNISTBinaryRewardAssembly.md)
 * 20th: [A Balanced Data Diet: Addressing the Exploration Bottleneck in Mega-Scale RL for Robot Control](robotics/BalancedDataDietSuccessGuidedSampling.md)
+* 29th: [A Visual Dive into Conditional Flow Matching](general_training/ConditionalFlowMatchingVisualDive.md)
 
 &#x20;&#x20;
 
