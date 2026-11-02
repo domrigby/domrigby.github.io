@@ -717,6 +717,7 @@ This projext is temporarily on hold whilst I get started at a new job and move t
 * 20th: [A Balanced Data Diet: Addressing the Exploration Bottleneck in Mega-Scale RL for Robot Control](robotics/BalancedDataDietSuccessGuidedSampling.md)
 * 28th: [KinetIQ Ascend: Toward 100% Reliable Manipulation and Superhuman Speed](robotics/KinetIQAscendRLManipulation.md)
 * 29th: [A Visual Dive into Conditional Flow Matching](general_training/ConditionalFlowMatchingVisualDive.md)
+* 30th - 1st Nov: [Distributed RL Revision](distribution_and_gpu_acceleration/DistributedRLRevision.md)
 
 ### November 2026
 * 2nd: [Introducing Instant Robot Learning](robotics/InstantRobotLearning.md)
