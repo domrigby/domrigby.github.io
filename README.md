@@ -145,6 +145,12 @@ The following section includes:
 16. **Highly learnable reset states are crucial for scaling RL**
    * [AlphaNist](robotics/AlphaNISTBinaryRewardAssembly.md) utilises massively parallelised environments to learn multi-task, contact rich assembly. They make the most out of this compute by selecting frontier difficulty reset states.
    * The above utilises learnability and sampling regime from [Success Guided Sampling](robotics/BalancedDataDietSuccessGuidedSampling.md). Learnability is based on p * (1 - p) where p = success rate on task and then beta sampling is used to select a reset state.
+17. **Condition on demonstrations rather than language**
+   * [Machenta](robotics/InstantRobotLearning.md) trained a robotics foundation model to be conditioned on real demonstrations rather than text. This has a few benefits: 
+      1. Agent learns-to-learn quickly and learns abstract representation of task rather memorising how to do each task.
+      2. sim2real can be included implicitly: agent can observe the instances specific conditions and then adapt.
+      3. It is trained only in simulation.
+   * Result is that the agent can learn many unseen tasks from one demonstration
 
 ### 2. Open‑Endedness & Auto‑Curricula
 
@@ -709,7 +715,11 @@ This projext is temporarily on hold whilst I get started at a new job and move t
 * 18th: [LoGRA: Scaling LLM Reinforcement Learning with Low-Rank Gradient Sketches](LLM_reinforcement_learning/LoGRALowRankGradientSketches.md)
 * 19th: [AlphaNIST: Emergent Assembly Skills from Binary Task Rewards](robotics/AlphaNISTBinaryRewardAssembly.md)
 * 20th: [A Balanced Data Diet: Addressing the Exploration Bottleneck in Mega-Scale RL for Robot Control](robotics/BalancedDataDietSuccessGuidedSampling.md)
+* 28th: [KinetIQ Ascend: Toward 100% Reliable Manipulation and Superhuman Speed](robotics/KinetIQAscendRLManipulation.md)
 * 29th: [A Visual Dive into Conditional Flow Matching](general_training/ConditionalFlowMatchingVisualDive.md)
+
+### November 2026
+* 2nd: [Introducing Instant Robot Learning](robotics/InstantRobotLearning.md)
 
 &#x20;&#x20;
 
