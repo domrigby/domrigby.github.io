@@ -721,6 +721,7 @@ This projext is temporarily on hold whilst I get started at a new job and move t
 
 ### November 2026
 * 2nd: [Introducing Instant Robot Learning](robotics/InstantRobotLearning.md)
+* 3rd: [Quadrillion-parameter transformers and how to train them](general_training/QuadrillionParameterTransformers.md)
 
 &#x20;&#x20;
 
